@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "slug": "vn-zyberon-sanctum-prelude",
+  "title_vi": "Tiếng Vọng Thánh Điện Zyberon",
+  "title_en": "Echoes of the Zyberon Sanctum",
+  "synopsis_vi": "Hồi sương sớm còn giăng ngang thềm đá năm cạnh, hai lữ khách lắng nghe nhịp nước ngầm và nét chữ cổ nơi Đại Đền Zyberon.",
+  "synopsis_en": "As morning mist drifts across the pentagonal stone steps, two wayfarers listen to subterranean water gears and ancient glyphs at the Grand Temple of Zyberon.",
+  "entry_node_id": "n01_arrival",
+  "bgm_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\audio\\zyberon_vn_prelude_pad.wav",
+  "default_backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+  "camera_rig": {
+    "preset": "low_angle_monument",
+    "fov_deg": 36.0,
+    "pos": [
+      13.5,
+      6.2,
+      16.8
+    ],
+    "target": [
+      0.0,
+      4.6,
+      0.0
+    ],
+    "weather": "mist",
+    "exposure": 1.08,
+    "source_slug": "temple-of-zyberon"
+  },
+  "cast": [
+    {
+      "id": "narrator",
+      "name_vi": "Lời Dẫn",
+      "name_en": "Narrator",
+      "voice_vi": "Mỹ Duyên",
+      "voice_en": "narrator",
+      "portrait_path": null,
+      "accent_color": "#94a3b8"
+    },
+    {
+      "id": "lyra",
+      "name_vi": "Lyra (Người Giữ Tháp)",
+      "name_en": "Lyra (Spire Keeper)",
+      "voice_vi": "Thùy Dung",
+      "voice_en": "female",
+      "portrait_path": null,
+      "accent_color": "#6ee7b7"
+    },
+    {
+      "id": "kael",
+      "name_vi": "Kael (Lữ Khách Phương Nam)",
+      "name_en": "Kael (Southern Wayfarer)",
+      "voice_vi": "Minh Triết",
+      "voice_en": "male",
+      "portrait_path": null,
+      "accent_color": "#fbbf24"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n01_arrival",
+      "speaker_id": "narrator",
+      "expression": "solemn",
+      "text_vi": "Hồi sương sớm còn giăng ngang năm bậc thềm đá rêu, hai lữ khách dừng chân trước tòa đại đền cổ. Gió từ lòng chảo thổi ngược lên mang theo mùi đồng xưa và tiếng mạch nước ngầm róc rách dưới móng đá.",
+      "text_en": "While morning mist still drifts across the five mossy stone steps, two wayfarers pause before the ancient grand temple. Wind rising from the basin carries the scent of aged bronze and subterranean water murmuring beneath the foundation.",
+      "backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+      "voice_vi_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n01_arrival_vi.wav",
+      "voice_en_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n01_arrival_en.wav",
+      "bgm_override_path": null,
+      "next_node_id": "n02_threshold",
+      "choices": [],
+      "hotspots": [
+        {
+          "id": "hs_sealing_stone",
+          "x_pct": 50.0,
+          "y_pct": 44.0,
+          "label_vi": "Hòn Đá Phong Ấn Giữa Tâm Điện",
+          "label_en": "Central Sealing Stone Monolith",
+          "inspect_vi": "Thân đá xám khắc chìm những đường rãnh cổ tự ăn khớp với bóng nắng ban mai rọi qua vòm đền.",
+          "inspect_en": "The grey monolith bears sunken archaic glyphs aligned cleanly with the morning sunbeams piercing the dome.",
+          "unlock_tip_id": "tip_sealing_stone"
+        },
+        {
+          "id": "hs_ritual_brazier",
+          "x_pct": 31.0,
+          "y_pct": 62.0,
+          "label_vi": "Chậu Lửa Đồng Chạm Nổi",
+          "label_en": "Sculpted Bronze Ritual Brazier",
+          "inspect_vi": "Lớp đồng xanh dày dặn đúc hình cánh chim cổ, bên trong than tùng vẫn âm ỉ giữ hơi ấm suốt đêm sương.",
+          "inspect_en": "Heavy patinated bronze cast with ancient wing motifs, still cradling warm pine embers through the misty night.",
+          "unlock_tip_id": "tip_bronze_brazier"
+        }
+      ],
+      "unlock_tip_ids": [
+        "tip_zyberon_terrace"
+      ],
+      "unlock_shard_id": null
+    },
+    {
+      "id": "n02_threshold",
+      "speaker_id": "lyra",
+      "expression": "curious",
+      "text_vi": "Anh coi kìa, bốn chậu lửa đồng quanh sân vẫn còn giữ tàn than ấm. Tụi mình bước vô soi kỹ mặt chữ trên Hòn Đá Phong Ấn trước, hay ghé tai nghe tiếng bánh răng đồng vọng lên từ hầm ngầm dưới chân nghen?",
+      "text_en": "Look over there, the four bronze braziers around the court still hold warm embers. Shall we step inside to examine the glyphs on the Sealing Stone first, or listen closely to the bronze gearwork echoing from the vault beneath our feet?",
+      "backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+      "voice_vi_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n02_threshold_vi.wav",
+      "voice_en_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n02_threshold_en.wav",
+      "bgm_override_path": null,
+      "next_node_id": null,
+      "choices": [
+        {
+          "id": "ch_inspect_stone",
+          "label_vi": "Bước lên thềm soi nét chữ cổ trên Hòn Đá Phong Ấn",
+          "label_en": "Ascend the dais to inspect the glyphs on the Sealing Stone",
+          "target_node_id": "n03a_stone_branch",
+          "grant_shard_id": "shard_sealing_oath"
+        },
+        {
+          "id": "ch_listen_vault",
+          "label_vi": "Áp tay xuống nền đá nghe nhịp bánh răng hầm mạch ngầm",
+          "label_en": "Press a palm to the stone floor to hear the subterranean gear vault",
+          "target_node_id": "n03b_vault_branch",
+          "grant_shard_id": "shard_siphon_cadence"
+        }
+      ],
+      "hotspots": [],
+      "unlock_tip_ids": [],
+      "unlock_shard_id": null
+    },
+    {
+      "id": "n03a_stone_branch",
+      "speaker_id": "kael",
+      "expression": "thoughtful",
+      "text_vi": "Chạm bàn tay lên mặt đá mát lạnh mà nghe rõ nhịp ngân trầm ấm bên trong đa. Người xưa canh từng khe nắng rọi từ đỉnh vòm vàng xuống đúng hàng chữ khắc mùa nước lên.",
+      "text_en": "Touching the cool stone face, you can feel a deep, steady hum resonating within. The builders aligned each sunbeam from the gilded dome right onto the carved flood-season inscriptions.",
+      "backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+      "voice_vi_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03a_stone_branch_vi.wav",
+      "voice_en_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03a_stone_branch_en.wav",
+      "bgm_override_path": null,
+      "next_node_id": "n04_convergence",
+      "choices": [],
+      "hotspots": [],
+      "unlock_tip_ids": [
+        "tip_sealing_stone"
+      ],
+      "unlock_shard_id": "shard_sealing_oath"
+    },
+    {
+      "id": "n03b_vault_branch",
+      "speaker_id": "lyra",
+      "expression": "warm",
+      "text_vi": "Dưới lớp gạch đá năm cạnh này là cả một dòng suối ngầm đang xoay đều từng vành răng đồng xanh đó nghen. Thảo nào qua bao nhiêu năm tháng mà nhịp thở của tòa đền vẫn vẹn nguyên chớ chẳng hề ngưng nghỉ.",
+      "text_en": "Beneath this five-sided stone pavement, an underground spring steadily turns the patinated bronze gear rings. No wonder the temple has kept its steady pulse unbroken across so many generations.",
+      "backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+      "voice_vi_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03b_vault_branch_vi.wav",
+      "voice_en_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03b_vault_branch_en.wav",
+      "bgm_override_path": null,
+      "next_node_id": "n04_convergence",
+      "choices": [],
+      "hotspots": [],
+      "unlock_tip_ids": [
+        "tip_bronze_brazier"
+      ],
+      "unlock_shard_id": "shard_siphon_cadence"
+    },
+    {
+      "id": "n04_convergence",
+      "speaker_id": "narrator",
+      "expression": "serene",
+      "text_vi": "Ánh nắng đầu ngày vừa chạm đỉnh vòm kim ô, tiếng chuông gió nơi hàng cột hộ pháp khẽ ngân dài, mở lối cho cuộc hành trình tiến sâu vô lòng chảo cổ Zyberon.",
+      "text_en": "As first daylight crowns the gilded dome, wind chimes along the guardian colonnade ring out softly, opening the way deeper into the ancient basin of Zyberon.",
+      "backdrop_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg",
+      "voice_vi_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n04_convergence_vi.wav",
+      "voice_en_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n04_convergence_en.wav",
+      "bgm_override_path": null,
+      "next_node_id": null,
+      "choices": [],
+      "hotspots": [],
+      "unlock_tip_ids": [],
+      "unlock_shard_id": null
+    }
+  ],
+  "tips": [
+    {
+      "id": "tip_zyberon_terrace",
+      "term_vi": "Thềm Đá Ngũ Giác Zyberon",
+      "term_en": "Pentagonal Terrace of Zyberon",
+      "body_vi": "Nền đá hoa cương năm cạnh chia đều năm hướng gió từ lòng chảo hội tụ về tâm đại đền.",
+      "body_en": "Five-sided granite terrace channeling the five basin winds toward the central sanctuary."
+    },
+    {
+      "id": "tip_sealing_stone",
+      "term_vi": "Hòn Đá Phong Ấn Khắc Cổ Tự",
+      "term_en": "Glyph-Carved Sealing Stone",
+      "body_vi": "Trụ đá nguyên khối dựng ngay trục dọc dưới mái vòm vàng, ghi dấu giao ước của các bậc tiền nhân.",
+      "body_en": "Monolithic stone pillar set directly beneath the golden dome, recording the covenant of the elders."
+    },
+    {
+      "id": "tip_bronze_brazier",
+      "term_vi": "Hầm Bánh Răng Mạch Ngầm & Lửa Thiêng",
+      "term_en": "Subterranean Water-Gear Vault & Braziers",
+      "body_vi": "Hệ thống rãnh nước ngầm dưới đáy đền dẫn sức nước làm quay các vành đồng cổ suốt bốn mùa.",
+      "body_en": "Subterranean stone conduits beneath the temple channel spring water to turn ancient bronze rings year-round."
+    }
+  ],
+  "memory_shards": [
+    {
+      "id": "shard_sealing_oath",
+      "title_vi": "Mảnh Ký Ức: Lời Thề Nắng Sớm Trên Đá Xám",
+      "title_en": "Memory Shard: Sunlit Oath on Grey Granite",
+      "echo_vi": "Khi tia nắng đầu tiên chạm nét khắc đầu dòng, tiếng vọng xưa nhắc người lữ khách giữ trọn lòng ngay thẳng.",
+      "echo_en": "When the first sunbeam touches the top glyph, an ancient echo reminds the traveler to keep a steadfast heart.",
+      "chapter_hint": 1
+    },
+    {
+      "id": "shard_siphon_cadence",
+      "title_vi": "Mảnh Ký Ức: Nhịp Nước Ngầm Dưới Chân Đền",
+      "title_en": "Memory Shard: Subterranean Stream Cadence",
+      "echo_vi": "Dòng suối khuất dưới lớp đá tối vẫn bền bỉ đẩy từng răng đồng xoay tròn không chút mỏi mệt.",
+      "echo_en": "Hidden beneath dark masonry, the mountain stream patiently turns each bronze tooth without rest.",
+      "chapter_hint": 2
+    }
+  ],
+  "archive_asset_map": {
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\audio\\zyberon_vn_prelude_pad.wav": "bgm/zyberon_vn_prelude_pad.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\manga_plates\\zyberon_vn_backdrop_2k.jpg": "backdrops/zyberon_vn_backdrop_2k.jpg",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n01_arrival_vi.wav": "voices/n01_arrival_vi.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n01_arrival_en.wav": "voices/n01_arrival_en.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n02_threshold_vi.wav": "voices/n02_threshold_vi.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n02_threshold_en.wav": "voices/n02_threshold_en.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03a_stone_branch_vi.wav": "voices/n03a_stone_branch_vi.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03a_stone_branch_en.wav": "voices/n03a_stone_branch_en.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03b_vault_branch_vi.wav": "voices/n03b_vault_branch_vi.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n03b_vault_branch_en.wav": "voices/n03b_vault_branch_en.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n04_convergence_vi.wav": "voices/n04_convergence_vi.wav",
+    "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\voices\\n04_convergence_en.wav": "voices/n04_convergence_en.wav"
+  }
+}

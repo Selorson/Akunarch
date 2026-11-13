@@ -1,0 +1,69 @@
+{
+  "phase": "ktx_ab_ktx2",
+  "exe": "E:\\Akunarch\\app\\src-tauri\\target-dotA\\release\\akunarch.exe",
+  "started": "2026-11-13T11:18:11.784Z",
+  "measurements": {
+    "SK_singularity-stonehenge-avalon": {
+      "timestamp": "2026-11-13 18:18:31",
+      "label": "ktx_ab_ktx2_SK_singularity-stonehenge-avalon",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 250.2,
+      "app_vram_mb_max": 250.2,
+      "webview_mb_median": 250.2,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.04,
+      "app_gpu3d_pct_p95": 0.14,
+      "app_gpu_all_pct_avg": 0.04,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 11,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1096
+    },
+    "SK_avalon-mage-sanctum": {
+      "timestamp": "2026-11-13 18:18:48",
+      "label": "ktx_ab_ktx2_SK_avalon-mage-sanctum",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 249.5,
+      "app_vram_mb_max": 287.2,
+      "webview_mb_median": 249.5,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.03,
+      "app_gpu3d_pct_p95": 0.13,
+      "app_gpu_all_pct_avg": 0.03,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 10.4,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1104
+    }
+  },
+  "probes": {},
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án"
+  ],
+  "sk": {
+    "singularity-stonehenge-avalon": {
+      "parts": 6,
+      "loadMs": 559,
+      "textures": 44,
+      "app_vram_mb": 250.2
+    },
+    "avalon-mage-sanctum": {
+      "parts": 6,
+      "loadMs": 527,
+      "textures": 67,
+      "app_vram_mb": 249.5
+    }
+  },
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T11:18:51.319Z"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "olympus_marble_massif_and_waterfalls",
+    "name_vi": "Khối Núi Cẩm Thạch Đa Tầng & Bốn Dòng Thác Xanh Đỉnh Olympus",
+    "name_en": "Multi-Tiered Pentelic Marble Massif & Four Recessed Waterfalls",
+    "summary_vi": "Khối núi đá cẩm thạch trắng xám vát cạnh dựng đứng nhiều tầng cùng bốn dòng thác bọt trắng xanh biếc.",
+    "summary_en": "Towering multi-tiered faceted white-grey marble massif with four frothy turquoise waterfalls in carved gullies.",
+    "dir": [
+      0,
+      0.0,
+      0
+    ]
+  },
+  {
+    "id": "helios_plaza_and_peristyle_sanctuary",
+    "name_vi": "Quảng Trường Sao Mặt Trời 16 Cánh, Đài Phun Nước & Hàng Cột Vòng Cung",
+    "name_en": "16-Ray Sun-Star Plaza, Golden Fountain & Wrapping Peristyle",
+    "summary_vi": "Sân tròn ngôi sao mười sáu cánh mạ vàng, đài phun nước mũi vực và hàng cột đá trắng vòng cung khóa hai cổng.",
+    "summary_en": "Circular 16-ray gilded Sun-Star plaza, cliffside golden fountain, 258-deg fluted colonnade, and twin portals.",
+    "dir": [
+      0,
+      4.32,
+      0
+    ]
+  },
+  {
+    "id": "grand_stairways_and_sacred_braziers",
+    "name_vi": "Đại Lộ Cầu Thang Đá Trắng Vút Đỉnh Núi & Hàng Chậu Lửa Vàng",
+    "name_en": "Grand Diagonal Marble Stairways & Burning Gilded Braziers",
+    "summary_vi": "Đại lộ bậc thang cẩm thạch trắng có lan can vươn chéo lên đỉnh thượng, rực sáng hàng chậu lửa đồng mạ vàng.",
+    "summary_en": "Long diagonal balustraded marble stairway and upper ascent flanked by golden-amber sacred fire braziers.",
+    "dir": [
+      0,
+      7.35,
+      0
+    ]
+  },
+  {
+    "id": "mid_left_pierced_marble_rotunda_tholos",
+    "name_vi": "Đền Tròn Sườn Trái Trổ Ô Cửa Vòm & Mái Vòm Đá Trắng Chia Múi",
+    "name_en": "Mid-Left Pierced Arched Marble Rotunda & Ribbed White Dome",
+    "summary_vi": "Tòa đền tròn đá trắng nơi sườn trái trổ mười hai ô cửa vòm thoáng đãng, đội mái vòm bán cầu cẩm thạch trắng.",
+    "summary_en": "Mid-slope marble Tholos rotunda with open round-arched colonnade, fenestrated drum, and pure white ribbed dome.",
+    "dir": [
+      0,
+      10.82,
+      0
+    ]
+  },
+  {
+    "id": "summit_pantheon_colonnade_and_guardians",
+    "name_vi": "Đại Điện Đỉnh Núi, Đôi Tượng Thần Vàng & Bàn Thờ Đại Bàng",
+    "name_en": "Summit Peripteral Pantheon, Gilded Guardians & Eagle Altar",
+    "summary_vi": "Ngôi đền chữ nhật bốn mặt cột khía rãnh, trán tường phù điêu vàng, đôi tượng thần đứng gác và bệ đại bàng cổ.",
+    "summary_en": "Classical peripteral summit temple with wide stairs, twin gilded guardian statues, relief pediment, and eagle altar.",
+    "dir": [
+      0,
+      13.92,
+      0
+    ]
+  },
+  {
+    "id": "summit_attic_drum_and_golden_dome",
+    "name_vi": "Đài Đế Đá Trắng, Cổ Vòm Trổ Cửa & Mái Vòm Bán Cầu Vàng Ròng",
+    "name_en": "Marble Attic Podium, Fenestrated Drum & Ribbed Golden Dome",
+    "summary_vi": "Đài đế đá trắng nâng tầng cổ vòm trổ mười sáu cửa sổ cùng mái vòm bán cầu mạ vàng chạm hoa văn và lồng đèn đỉnh.",
+    "summary_en": "White marble attic podium, fenestrated drum, embossed coffered hemispherical golden dome, and summit lantern.",
+    "dir": [
+      0,
+      15.17,
+      0
+    ]
+  }
+]

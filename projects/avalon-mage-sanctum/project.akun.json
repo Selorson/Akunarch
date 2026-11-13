@@ -1,0 +1,155 @@
+{
+  "schema_version": "2.0",
+  "slug": "avalon-mage-sanctum",
+  "title": "Thánh Đàn Pháp Thư Avalon & Rương Thiên Thạch Lam",
+  "title_en": "Avalon Arcane Reliquary Dais & Azure Meteorite Chest",
+  "kind": "clockwork",
+  "planet": "earth",
+  "region_slug": "britannia-avalon-sanctum",
+  "era": "497–510 SCN",
+  "era_year": 502,
+  "lat": 51.1458,
+  "lng": -2.7145,
+  "biome": "arcane-sanctum",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": null,
+  "cowriter_key": "loc:thanh-dan-phap-thu-avalon",
+  "unlock_chapter": 4,
+  "description_vi": "Bệ đá cổ bát giác bốn bậc thềm rêu phong khắc chìm trận đồ chữ cổ Ogham sáng ánh lam dịu. Bốn trụ đá nhọn canh giữ bốn góc quanh gốc sồi già điểm lá lam phát sáng, nơi bộ rễ chằng chịt ôm chặt chiếc rương đá sáu cạnh mở nắp cùng cuốn pháp thư da thuộc và đôi bình tinh chất trước thềm.",
+  "description_en": "Four-stepped mossy octagonal stone dais inscribed with a glowing Celtic and Ogham arcane circle, guarded by four rune obelisks around a gnarled ancient oak whose roots embrace an open hexagonal meteorite reliquary behind a parchment grimoire lectern and twin essence phials.",
+  "local_image_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\concepts\\concept_avalon_mage_sanctum_reliquary_v4.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\avalon-mage-sanctum\\concepts\\concept_avalon_mage_sanctum_reliquary_v4.jpg",
+    "E:\\Akunarch\\projects\\avalon-mage-sanctum\\concepts\\concept_avalon_azure_meteorite_reliquary.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\audio\\avalon_reliquary_chime.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\avalon-mage-sanctum\\audio\\avalon_reliquary_chime.wav"
+  ],
+  "manga_plates": [],
+  "clockwork": {
+    "parts": [
+      {
+        "dir": [
+          0,
+          0.0,
+          0
+        ],
+        "id": "weathered_octagonal_moss_stepped_plinth",
+        "name_en": "Four-Tiered Weathered Mossy Octagonal Stone Plinth",
+        "name_vi": "Bệ Đá Cổ Vát Bát Giác 4 Bậc Thềm Rêu Phong",
+        "summary_en": "Four-stepped octagonal ashlar stone plinth weathered with damp forest moss.",
+        "summary_vi": "Bệ đá tám cạnh xếp bốn bậc thềm rêu xanh ẩm sương giữa rừng thiêng cổ kính."
+      },
+      {
+        "dir": [
+          0,
+          1.88,
+          0
+        ],
+        "id": "front_grimoire_lectern_and_mana_phials",
+        "name_en": "Stone Grimoire Lectern & Twin Glowing Essence Phials",
+        "name_vi": "Bệ Đá Pháp Thư Hai Trang Giấy Da & Đôi Lọ Tinh Chất Xanh",
+        "summary_en": "Front stone lectern cradling an open leather-bound parchment grimoire beside two glass essence phials.",
+        "summary_vi": "Bệ đá phía trước nâng cuốn pháp thư bìa da mở rộng hai trang cổ tự bên hai lọ tinh chất."
+      },
+      {
+        "dir": [
+          0,
+          4.02,
+          0
+        ],
+        "id": "celtic_ogham_glowing_rune_floor",
+        "name_en": "Engraved Glowing Azure Celtic & Ogham Arcane Circle Floor",
+        "name_vi": "Mặt Sàn Trận Đồ Cổ Ngữ Ogham Phát Sáng Xanh Lam",
+        "summary_en": "Recessed stone floor deeply incised with an eight-pointed knotwork star and glowing azure runes.",
+        "summary_vi": "Mặt sàn đá khắc sâu vòng chữ cổ Ogham và ngôi sao tám cánh tỏa ánh sáng lam dịu."
+      },
+      {
+        "dir": [
+          0,
+          5.31,
+          0
+        ],
+        "id": "four_corner_rune_monolith_obelisks",
+        "name_en": "Four Pointed Rune-Inscribed Corner Stone Obelisks",
+        "name_vi": "Bốn Trụ Đá Nhọn Khắc Chữ Cổ Tỏa Sáng Lam Ở Bốn Góc",
+        "summary_en": "Four chamfered pointed stone obelisks guarding the corners with luminous azure rune carvings.",
+        "summary_vi": "Bốn cột đá vát nhọn trấn giữ bốn góc thềm, khắc nét chữ cổ ánh sắc lam trong trẻo."
+      },
+      {
+        "dir": [
+          0,
+          9.15,
+          0
+        ],
+        "id": "gnarled_ancient_oak_roots_and_azure_leaves",
+        "name_en": "Gnarled Ancient Oak Trunk, Sprawling Roots & Glowing Azure Leaves",
+        "name_vi": "Gốc Sồi Khô Cổ Thụ Uốn Rễ Chằng Chịt Điểm Lá Lam Phát Sáng",
+        "summary_en": "Twisted hollow ancient oak trunk and cascading roots dotted with luminous sky-blue leaves.",
+        "summary_vi": "Thân sồi khô vặn xoắn buông rễ ôm chặt thềm đá, lấm tấm những phiến lá non ánh lam huyền ảo."
+      },
+      {
+        "dir": [
+          0,
+          13.42,
+          0
+        ],
+        "id": "hexagonal_reliquary_chest_and_450nm_meteorite",
+        "name_en": "Open Hexagonal Carved Stone Reliquary & Pure Azure Meteorite",
+        "name_vi": "Rương Đá Lục Giác Mở Nắp & Viên Đá Thiên Thạch Lam Tinh Khiết",
+        "summary_en": "Knotwork-carved hexagonal stone chest with open bronze-clasped lid housing the radiant azure meteorite.",
+        "summary_vi": "Rương đá sáu cạnh chạm hoa văn mở nắp khóa đồng, ấp ủ khối thiên thạch lam rực sáng bên trong."
+      }
+    ],
+    "glb_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\clockwork\\avalon-mage-sanctum.glb",
+    "intro_video_path": null,
+    "pack_version": "2.1.0",
+    "preview_render_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\clockwork\\avalon-mage-sanctum_preview_1080p.png"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "splat_path": null,
+    "water_level": 1.6,
+    "foliage_density": 0.65,
+    "grid_resolution": 65,
+    "heightmap_values": [],
+    "placements": [],
+    "audio_zones": [],
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_title": null,
+    "episode_json_path": null
+  },
+  "cinema": {
+    "video_path": null,
+    "thumbnail_path": null,
+    "video_type": "intro",
+    "episode_number": null,
+    "duration_sec": 8.0,
+    "fps": 24,
+    "vfx_preset": "arcane_embers",
+    "vfx_overlay_path": null,
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": null,
+    "voice_track_path": null,
+    "bgm_track_path": null,
+    "mastered_audio_path": null,
+    "mastered_lufs": null,
+    "mastered_true_peak_dbtp": null,
+    "keyframes": [],
+    "subtitles": []
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

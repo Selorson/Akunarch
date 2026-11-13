@@ -1,0 +1,74 @@
+[
+  {
+    "id": "weathered_octagonal_moss_stepped_plinth",
+    "name_vi": "Bệ Đá Cổ Vát Bát Giác 4 Bậc Thềm Rêu Phong",
+    "name_en": "Four-Tiered Weathered Mossy Octagonal Stone Plinth",
+    "summary_vi": "Bệ đá tám cạnh xếp bốn bậc thềm rêu xanh ẩm sương giữa rừng thiêng cổ kính.",
+    "summary_en": "Four-stepped octagonal ashlar stone plinth weathered with damp forest moss.",
+    "dir": [
+      0,
+      0.0,
+      0
+    ]
+  },
+  {
+    "id": "front_grimoire_lectern_and_mana_phials",
+    "name_vi": "Bệ Đá Pháp Thư Hai Trang Giấy Da & Đôi Lọ Tinh Chất Xanh",
+    "name_en": "Stone Grimoire Lectern & Twin Glowing Essence Phials",
+    "summary_vi": "Bệ đá phía trước nâng cuốn pháp thư bìa da mở rộng hai trang cổ tự bên hai lọ tinh chất.",
+    "summary_en": "Front stone lectern cradling an open leather-bound parchment grimoire beside two glass essence phials.",
+    "dir": [
+      0,
+      1.88,
+      0
+    ]
+  },
+  {
+    "id": "celtic_ogham_glowing_rune_floor",
+    "name_vi": "Mặt Sàn Trận Đồ Cổ Ngữ Ogham Phát Sáng Xanh Lam",
+    "name_en": "Engraved Glowing Azure Celtic & Ogham Arcane Circle Floor",
+    "summary_vi": "Mặt sàn đá khắc sâu vòng chữ cổ Ogham và ngôi sao tám cánh tỏa ánh sáng lam dịu.",
+    "summary_en": "Recessed stone floor deeply incised with an eight-pointed knotwork star and glowing azure runes.",
+    "dir": [
+      0,
+      4.02,
+      0
+    ]
+  },
+  {
+    "id": "four_corner_rune_monolith_obelisks",
+    "name_vi": "Bốn Trụ Đá Nhọn Khắc Chữ Cổ Tỏa Sáng Lam Ở Bốn Góc",
+    "name_en": "Four Pointed Rune-Inscribed Corner Stone Obelisks",
+    "summary_vi": "Bốn cột đá vát nhọn trấn giữ bốn góc thềm, khắc nét chữ cổ ánh sắc lam trong trẻo.",
+    "summary_en": "Four chamfered pointed stone obelisks guarding the corners with luminous azure rune carvings.",
+    "dir": [
+      0,
+      5.31,
+      0
+    ]
+  },
+  {
+    "id": "gnarled_ancient_oak_roots_and_azure_leaves",
+    "name_vi": "Gốc Sồi Khô Cổ Thụ Uốn Rễ Chằng Chịt Điểm Lá Lam Phát Sáng",
+    "name_en": "Gnarled Ancient Oak Trunk, Sprawling Roots & Glowing Azure Leaves",
+    "summary_vi": "Thân sồi khô vặn xoắn buông rễ ôm chặt thềm đá, lấm tấm những phiến lá non ánh lam huyền ảo.",
+    "summary_en": "Twisted hollow ancient oak trunk and cascading roots dotted with luminous sky-blue leaves.",
+    "dir": [
+      0,
+      9.15,
+      0
+    ]
+  },
+  {
+    "id": "hexagonal_reliquary_chest_and_450nm_meteorite",
+    "name_vi": "Rương Đá Lục Giác Mở Nắp & Viên Đá Thiên Thạch Lam Tinh Khiết",
+    "name_en": "Open Hexagonal Carved Stone Reliquary & Pure Azure Meteorite",
+    "summary_vi": "Rương đá sáu cạnh chạm hoa văn mở nắp khóa đồng, ấp ủ khối thiên thạch lam rực sáng bên trong.",
+    "summary_en": "Knotwork-carved hexagonal stone chest with open bronze-clasped lid housing the radiant azure meteorite.",
+    "dir": [
+      0,
+      13.42,
+      0
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "phase": "b0_old",
+  "exe": "C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.exe",
+  "started": "2026-11-13T09:16:47.663Z",
+  "measurements": {},
+  "probes": {
+    "B0_end": {
+      "created": 2,
+      "lost": 0,
+      "restored": 0,
+      "stage": null,
+      "consoleTooManyContexts": 0,
+      "consoleContextLost": 0
+    }
+  },
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án",
+    "Dữ liệu project.akun.json + manga_plates + stage_vn + akunarch.db đã khôi phục, 46 file khớp SHA-256."
+  ],
+  "b0": {
+    "rig": {
+      "has": true,
+      "w": 676,
+      "h": 781,
+      "x": 870,
+      "y": 505.96875
+    },
+    "consoleErrors": [
+      "IPC custom protocol failed, Tauri will now use the postMessage interface instead TypeError: Failed to fetch\n    at window.fetch (http://tauri.localhost/_app/immutable/chunks/DtDVS9DB.js:1:1881)\n    at Object.sendIpcMessage (<anonymous>:83:7)\n    at Object.<anonymous> (<anonymous>:177:38)\n    at action (<anonymous>:336:38)\n    at <anonymous>:345:11\n    at new Promise (<anonymous>)\n    at Object.value (<anonymous>:325:14)\n    at An (http://tauri.localhost/_app/immutable/chunks/3DN7CaYw.js:2:9635)\n    at Object.bootstrap (http://tauri.localhost/_app/immutable/chunks/3DN7CaYw.js:2:10375)\n    at D (http://tauri.localhost/_app/immutable/chunks/3DN7CaYw.js:12705:29184)"
+    ]
+  },
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T09:17:04.894Z"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "part_cliff",
+    "name_vi": "Vách đá vôi & Tĩnh thất ngầm",
+    "name_en": "Limestone Cliff & Underground Sanctuary",
+    "summary_vi": "Vách đá vôi phủ sương muối cao 1.600 m; sâu dưới móng là Tĩnh thất của Thánh Đồng: 12 cung hoàng đạo, 3 lớp thảm đỏ, giường tuyết tùng.",
+    "summary_en": "Frost-dusted limestone cliff; beneath the foundation lies the windowless sanctuary with 12 zodiac reliefs and a cedar bed.",
+    "dir": [
+      0,
+      0.0,
+      0
+    ]
+  },
+  {
+    "id": "part_base",
+    "name_vi": "Thân dưới bát giác & Cửa chính",
+    "name_en": "Octagonal Base & Main Door",
+    "summary_vi": "Đá bazan đen thế kỷ XIV, 8 trụ ốp khắc hoa văn thoi, cửa sổ lancet chấn song sắt, cửa sồi vòm nhọn, cầu thang xoắn ốc đá vôi bên trong.",
+    "summary_en": "14th-century black basalt with 8 carved buttresses, lancet windows, arched oak door and the inner limestone spiral stair.",
+    "dir": [
+      0,
+      1.9,
+      0
+    ]
+  },
+  {
+    "id": "part_parapet",
+    "name_vi": "Tường răng cưa & 4 tháp góc",
+    "name_en": "Crenellated Parapet & Corner Turrets",
+    "summary_vi": "Vòng tường răng cưa trên hàng đá nhô, 4 tháp góc canh giữ vách núi.",
+    "summary_en": "Crenellated ring on corbels with four corner turrets.",
+    "dir": [
+      0,
+      3.2,
+      0
+    ]
+  },
+  {
+    "id": "part_upper",
+    "name_vi": "Thân trên & Đồng hồ thiên văn",
+    "name_en": "Upper Body & Astronomical Clock",
+    "summary_vi": "Mặt đồng hồ thiên văn bằng đồng thau khắc số La Mã, vòng hoàng đạo lệch tâm, 3 mặt phụ dưới mái vòm; trong lòng là con lắc neo 4 m và tạ đá hoa cương.",
+    "summary_en": "Brass astronomical dial with Roman numerals and an eccentric zodiac ring, three sub-dials, and the 4 m anchor pendulum inside.",
+    "dir": [
+      0,
+      4.6,
+      0
+    ]
+  },
+  {
+    "id": "part_belfry",
+    "name_vi": "Gác chuông",
+    "name_en": "Belfry",
+    "summary_vi": "Hai chuông đồng treo xà gỗ sau 4 ô vòm nhọn, 4 đầu hồi có huy hiệu tròn, 8 tháp nhọn.",
+    "summary_en": "Two bronze bells behind four pointed arches under roundel gables and eight pinnacles.",
+    "dir": [
+      0,
+      6.1,
+      0
+    ]
+  },
+  {
+    "id": "part_crown",
+    "name_vi": "Mái chóp & Quả cầu thiên văn",
+    "name_en": "Spire & Armillary Sphere",
+    "summary_vi": "Mái chóp đá phiến có 4 mái hồi chéo, trụ đồng đỡ quả cầu thiên văn 5 đai.",
+    "summary_en": "Cross-gabled slate spire carrying a five-ring brass armillary sphere.",
+    "dir": [
+      0,
+      7.7,
+      0
+    ]
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "phase": "b0_ktx",
+  "exe": "E:\\Akunarch\\app\\src-tauri\\target-dotA\\release\\akunarch.exe",
+  "started": "2026-11-13T11:19:02.448Z",
+  "measurements": {},
+  "probes": {
+    "B0_end": {
+      "created": 1,
+      "lost": 0,
+      "restored": 0,
+      "stage": {
+        "contextsCreated": 1,
+        "contextLost": 0,
+        "contextRestored": 0,
+        "acquires": 6,
+        "releases": 6,
+        "owned": false,
+        "memory": {
+          "geometries": 3,
+          "textures": 2,
+          "programs": 5
+        }
+      },
+      "consoleTooManyContexts": 0,
+      "consoleContextLost": 0
+    }
+  },
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án",
+    "Dữ liệu project.akun.json + manga_plates + stage_vn + akunarch.db đã khôi phục, 46 file khớp SHA-256."
+  ],
+  "b0": {
+    "grid": {
+      "diffOff": 0.364,
+      "diffBack": 0
+    },
+    "wireframe": {
+      "diffOn": 4.162,
+      "diffBack": 0
+    },
+    "ultra": {
+      "hd": {
+        "w": 569,
+        "h": 421,
+        "cssW": 569,
+        "dpr": 1,
+        "stage": {
+          "contextsCreated": 1,
+          "contextLost": 0,
+          "contextRestored": 0,
+          "acquires": 1,
+          "releases": 0,
+          "owned": true,
+          "memory": {
+            "geometries": 215,
+            "textures": 50,
+            "programs": 17
+          }
+        }
+      },
+      "ultra": {
+        "w": 853,
+        "h": 631,
+        "cssW": 569,
+        "dpr": 1,
+        "stage": {
+          "contextsCreated": 1,
+          "contextLost": 0,
+          "contextRestored": 0,
+          "acquires": 2,
+          "releases": 1,
+          "owned": true,
+          "memory": {
+            "geometries": 215,
+            "textures": 50,
+            "programs": 17
+          }
+        }
+      },
+      "ultraLabel": "Ultra",
+      "diffVsHd": 1.099
+    },
+    "manga_tab01": {
+      "beauty": {
+        "w": 2048,
+        "h": 1152,
+        "bytes": 1572057
+      },
+      "depth": {
+        "w": 2048,
+        "h": 1152,
+        "bytes": 192464
+      }
+    },
+    "manga_tab02": {
+      "beauty": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 5079434
+      },
+      "depth": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 84618
+      }
+    },
+    "rig": {
+      "has": true,
+      "w": 676,
+      "h": 781,
+      "x": 870,
+      "y": 505.96875
+    },
+    "manga_tab03": {
+      "beauty": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 1478401
+      },
+      "depth": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 87167
+      }
+    },
+    "consoleErrors": [
+      "IPC custom protocol failed, Tauri will now use the postMessage interface instead TypeError: Failed to fetch\n    at window.fetch (http://tauri.localhost/_app/immutable/chunks/XJS0IaAn.js:1:1881)\n    at Object.sendIpcMessage (<anonymous>:83:7)\n    at Object.<anonymous> (<anonymous>:177:38)\n    at action (<anonymous>:336:38)\n    at <anonymous>:345:11\n    at new Promise (<anonymous>)\n    at Object.value (<anonymous>:325:14)\n    at q (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:2:9913)\n    at ks.isMinimized (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:118:32563)\n    at HTMLDocument.Fe (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:118:45863)",
+      "IPC custom protocol failed, Tauri will now use the postMessage interface instead TypeError: Failed to fetch\n    at window.fetch (http://tauri.localhost/_app/immutable/chunks/XJS0IaAn.js:1:1881)\n    at Object.sendIpcMessage (<anonymous>:83:7)\n    at Object.<anonymous> (<anonymous>:177:38)\n    at action (<anonymous>:336:38)\n    at <anonymous>:345:11\n    at new Promise (<anonymous>)\n    at Object.value (<anonymous>:325:14)\n    at q (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:2:9913)\n    at Object.bootstrap (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:2:10651)\n    at Qt (http://tauri.localhost/_app/immutable/chunks/kN4-k4Nm.js:118:45147)"
+    ]
+  },
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T11:19:54.105Z"
+}

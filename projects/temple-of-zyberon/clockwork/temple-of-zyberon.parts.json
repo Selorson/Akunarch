@@ -1,0 +1,86 @@
+[
+  {
+    "id": "geological_siphon_base",
+    "name_vi": "Đế Địa Tầng Đá Bazan & Mạch Ngầm Cổ Đại",
+    "name_en": "Basalt Geological Cutaway & Subterranean Conduit Base",
+    "summary_vi": "Khối đá nền năm cạnh vát mặt cắt địa chất phơi lộ các rãnh dẫn mạch ngầm sâu dưới móng đền.",
+    "summary_en": "Pentagonal basalt bedrock cutaway revealing carved subterranean channels beneath the foundation.",
+    "dir": [
+      0,
+      0.0,
+      0
+    ]
+  },
+  {
+    "id": "subterranean_siphon_vault",
+    "name_vi": "Hầm Vòm Cơ Khí & Bánh Răng Đồng Ngầm Đáy Đền",
+    "name_en": "Subterranean Bronze Vault & Under-Sanctum Gearwork",
+    "summary_vi": "Tầng hầm vòm đá khóa chặt các vành cơ cấu đồng thau cổ kính bên dưới sàn chính điện.",
+    "summary_en": "Vaulted stone undercroft housing heavy bronze ring mechanisms beneath the main sanctuary floor.",
+    "dir": [
+      0,
+      2.7,
+      0
+    ]
+  },
+  {
+    "id": "pentagonal_terrace",
+    "name_vi": "Thềm Đá Ngũ Giác Bậc Thang Đại Lễ",
+    "name_en": "Grand Pentagonal Stepped Stone Terrace",
+    "summary_vi": "Năm mặt bậc thang đá hoa cương dẫn lối hành hương hội tụ về tâm điểm tòa đại đền.",
+    "summary_en": "Five-sided monumental granite ceremonial stairway converging toward the inner sanctum.",
+    "dir": [
+      0,
+      3.8,
+      0
+    ]
+  },
+  {
+    "id": "ritual_braziers",
+    "name_vi": "Cụm Chậu Lửa Nghi Lễ Đúc Đồng Chạm Nổi",
+    "name_en": "Sculpted Bronze Ritual Braziers",
+    "summary_vi": "Những đài lửa đồng điêu khắc tinh xảo canh giữ các góc thềm ngũ giác suốt ngày đêm.",
+    "summary_en": "Ornate sculpted bronze ritual braziers standing sentinel at the corners of the terrace.",
+    "dir": [
+      0,
+      5.3,
+      0
+    ]
+  },
+  {
+    "id": "sealing_stone_core",
+    "name_vi": "Hòn Đá Phong Ấn Khắc Cổ Tự Giữa Tâm Điện",
+    "name_en": "Rune-Bound Sealing Stone Core",
+    "summary_vi": "Khối thạch trụ thiêng chạm khắc văn tự cổ nằm ngay trục thẳng đứng giữa lòng đại đền.",
+    "summary_en": "Sacred monolithic Sealing Stone etched with archaic glyphs along the central axis.",
+    "dir": [
+      0,
+      7.8,
+      0
+    ]
+  },
+  {
+    "id": "sanctum_colonnade",
+    "name_vi": "Vòng Cột Đá Hộ Pháp Đỡ Vòm Thượng Điện",
+    "name_en": "Guardian Pillar Sanctum Colonnade",
+    "summary_vi": "Hàng cột đá điêu khắc tượng hộ pháp trầm mặc nâng đỡ toàn bộ kết cấu mái vòm phía trên.",
+    "summary_en": "Ring of carved guardian stone pillars supporting the upper drum of the temple.",
+    "dir": [
+      0,
+      11.9,
+      0
+    ]
+  },
+  {
+    "id": "imperial_golden_dome",
+    "name_vi": "Mái Vòm Kim Ô Mạ Vàng Đỉnh Đại Đền Zyberon",
+    "name_en": "Imperial Gilded-Bronze Dome Crown",
+    "summary_vi": "Mái vòm đồng mạ vàng rực rỡ khép lại trục thẳng đứng uy nghiêm của Đại Đền Ngũ Giác.",
+    "summary_en": "Radiant gilded-bronze ribbed dome crowning the vertical axis of the Grand Temple.",
+    "dir": [
+      0,
+      13.0,
+      0
+    ]
+  }
+]

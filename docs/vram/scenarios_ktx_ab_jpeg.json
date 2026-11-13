@@ -1,0 +1,124 @@
+{
+  "phase": "ktx_ab_jpeg",
+  "exe": "E:\\Akunarch\\app\\src-tauri\\target-dotA\\release\\akunarch.exe",
+  "started": "2026-11-13T11:14:23.590Z",
+  "measurements": {
+    "SK_temple-of-zyberon": {
+      "timestamp": "2026-11-13 18:14:43",
+      "label": "ktx_ab_jpeg_SK_temple-of-zyberon",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 462.1,
+      "app_vram_mb_max": 462.1,
+      "webview_mb_median": 462.1,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.03,
+      "app_gpu3d_pct_p95": 0.15,
+      "app_gpu_all_pct_avg": 0.03,
+      "gpu_util_avg": 1.31,
+      "gpu_util_p95": 3,
+      "gpu_power_w_avg": 10.6,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1314
+    },
+    "SK_singularity-samos-olympus": {
+      "timestamp": "2026-11-13 18:15:03",
+      "label": "ktx_ab_jpeg_SK_singularity-samos-olympus",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 511.4,
+      "app_vram_mb_max": 511.8,
+      "webview_mb_median": 511.4,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.03,
+      "app_gpu3d_pct_p95": 0.09,
+      "app_gpu_all_pct_avg": 0.04,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 10.5,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1363
+    },
+    "SK_singularity-stonehenge-avalon": {
+      "timestamp": "2026-11-13 18:15:20",
+      "label": "ktx_ab_jpeg_SK_singularity-stonehenge-avalon",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 427,
+      "app_vram_mb_max": 427,
+      "webview_mb_median": 427,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.03,
+      "app_gpu3d_pct_p95": 0.15,
+      "app_gpu_all_pct_avg": 0.05,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 10.5,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1270
+    },
+    "SK_avalon-mage-sanctum": {
+      "timestamp": "2026-11-13 18:15:37",
+      "label": "ktx_ab_jpeg_SK_avalon-mage-sanctum",
+      "process": "akunarch",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 6,
+      "app_vram_mb_median": 462.4,
+      "app_vram_mb_max": 463.9,
+      "webview_mb_median": 462.4,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0.02,
+      "app_gpu3d_pct_p95": 0.1,
+      "app_gpu_all_pct_avg": 0.04,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 11.9,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1305
+    }
+  },
+  "probes": {},
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án",
+    "Đã khôi phục 4 .glb KTX2, SHA-256 khớp."
+  ],
+  "sk": {
+    "temple-of-zyberon": {
+      "parts": 7,
+      "loadMs": 581,
+      "textures": 51,
+      "app_vram_mb": 462.1
+    },
+    "singularity-samos-olympus": {
+      "parts": 6,
+      "loadMs": 2800,
+      "textures": 61,
+      "app_vram_mb": 511.4
+    },
+    "singularity-stonehenge-avalon": {
+      "parts": 6,
+      "loadMs": 339,
+      "textures": 48,
+      "app_vram_mb": 427
+    },
+    "avalon-mage-sanctum": {
+      "parts": 6,
+      "loadMs": 273,
+      "textures": 84,
+      "app_vram_mb": 462.4
+    }
+  },
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T11:15:40.510Z"
+}

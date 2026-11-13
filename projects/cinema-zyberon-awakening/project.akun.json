@@ -1,0 +1,150 @@
+{
+  "schema_version": "2.0",
+  "slug": "cinema-zyberon-awakening",
+  "title": "Phim Khai Mở Đại Đền Ngũ Giác Zyberon",
+  "title_en": "Awakening of the Pentagonal Temple of Zyberon",
+  "kind": "cinema",
+  "planet": "akunalia",
+  "region_slug": "zyberon-sacred-basin",
+  "era": "Kỷ Nguyên Hoàng Kim Eldarin",
+  "era_year": null,
+  "lat": 14.62,
+  "lng": 108.45,
+  "biome": "sacred-highland",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": null,
+  "cowriter_key": "",
+  "unlock_chapter": 1,
+  "description_vi": "Phim cắt cảnh điện ảnh quay trực tiếp trên mô hình Đại Đền Ngũ Giác Zyberon, kết hợp hạt sáng cổ ngữ và bản phối âm chuẩn mười bốn đơn vị âm lượng.",
+  "description_en": "Cinematic sequence filmed directly on the 3D Grand Temple of Zyberon with particle VFX and ToneForge -14.0 LUFS mastered narration and score.",
+  "local_image_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\thumbnail.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\thumbnail.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\audio\\zyberon_cinema_score.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\audio\\zyberon_cinema_score.wav",
+    "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\narration_vi.wav",
+    "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening_master_14lufs.wav"
+  ],
+  "manga_plates": [
+    {
+      "id": "plate_cinema-zyberon-awakening_depth",
+      "label": "Cinema Beauty + Depth (Phim Khai Mở Đại Đền Ngũ Giác Zyberon)",
+      "beauty_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\thumbnail.jpg",
+      "depth_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\depth_preview.png",
+      "width": 1280,
+      "height": 720,
+      "fov_deg": 37.0,
+      "created_at": "2026-11-11T21:04:13.797339+00:00"
+    }
+  ],
+  "clockwork": {
+    "parts": [],
+    "glb_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon.glb",
+    "intro_video_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening.mp4",
+    "pack_version": "2.1.0"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_json_path": null,
+    "episode_title": null
+  },
+  "cinema": {
+    "video_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening.mp4",
+    "thumbnail_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\thumbnail.jpg",
+    "video_type": "intro",
+    "episode_number": 1,
+    "duration_sec": 5.0,
+    "fps": 24,
+    "vfx_preset": "golden_embers",
+    "vfx_overlay_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening_vfx_overlay.png",
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon.glb",
+    "voice_track_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\narration_vi.wav",
+    "bgm_track_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\audio\\zyberon_cinema_score.wav",
+    "mastered_audio_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening_master_14lufs.wav",
+    "mastered_lufs": -13.95,
+    "mastered_true_peak_dbtp": -1.44,
+    "keyframes": [
+      {
+        "time_sec": 0.0,
+        "pos": [
+          18.5,
+          7.2,
+          20.5
+        ],
+        "target": [
+          0.0,
+          4.2,
+          0.0
+        ],
+        "fov_deg": 38.0,
+        "explode_pct": 0.0,
+        "id": "kf_01"
+      },
+      {
+        "time_sec": 2.5,
+        "pos": [
+          11.0,
+          8.8,
+          17.0
+        ],
+        "target": [
+          0.0,
+          5.0,
+          0.0
+        ],
+        "fov_deg": 36.0,
+        "explode_pct": 16.0,
+        "id": "kf_02"
+      },
+      {
+        "time_sec": 5.0,
+        "pos": [
+          4.5,
+          6.4,
+          15.2
+        ],
+        "target": [
+          0.0,
+          4.6,
+          0.0
+        ],
+        "fov_deg": 35.0,
+        "explode_pct": 0.0,
+        "id": "kf_03"
+      }
+    ],
+    "subtitles": [
+      {
+        "id": "sub_01",
+        "start_sec": 0.2,
+        "end_sec": 2.5,
+        "text_vi": "Giữa sương sớm lòng chảo cổ, năm bậc thềm đá hoa cương dần hiện rõ.",
+        "text_en": "Amid the ancient basin's morning mist, five granite terraces emerge into view."
+      },
+      {
+        "id": "sub_02",
+        "start_sec": 2.5,
+        "end_sec": 4.9,
+        "text_vi": "Ánh bình minh chạm đỉnh mái vòm đồng mạ vàng trên Hòn Đá Phong Ấn.",
+        "text_en": "Dawn light crowns the gilded bronze dome above the central Sealing Stone."
+      }
+    ]
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

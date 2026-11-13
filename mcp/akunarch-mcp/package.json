@@ -1,0 +1,20 @@
+{
+  "name": "akunarch-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cổng điều khiển AI cho Akunarch (MCP stdio) — gọi 35 lệnh IPC của akunarch.exe qua CDP",
+  "type": "module",
+  "main": "src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "ws": "^8.23.0",
+    "zod": "^4.6.7"
+  }
+}

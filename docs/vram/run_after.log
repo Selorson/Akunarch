@@ -1,0 +1,147 @@
+[08:45:45] MEASURE S0_machine_idle_app_off: app=0MB (max 0) app3D=0% gpu=3% P8 14.2W
+[08:45:45] BACKUP 24 files -> E:\Akunarch\_archive\vram_dot_A\data_backup_after
+[08:45:57] PROBE S1_cold_boot: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 1,
+    releases: 0,
+    owned: true,
+    memory: { geometries: 328, textures: 51, programs: 17 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:45:57] SHOT E:\Akunarch\docs\vram\screenshots\after\S1_cold_boot.png
+[08:46:10] MEASURE S1_cold_boot: app=451.4MB (max 458.7) app3D=0.01% gpu=11.32% P8 39.9W
+[08:46:13] SHOT E:\Akunarch\docs\vram\screenshots\after\S2_temple_default_view.png
+[08:46:35] MEASURE S2_3d_idle_after_orbit: app=425.9MB (max 425.9) app3D=0% gpu=19.83% P2 71.7W
+[08:46:35] PROBE S2_3d_idle: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 1,
+    releases: 0,
+    owned: true,
+    memory: { geometries: 328, textures: 51, programs: 17 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:46:46] MEASURE SM_autorotate_visible: app=378.3MB (max 378.3) app3D=7.46% gpu=14.4% P8 26W
+[08:46:58] MEASURE SM_autorotate_minimized: app=376.8MB (max 376.8) app3D=0% gpu=3.27% P8 14.7W
+[08:47:07] SHOT E:\Akunarch\docs\vram\screenshots\after\SC_chunk_0_0_before_sculpt.png
+[08:47:21] MEASURE SC_sculpt_0: app=432.8MB (max 461.6) app3D=0.11% gpu=4.04% P8 27.8W
+[08:47:38] MEASURE SC_sculpt_1: app=695.3MB (max 722.5) app3D=0% gpu=5.45% P2 33.3W
+[08:47:38] PROBE SC_sculpt_1: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 2,
+    releases: 1,
+    owned: true,
+    memory: { geometries: 566, textures: 113, programs: 14 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:48:36] MEASURE SC_sculpt_20: app=707.1MB (max 707.1) app3D=0% gpu=2.79% P2 30.7W
+[08:48:36] PROBE SC_sculpt_20: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 2,
+    releases: 1,
+    owned: true,
+    memory: { geometries: 566, textures: 113, programs: 14 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:49:51] MEASURE S3_round_1: app=690.2MB (max 690.2) app3D=0% gpu=4.24% P2 29.3W
+[08:49:51] PROBE S3_round_1: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 39,
+    releases: 38,
+    owned: true,
+    memory: { geometries: 472, textures: 63, programs: 19 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:52:07] MEASURE S3_round_3: app=635.5MB (max 635.5) app3D=0% gpu=2.68% P8 31.2W
+[08:52:07] PROBE S3_round_3: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 113,
+    releases: 112,
+    owned: true,
+    memory: { geometries: 472, textures: 63, programs: 19 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:52:45] PROBE S4_after_toggles: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 144,
+    releases: 143,
+    owned: true,
+    memory: { geometries: 14, textures: 4, programs: 7 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:53:00] MEASURE S4_3d_on_after_toggles: app=462.5MB (max 554.6) app3D=0% gpu=9.88% P2 56.2W
+[08:53:16] MEASURE S4_vault_tab_after_release: app=199.9MB (max 200.4) app3D=0% gpu=7.85% P2 67.3W
+[08:53:16] PROBE S4_final: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  stage: {
+    contextsCreated: 1,
+    contextLost: 0,
+    contextRestored: 0,
+    acquires: 144,
+    releases: 144,
+    owned: false,
+    memory: { geometries: 3, textures: 2, programs: 5 }
+  },
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:53:19] RESTORE OK: 24 files, SHA-256 khớp 100%
+[08:53:19] WROTE E:\Akunarch\docs\vram\scenarios_after.json
+EXIT=0

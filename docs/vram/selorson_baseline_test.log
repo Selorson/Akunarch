@@ -1,0 +1,491 @@
+
+> frontend-v3@0.1.14 test:runtime
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: desktop updater is gated by the desktop-admin flavor
+ok 1 - desktop updater is gated by the desktop-admin flavor
+  ---
+  duration_ms: 96.6971
+  type: 'test'
+  ...
+# Subtest: user flavors exclude every admin route at build time
+ok 2 - user flavors exclude every admin route at build time
+  ---
+  duration_ms: 0.271
+  type: 'test'
+  ...
+# Subtest: non-desktop admin flavors exclude local desktop tools
+ok 3 - non-desktop admin flavors exclude local desktop tools
+  ---
+  duration_ms: 0.1777
+  type: 'test'
+  ...
+# Subtest: public web defaults to the user flavor and has an explicit admin build
+ok 4 - public web defaults to the user flavor and has an explicit admin build
+  ---
+  duration_ms: 1.2046
+  type: 'test'
+  ...
+# Subtest: flavor dev launches Vite without spawning a Windows cmd shim
+ok 5 - flavor dev launches Vite without spawning a Windows cmd shim
+  ---
+  duration_ms: 9.406
+  type: 'test'
+  ...
+# Subtest: desktop releases use only the dedicated admin tag family
+ok 6 - desktop releases use only the dedicated admin tag family
+  ---
+  duration_ms: 9.6391
+  type: 'test'
+  ...
+# Subtest: public web CI never waits for a native desktop build
+ok 7 - public web CI never waits for a native desktop build
+  ---
+  duration_ms: 5.7234
+  type: 'test'
+  ...
+# Subtest: desktop-user has a separate shell without admin bridge resources
+ok 8 - desktop-user has a separate shell without admin bridge resources
+  ---
+  duration_ms: 28.2953
+  type: 'test'
+  ...
+# Subtest: desktop-admin has a visibly separate installer identity
+ok 9 - desktop-admin has a visibly separate installer identity
+  ---
+  duration_ms: 10.4648
+  type: 'test'
+  ...
+# Subtest: Android admin and user builds have separate flavors and assets
+ok 10 - Android admin and user builds have separate flavors and assets
+  ---
+  duration_ms: 18.458
+  type: 'test'
+  ...
+# Subtest: CI builds every platform-audience boundary without delaying public deploy
+ok 11 - CI builds every platform-audience boundary without delaying public deploy
+  ---
+  duration_ms: 20.8024
+  type: 'test'
+  ...
+# Subtest: release channels and credentials are isolated by audience
+ok 12 - release channels and credentials are isolated by audience
+  ---
+  duration_ms: 20.0907
+  type: 'test'
+  ...
+# Subtest: two data modes exist for desktop-admin only, and default to the safe one
+ok 13 - two data modes exist for desktop-admin only, and default to the safe one
+  ---
+  duration_ms: 22.3928
+  type: 'test'
+  ...
+# Subtest: the launch gate is answered per session, never remembered
+ok 14 - the launch gate is answered per session, never remembered
+  ---
+  duration_ms: 0.8262
+  type: 'test'
+  ...
+# Subtest: a session belongs to the mode that issued it
+ok 15 - a session belongs to the mode that issued it
+  ---
+  duration_ms: 31.0353
+  type: 'test'
+  ...
+# Subtest: production mode leaves newsletter sending to the deployment
+ok 16 - production mode leaves newsletter sending to the deployment
+  ---
+  duration_ms: 9.1143
+  type: 'test'
+  ...
+# Subtest: the mode badge sits beside the wordmark, never inside its link
+ok 17 - the mode badge sits beside the wordmark, never inside its link
+  ---
+  duration_ms: 0.6184
+  type: 'test'
+  ...
+# Subtest: the launch gate renders outside the header
+ok 18 - the launch gate renders outside the header
+  ---
+  duration_ms: 9.2762
+  type: 'test'
+  ...
+# Subtest: local mode shares no live resource beyond the database
+ok 19 - local mode shares no live resource beyond the database
+  ---
+  duration_ms: 0.5764
+  type: 'test'
+  ...
+# Subtest: a mode that could not be honoured says so instead of appearing normal
+ok 20 - a mode that could not be honoured says so instead of appearing normal
+  ---
+  duration_ms: 15.2298
+  type: 'test'
+  ...
+# Subtest: normalizes backend unread_count and sorts newest conversations first
+ok 21 - normalizes backend unread_count and sorts newest conversations first
+  ---
+  duration_ms: 1.343
+  type: 'test'
+  ...
+# Subtest: counts unread once from conversations
+ok 22 - counts unread once from conversations
+  ---
+  duration_ms: 0.1775
+  type: 'test'
+  ...
+# Subtest: marks one conversation read without mutating the source list
+ok 23 - marks one conversation read without mutating the source list
+  ---
+  duration_ms: 0.4102
+  type: 'test'
+  ...
+# Subtest: parseCommentSegments splits plain text and [spoiler]...[/spoiler] blocks case-insensitively
+ok 24 - parseCommentSegments splits plain text and [spoiler]...[/spoiler] blocks case-insensitively
+  ---
+  duration_ms: 1.5387
+  type: 'test'
+  ...
+# Subtest: wrapSelectionWithSpoiler wraps selected range or inserts placeholder
+ok 25 - wrapSelectionWithSpoiler wraps selected range or inserts placeholder
+  ---
+  duration_ms: 0.2029
+  type: 'test'
+  ...
+# Subtest: buildCommentThreads groups nested replies under root threads and sorts by newest/top/oldest
+ok 26 - buildCommentThreads groups nested replies under root threads and sorts by newest/top/oldest
+  ---
+  duration_ms: 0.4209
+  type: 'test'
+  ...
+# Subtest: Admin World Review & Open Sync Gateway, Journey Auto-Play, CommentsSection, and NotificationBell are wired
+ok 27 - Admin World Review & Open Sync Gateway, Journey Auto-Play, CommentsSection, and NotificationBell are wired
+  ---
+  duration_ms: 1162.2883
+  type: 'test'
+  ...
+# Subtest: resolveReaderHub prioritizes authenticated server progress and advances to next_chapter when completed
+ok 28 - resolveReaderHub prioritizes authenticated server progress and advances to next_chapter when completed
+  ---
+  duration_ms: 1.1258
+  type: 'test'
+  ...
+# Subtest: readGuestProgressFromStorage and resolveReaderHub support guest localStorage progress
+ok 29 - readGuestProgressFromStorage and resolveReaderHub support guest localStorage progress
+  ---
+  duration_ms: 0.3978
+  type: 'test'
+  ...
+# Subtest: resolveLoreLinks and formatCategoryMeta map library and 3D world links accurately
+ok 30 - resolveLoreLinks and formatCategoryMeta map library and 3D world links accurately
+  ---
+  duration_ms: 0.5321
+  type: 'test'
+  ...
+# Subtest: buildBatchPublishPayload deduplicates IDs and computes totalSelected
+ok 31 - buildBatchPublishPayload deduplicates IDs and computes totalSelected
+  ---
+  duration_ms: 0.2988
+  type: 'test'
+  ...
+# Subtest: Homepage Immersion (Item 6) and Admin Publish Moderation Station (Item 7) are wired across routes
+ok 32 - Homepage Immersion (Item 6) and Admin Publish Moderation Station (Item 7) are wired across routes
+  ---
+  duration_ms: 47.9243
+  type: 'test'
+  ...
+# Subtest: formatAudioTime formats seconds and hours cleanly
+ok 33 - formatAudioTime formats seconds and hours cleanly
+  ---
+  duration_ms: 0.922
+  type: 'test'
+  ...
+# Subtest: normalizeTrack enriches track with fallback album metadata
+ok 34 - normalizeTrack enriches track with fallback album metadata
+  ---
+  duration_ms: 0.192
+  type: 'test'
+  ...
+# Subtest: computeNextQueueIndex handles repeat all, repeat one, repeat off, and shuffle
+ok 35 - computeNextQueueIndex handles repeat all, repeat one, repeat off, and shuffle
+  ---
+  duration_ms: 0.1429
+  type: 'test'
+  ...
+# Subtest: isDirectVideoSource distinguishes native video files from YouTube/Vimeo embeds
+ok 36 - isDirectVideoSource distinguishes native video files from YouTube/Vimeo embeds
+  ---
+  duration_ms: 0.1775
+  type: 'test'
+  ...
+# Subtest: buildSafeEmbedUrl converts YouTube/Vimeo links and preserves existing query strings
+ok 37 - buildSafeEmbedUrl converts YouTube/Vimeo links and preserves existing query strings
+  ---
+  duration_ms: 0.2943
+  type: 'test'
+  ...
+# Subtest: resolveVideoThumbnail prefers custom thumbnail and falls back to YouTube mqdefault
+ok 38 - resolveVideoThumbnail prefers custom thumbnail and falls back to YouTube mqdefault
+  ---
+  duration_ms: 0.1595
+  type: 'test'
+  ...
+# Subtest: pickInitialVideo prioritizes requested ?ep=, then in-progress, then featured, then Ep 1
+ok 39 - pickInitialVideo prioritizes requested ?ep=, then in-progress, then featured, then Ep 1
+  ---
+  duration_ms: 0.2567
+  type: 'test'
+  ...
+# Subtest: GlobalAudioPlayer is mounted in root +layout.svelte and /music does not pause onDestroy
+ok 40 - GlobalAudioPlayer is mounted in root +layout.svelte and /music does not pause onDestroy
+  ---
+  duration_ms: 171.9545
+  type: 'test'
+  ...
+# Public profile load failed {
+#   url: 'unused/profile/42',
+#   error: Error: offline
+#       at file:///E:/Selorson/frontend-v3/tests/runtime-targets.test.mjs:50:66
+#       at loadPublicProfile (file:///E:/Selorson/frontend-v3/src/lib/profile-loader.js:10:26)
+#       at TestContext.<anonymous> (file:///E:/Selorson/frontend-v3/tests/runtime-targets.test.mjs:50:28)
+#       at async Test.run (node:internal/test_runner/test:1054:7)
+#       at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+# }
+# Subtest: desktop and mobile are SPA runtimes; web remains SSR
+ok 41 - desktop and mobile are SPA runtimes; web remains SSR
+  ---
+  duration_ms: 0.8221
+  type: 'test'
+  ...
+# Subtest: public profile data loads in both SSR and SPA execution contexts
+ok 42 - public profile data loads in both SSR and SPA execution contexts
+  ---
+  duration_ms: 1.5997
+  type: 'test'
+  ...
+# Subtest: SPA-compatible routes do not depend on server-only page loads
+ok 43 - SPA-compatible routes do not depend on server-only page loads
+  ---
+  duration_ms: 59.6789
+  type: 'test'
+  ...
+# Subtest: desktop-critical routes remain present, including Chapters and Manga admin
+ok 44 - desktop-critical routes remain present, including Chapters and Manga admin
+  ---
+  duration_ms: 77.8261
+  type: 'test'
+  ...
+# Subtest: Tauri uses the desktop dev and build targets
+ok 45 - Tauri uses the desktop dev and build targets
+  ---
+  duration_ms: 1.2266
+  type: 'test'
+  ...
+# Subtest: runtime target is derived consistently by the root layout
+ok 46 - runtime target is derived consistently by the root layout
+  ---
+  duration_ms: 6.064
+  type: 'test'
+  ...
+# Subtest: Tauri CSP permits blob: and data: in connect-src for glTF ImageBitmapLoader & Draco WASM without wildcard loosening
+ok 47 - Tauri CSP permits blob: and data: in connect-src for glTF ImageBitmapLoader & Draco WASM without wildcard loosening
+  ---
+  duration_ms: 1.1062
+  type: 'test'
+  ...
+# Subtest: khung không xoay giữ nguyên cách hiển thị cũ
+ok 48 - khung không xoay giữ nguyên cách hiển thị cũ
+  ---
+  duration_ms: 70.195
+  type: 'test'
+  ...
+# Subtest: khung xoay bao trọn hộp bao của ảnh, không tràn không cắt
+ok 49 - khung xoay bao trọn hộp bao của ảnh, không tràn không cắt
+  ---
+  duration_ms: 0.4375
+  type: 'test'
+  ...
+# Subtest: ảnh vuông xoay 45 độ cho khung vuông và thu về 1/căn 2
+ok 50 - ảnh vuông xoay 45 độ cho khung vuông và thu về 1/căn 2
+  ---
+  duration_ms: 0.1134
+  type: 'test'
+  ...
+# Subtest: góc xoay được đưa về khoảng [0, 360)
+ok 51 - góc xoay được đưa về khoảng [0, 360)
+  ---
+  duration_ms: 0.0816
+  type: 'test'
+  ...
+# Subtest: bố cục lạ rơi về mặc định
+ok 52 - bố cục lạ rơi về mặc định
+  ---
+  duration_ms: 0.1883
+  type: 'test'
+  ...
+# Subtest: bố cục một hình ép tỉ lệ, bố cục ghép giữ tỉ lệ gốc của ảnh
+ok 53 - bố cục một hình ép tỉ lệ, bố cục ghép giữ tỉ lệ gốc của ảnh
+  ---
+  duration_ms: 0.1312
+  type: 'test'
+  ...
+# Subtest: ảnh xoay trong ô thumbnail luôn nằm gọn trong ô
+ok 54 - ảnh xoay trong ô thumbnail luôn nằm gọn trong ô
+  ---
+  duration_ms: 0.2047
+  type: 'test'
+  ...
+# Subtest: chỉ giữ thẻ định dạng inline, escape phần còn lại
+ok 55 - chỉ giữ thẻ định dạng inline, escape phần còn lại
+  ---
+  duration_ms: 0.997
+  type: 'test'
+  ...
+# Subtest: không để lọt thẻ nguy hiểm, kể cả thẻ hở
+ok 56 - không để lọt thẻ nguy hiểm, kể cả thẻ hở
+  ---
+  duration_ms: 0.4712
+  type: 'test'
+  ...
+# Subtest: không escape lại thực thể HTML có sẵn
+ok 57 - không escape lại thực thể HTML có sẵn
+  ---
+  duration_ms: 0.3107
+  type: 'test'
+  ...
+# Subtest: normalizeBlocks giữ góc xoay, giữ đoạn trống, bỏ khối hình rỗng
+ok 58 - normalizeBlocks giữ góc xoay, giữ đoạn trống, bỏ khối hình rỗng
+  ---
+  duration_ms: 1.1742
+  type: 'test'
+  ...
+# Subtest: normalizeBlocks chịu được đầu vào rác
+ok 59 - normalizeBlocks chịu được đầu vào rác
+  ---
+  duration_ms: 0.0945
+  type: 'test'
+  ...
+# Subtest: isUnlockedState and isExploredState handle all 4 RevealState variants without locking explored nodes
+ok 60 - isUnlockedState and isExploredState handle all 4 RevealState variants without locking explored nodes
+  ---
+  duration_ms: 0.9174
+  type: 'test'
+  ...
+# Subtest: resolveWorldNodeTargetUrl routes regions, locations, and characters to their exact 3D scenes
+ok 61 - resolveWorldNodeTargetUrl routes regions, locations, and characters to their exact 3D scenes
+  ---
+  duration_ms: 0.2572
+  type: 'test'
+  ...
+# Subtest: findNodeByFocusParam matches by numeric id, slug, and accent-insensitive Vietnamese name
+ok 62 - findNodeByFocusParam matches by numeric id, slug, and accent-insensitive Vietnamese name
+  ---
+  duration_ms: 8.7384
+  type: 'test'
+  ...
+# Subtest: filterWorldNodes supports kind filtering and chapter syntax search
+ok 63 - filterWorldNodes supports kind filtering and chapter syntax search
+  ---
+  duration_ms: 1.0966
+  type: 'test'
+  ...
+# Subtest: latLngToSvgPoint and geoJsonGeometryToSvgPath project equirectangular coordinates accurately
+ok 64 - latLngToSvgPoint and geoJsonGeometryToSvgPath project equirectangular coordinates accurately
+  ---
+  duration_ms: 0.8843
+  type: 'test'
+  ...
+# Subtest: World HUD, Atlas 2D, and 3D Markers preserve explored state and bi-directional deep-links
+ok 65 - World HUD, Atlas 2D, and 3D Markers preserve explored state and bi-directional deep-links
+  ---
+  duration_ms: 47.7389
+  type: 'test'
+  ...
+# Subtest: 3D scenes fly camera back to HOME on deselect and world routes reload reactively on same-route navigation
+ok 66 - 3D scenes fly camera back to HOME on deselect and world routes reload reactively on same-route navigation
+  ---
+  duration_ms: 74.938
+  type: 'test'
+  ...
+# Subtest: Chặng 1A: Dual-Sector Dynamic Reference-Frame Cosmos isolates Tinh Vực Akunalia & Hệ Mặt Trời and keeps active body at [0,0,0]
+ok 67 - Chặng 1A: Dual-Sector Dynamic Reference-Frame Cosmos isolates Tinh Vực Akunalia & Hệ Mặt Trời and keeps active body at [0,0,0]
+  ---
+  duration_ms: 21.5511
+  type: 'test'
+  ...
+# Subtest: Chặng 1A: Temporal Divergence Meter, Akunalia Canon Nodes & Earth Singularities enforce Spoiler-safe Fog of War and VI/EN output
+ok 68 - Chặng 1A: Temporal Divergence Meter, Akunalia Canon Nodes & Earth Singularities enforce Spoiler-safe Fog of War and VI/EN output
+  ---
+  duration_ms: 1.2531
+  type: 'test'
+  ...
+# Subtest: Chặng 1A: AAA 4096x2048 Albedo JPGs, 2048x1024 RGBA PNGs (Alpha=255), GeoJSONs, and Rule \#34 Subtext compliance are valid
+ok 69 - Chặng 1A: AAA 4096x2048 Albedo JPGs, 2048x1024 RGBA PNGs (Alpha=255), GeoJSONs, and Rule \#34 Subtext compliance are valid
+  ---
+  duration_ms: 3802.7649
+  type: 'test'
+  ...
+# Subtest: Chặng 1A: Zero clay/toy geometry, subtle vertex relief, ACES+Bloom pipeline, GLSL shaders & Light-Mode HUD contrast hold
+ok 70 - Chặng 1A: Zero clay/toy geometry, subtle vertex relief, ACES+Bloom pipeline, GLSL shaders & Light-Mode HUD contrast hold
+  ---
+  duration_ms: 81.6476
+  type: 'test'
+  ...
+# Subtest: Chặng 1A Reviewer Regressions: Rule \#36 Southern vocabulary, Canon coord snapping, localized HUD badges, drag-safe 360° orbit & low-profile telemetry pins
+ok 71 - Chặng 1A Reviewer Regressions: Rule \#36 Southern vocabulary, Canon coord snapping, localized HUD badges, drag-safe 360° orbit & low-profile telemetry pins
+  ---
+  duration_ms: 10.2595
+  type: 'test'
+  ...
+# Subtest: Chặng 1A Round 2: Canon sub-route resolvers, boundary edge cases, HUD-safe viewOffset framing, Atlas 2D label collision avoidance & shader artifact removal
+ok 72 - Chặng 1A Round 2: Canon sub-route resolvers, boundary edge cases, HUD-safe viewOffset framing, Atlas 2D label collision avoidance & shader artifact removal
+  ---
+  duration_ms: 4.4332
+  type: 'test'
+  ...
+# Subtest: Chặng 1B-1: Oren-Nayar zero-plastic planetary shaders, Daylight Observation, Prism Dispersion Moment & AAA disassemblable temple-of-zyberon
+ok 73 - Chặng 1B-1: Oren-Nayar zero-plastic planetary shaders, Daylight Observation, Prism Dispersion Moment & AAA disassemblable temple-of-zyberon
+  ---
+  duration_ms: 15.3391
+  type: 'test'
+  ...
+# Subtest: Chặng 1B-1 Reviewer Regressions: Coaxial zero-collision strata, live DB Canon part merging, sea-ice specular exclusion, Non-Color normal bake & monotonic prism subsidence
+ok 74 - Chặng 1B-1 Reviewer Regressions: Coaxial zero-collision strata, live DB Canon part merging, sea-ice specular exclusion, Non-Color normal bake & monotonic prism subsidence
+  ---
+  duration_ms: 1.2069
+  type: 'test'
+  ...
+# Subtest: Chặng 1B-1 Round 2 Reviewer Regressions: ?body= query param, continuous prism exit stream, linearAlbedo Minnaert limb darkening & LocationHud showcase gateway
+ok 75 - Chặng 1B-1 Round 2 Reviewer Regressions: ?body= query param, continuous prism exit stream, linearAlbedo Minnaert limb darkening & LocationHud showcase gateway
+  ---
+  duration_ms: 0.5644
+  type: 'test'
+  ...
+# Subtest: Chặng 1B-1 Desktop Tauri HiDPI Crispness: Hardware tier classification & DPR-synced EffectComposer across lightweight canvases
+ok 76 - Chặng 1B-1 Desktop Tauri HiDPI Crispness: Hardware tier classification & DPR-synced EffectComposer across lightweight canvases
+  ---
+  duration_ms: 19.6071
+  type: 'test'
+  ...
+# Subtest: Nhịp 1B-2A: All 5 Akunalia regions feature AAA Draco .glb monuments with coaxial zero-collision strata, masked HDR emissiveTextures, live DB merging & Rule \#36/\#34 compliance
+ok 77 - Nhịp 1B-2A: All 5 Akunalia regions feature AAA Draco .glb monuments with coaxial zero-collision strata, masked HDR emissiveTextures, live DB merging & Rule \#36/\#34 compliance
+  ---
+  duration_ms: 131.0494
+  type: 'test'
+  ...
+# Subtest: Nhịp 1B-2B & 1B-2C + Open Sync Gateway: all 8/8 Earth Singularities (13/13 Universe landmarks) preserve coaxial strata lore, Rule \#36/\#34/\#9/\#10 compliance, and Admin Gateway wiring
+ok 78 - Nhịp 1B-2B & 1B-2C + Open Sync Gateway: all 8/8 Earth Singularities (13/13 Universe landmarks) preserve coaxial strata lore, Rule \#36/\#34/\#9/\#10 compliance, and Admin Gateway wiring
+  ---
+  duration_ms: 270.2594
+  type: 'test'
+  ...
+1..78
+# tests 78
+# suites 0
+# pass 78
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 42967.2592

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Akunarch",
+  "version": "2.0.0",
+  "identifier": "vn.selorson.akunarch",
+  "build": {
+    "frontendDist": "../ui/build",
+    "devUrl": "http://localhost:5190",
+    "beforeDevCommand": "npm --prefix ../ui run dev",
+    "beforeBuildCommand": "npm --prefix ../ui run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Akunarch — Digital Backlot & World Studio",
+        "width": 1520,
+        "height": 920,
+        "minWidth": 1120,
+        "minHeight": 700,
+        "center": true,
+        "resizable": true,
+        "additionalBrowserArgs": "--ignore-gpu-blocklist --enable-webgl --enable-gpu-rasterization"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' customprotocol: asset: akunmedia:; connect-src 'self' ipc: http://ipc.localhost https://ipc.localhost asset: http://asset.localhost https://asset.localhost akunmedia: http://akunmedia.localhost https://akunmedia.localhost http://127.0.0.1:* http://localhost:* blob: data: https: ws: wss:; img-src 'self' asset: http://asset.localhost https://asset.localhost akunmedia: http://akunmedia.localhost https://akunmedia.localhost http://127.0.0.1:* http://localhost:* data: blob: https:; media-src 'self' asset: http://asset.localhost https://asset.localhost akunmedia: http://akunmedia.localhost https://akunmedia.localhost http://127.0.0.1:* http://localhost:* data: blob: https:; script-src 'self' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "shortDescription": "Akunarch — Đại Xưởng Kiến Tạo Vũ Trụ 3D, Sa Bàn Cơ Khí, Thế Giới Mở, Visual Novel & Điện Ảnh",
+    "longDescription": "Digital Backlot 100% Local GPU RTX 4080 cho hệ sinh thái Co-Writer và Selorson V3."
+  }
+}

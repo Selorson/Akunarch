@@ -1,0 +1,31 @@
+# --- build & phụ thuộc (tái tạo được) ---
+app/src-tauri/target*/
+**/node_modules/
+app/ui/build/
+app/ui/.svelte-kit/
+__pycache__/
+*.pyc
+.superpowers/
+
+# --- repo ngoài & công cụ nhị phân (mỗi repo có git riêng / tải lại được) ---
+repos/
+bin/*.exe
+bin/tools/
+
+# --- sao lưu cục bộ ---
+_archive/
+
+# --- tài liệu: ảnh chụp đo đạc tái tạo được bằng script ---
+docs/**/screenshots/
+
+# --- dự án: chỉ giữ dữ liệu dạng chữ; media (.glb/.png/.jpg/.wav/.mp4/.ply/.zip) nằm trên đĩa, không vào git ---
+projects/**
+!projects/*/
+!projects/*/project.akun.json
+!projects/*/concepts/
+!projects/*/concepts/prompts/
+!projects/*/concepts/prompts/*.md
+!projects/*/clockwork/
+!projects/*/clockwork/*.json
+!projects/*/stage_vn/
+!projects/*/stage_vn/*.json

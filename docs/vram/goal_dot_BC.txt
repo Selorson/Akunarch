@@ -1,0 +1,26 @@
+ĐỢT B+C GỘP — Hoàn tất Kế hoạch VRAM v2 cho Akunarch (E:\Akunarch) + Selorson V3 (E:\Selorson), chạy MỘT MẠCH B0→C3, không dừng chờ duyệt giữa B và C.
+
+ĐỌC TRƯỚC: E:\Akunarch\docs\vram\implementation_plan.md (mục 0,1,2,4,5,6 + các dòng "⚠️ Đính chính"/"✅ Đã đo"); E:\Akunarch\docs\vram\walkthrough_dot_A.md (mục 4,8,9); E:\Akunarch\AGENTS.md; E:\Selorson-Ecosystem\AKUNARCH_MASTER_PLAN.md; E:\Selorson-Ecosystem\SELORSON_WORLD_3D_VN_ROADMAP.md (cấm WEBGL_lose_context/forceContextLoss).
+
+ĐÃ CHỐT: Q1 windows-sys · Q2 Chờ 2D bật mặc định · Q3 bản gốc .glb vào clockwork\_master\, bản KTX2 giữ tên <slug>.glb · Q4 temple_of_zyberon.glb trùng chuyển sang E:\Akunarch\_archive\ (không xóa).
+
+THỨ TỰ:
+B0: trên bản target-dotA kiểm 3 việc treo của Đợt A: (a) nút Chụp Manga 2K tab 01/02/03 (sao lưu manga_plates\ trước, khôi phục + so SHA-256 sau); (b) chụp so sánh tab 03 Camera Rig 3D; (c) nút Ultra, Thước/Lưới/Wireframe chạy thật. Lỗi thì sửa + có test.
+B1→B4 theo mục 4. Xuất docs\vram\walkthrough_dot_B.md rồi đi tiếp C.
+C1→C3 theo mục 5 (Selorson V3; Chờ 2D + preview Blender qua GpuJobQueue + nút ▶/⏹ 3D; hot-swap; nghiệm thu).
+
+AN TOÀN:
+- akunarch.exe đang cài là HARD LINK tới app\src-tauri\target\release\akunarch.exe → mọi build thử/đo dùng CARGO_TARGET_DIR=E:\Akunarch\app\src-tauri\target-dotA; kiểm SHA-256 exe đang cài trước/sau mỗi build. Kiểm tương tự Selorson Admin\app.exe.
+- Hot-swap CHỈ ở C3: tắt app → sao lưu *.bak-<yyyyMMdd-HHmm> → xóa tên cũ rồi chép file mới (tách hard link) → mở thử chế độ người dùng thật; lỗi khởi động thì khôi phục .bak ngay.
+- KTX2: không ghi đè _master\; so ảnh trước/sau cùng góc máy cả 4 kỳ quan (Luật #7); hình xấu đi thì dùng UASTC cho kênh đó.
+- Kịch bản ghi vào dữ liệu thật (điêu khắc, Manga) phải sao lưu trước, khôi phục + so SHA-256 sau.
+- Co-Writer chỉ đọc; Selorson sync giữ Draft-First. Không sửa phát hiện ngoài phạm vi mục 0.3.
+- gltf-transform (npm) và KTX-Software (GitHub release chính thức KhronosGroup) cài cục bộ trong E:\Akunarch\bin\tools\, không thêm vào Cargo.toml/package.json của app.
+
+DỪNG SỚM CHỈ KHI: test đỏ không sửa được; khôi phục dữ liệu lệch SHA; KTX2 hỏng hình không khắc phục được; hot-swap lỗi (đã khôi phục .bak). Ghi rõ lý do vào walkthrough.
+
+KIỂM THỬ (xanh hết trước C3): Akunarch: cargo test, npm run check, npm run build, npm test. Selorson frontend-v3: npm run check, npm run build, npm run test:runtime; backend-v3: cargo test.
+
+ĐO: bin\scripts\measure_vram.ps1 + app\ui\tests\vram-scenarios.mjs (mở rộng cho ⏹ 3D, Chờ 2D, kịch bản 5 Selorson). Nghiệm thu cuối C3: đủ 5 kịch bản mục 6, mỗi kịch bản 3 lần lấy trung vị, trên bản đã hot-swap, chế độ người dùng thật. Số đo thật; không đạt ghi KHÔNG ĐẠT, cấm sửa tiêu chí.
+
+KẾT THÚC: docs\vram\walkthrough_final.md: bảng A0→A→B→C từng kịch bản, ảnh đối chiếu, file đã đổi, mục không đạt/chưa kiểm, đường dẫn .bak để quay lại. Rồi DỪNG.

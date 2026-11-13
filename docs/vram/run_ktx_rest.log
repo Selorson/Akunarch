@@ -1,0 +1,8 @@
+=== singularity-samos-olympus 17:05:35
+{"ok":true,"glb":"E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb","master":"E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\_master\\singularity-samos-olympus.glb","archived_master":null,"texture_format":"KTX2 BC7 + zstd (t? UASTC L4)","bytes_master":12252088,"bytes_before":12252088,"bytes_after":46339636,"images_master":46,"images_after":43}
+=== singularity-stonehenge-avalon 17:12:02
+{"ok":true,"glb":"E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon.glb","master":"E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\_master\\singularity-stonehenge-avalon.glb","archived_master":null,"texture_format":"KTX2 BC7 + zstd (t? UASTC L4)","bytes_master":11702492,"bytes_before":11702492,"bytes_after":36916936,"images_master":33,"images_after":29}
+=== avalon-mage-sanctum 17:17:04
+FAIL avalon-mage-sanctum
+      0 [main] bash 978 dofork: child -1 - forked process 19812 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+docs/vram/run_ktx_rest.sh: fork: retry: Resource temporarily unavailable

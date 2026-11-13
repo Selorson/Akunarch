@@ -1,0 +1,150 @@
+{
+  "schema_version": "2.0",
+  "slug": "cinema-olympus-pantheon-chronicle",
+  "title": "Biên Niên Sử Đỉnh Mây Cẩm Thạch Olympus",
+  "title_en": "Chronicle of the Cloud-Crowned Marble Olympus",
+  "kind": "cinema",
+  "planet": "earth",
+  "region_slug": "aegean-hellenic-arc",
+  "era": "800 TCN",
+  "era_year": null,
+  "lat": 40.0856,
+  "lng": 22.3586,
+  "biome": "sacred-highland",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": null,
+  "cowriter_key": "",
+  "unlock_chapter": 1,
+  "description_vi": "Phim cắt cảnh điện ảnh lướt dọc vách núi cẩm thạch bốn dòng thác lên tới Đại Điện Pantheon mái vòm vàng, kèm thuyết minh tiếng Việt miền Nam và âm thanh chuẩn mười bốn đơn vị âm lượng.",
+  "description_en": "Cinematic camera sweep ascending the four-waterfall marble massif to the gilded-dome Pantheon, complete with local TTS narration and -14.0 LUFS mastered soundtrack.",
+  "local_image_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\thumbnail.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\thumbnail.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\audio\\olympus_cinema_score.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\audio\\olympus_cinema_score.wav",
+    "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\narration_vi.wav",
+    "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle_master_14lufs.wav"
+  ],
+  "manga_plates": [
+    {
+      "id": "plate_cinema-olympus-pantheon-chronicle_depth",
+      "label": "Cinema Beauty + Depth (Biên Niên Sử Đỉnh Mây Cẩm Thạch Olympus)",
+      "beauty_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\thumbnail.jpg",
+      "depth_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\depth_preview.png",
+      "width": 1280,
+      "height": 720,
+      "fov_deg": 37.0,
+      "created_at": "2026-11-11T21:05:13.797339+00:00"
+    }
+  ],
+  "clockwork": {
+    "parts": [],
+    "glb_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb",
+    "intro_video_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle.mp4",
+    "pack_version": "2.1.0"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_json_path": null,
+    "episode_title": null
+  },
+  "cinema": {
+    "video_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle.mp4",
+    "thumbnail_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\thumbnail.jpg",
+    "video_type": "intro",
+    "episode_number": 1,
+    "duration_sec": 5.0,
+    "fps": 24,
+    "vfx_preset": "golden_embers",
+    "vfx_overlay_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle_vfx_overlay.png",
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb",
+    "voice_track_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\narration_vi.wav",
+    "bgm_track_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\audio\\olympus_cinema_score.wav",
+    "mastered_audio_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle_master_14lufs.wav",
+    "mastered_lufs": -13.99,
+    "mastered_true_peak_dbtp": -1.44,
+    "keyframes": [
+      {
+        "time_sec": 0.0,
+        "pos": [
+          19.0,
+          9.5,
+          22.5
+        ],
+        "target": [
+          0.0,
+          5.2,
+          0.0
+        ],
+        "fov_deg": 39.0,
+        "explode_pct": 0.0,
+        "id": "kf_01"
+      },
+      {
+        "time_sec": 2.5,
+        "pos": [
+          12.5,
+          11.8,
+          18.5
+        ],
+        "target": [
+          0.0,
+          6.6,
+          -1.2
+        ],
+        "fov_deg": 37.0,
+        "explode_pct": 12.0,
+        "id": "kf_02"
+      },
+      {
+        "time_sec": 5.0,
+        "pos": [
+          6.0,
+          13.0,
+          15.8
+        ],
+        "target": [
+          0.0,
+          7.4,
+          -2.0
+        ],
+        "fov_deg": 35.0,
+        "explode_pct": 0.0,
+        "id": "kf_03"
+      }
+    ],
+    "subtitles": [
+      {
+        "id": "sub_01",
+        "start_sec": 0.2,
+        "end_sec": 2.5,
+        "text_vi": "Từ quảng trường ngôi sao mười sáu cánh bên bốn dòng thác xanh đổ xuống vực.",
+        "text_en": "From the sixteen-ray sun plaza beside four turquoise cascades plunging into the gorge."
+      },
+      {
+        "id": "sub_02",
+        "start_sec": 2.5,
+        "end_sec": 4.9,
+        "text_vi": "Đại lộ cầu thang thắp lửa vút thẳng lên mái vòm vàng chói lọi giữa tầng mây.",
+        "text_en": "The brazier-lit grand stairway ascends straight to the gleaming golden dome amid the clouds."
+      }
+    ]
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

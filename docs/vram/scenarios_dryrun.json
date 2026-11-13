@@ -1,0 +1,43 @@
+{
+  "phase": "dryrun",
+  "exe": "C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.exe",
+  "started": "2026-11-13T08:27:08.827Z",
+  "measurements": {
+    "S2_3d_idle_after_orbit": {
+      "timestamp": "2026-11-13 15:27:35",
+      "label": "dryrun_S2_3d_idle_after_orbit",
+      "process": "akunarch",
+      "process_count": 8,
+      "luid": "luid_0x00000000_0x00010af9",
+      "samples": 10,
+      "app_vram_mb_median": 483.9,
+      "app_vram_mb_max": 509.1,
+      "webview_mb_median": 483.9,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 13.95,
+      "app_gpu3d_pct_p95": 47.33,
+      "app_gpu_all_pct_avg": 13.97,
+      "gpu_util_avg": 20.17,
+      "gpu_util_p95": 32,
+      "gpu_power_w_avg": 36,
+      "gpu_pstate_mode": "P5",
+      "gpu_mem_used_mb_avg": 1975
+    }
+  },
+  "probes": {
+    "S2_3d_idle": {
+      "created": 1,
+      "lost": 0,
+      "restored": 0,
+      "consoleTooManyContexts": 0,
+      "consoleContextLost": 0
+    }
+  },
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án",
+    "S2 canvas temple: 853×681 (backing store)"
+  ],
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T08:27:38.633Z"
+}

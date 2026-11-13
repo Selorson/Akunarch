@@ -1,0 +1,74 @@
+[
+  {
+    "id": "salisbury_earth_mound_cutaway",
+    "name_vi": "Đế Đất Nâu Tự Nhiên & Đồi Cỏ Xanh Salisbury",
+    "name_en": "Natural Brown Earth Cutaway & Salisbury Grassy Mound",
+    "summary_vi": "Lát cắt đất nâu tự nhiên nâng đỡ quả đồi cỏ xanh thoải dần lên đỉnh thánh địa cổ.",
+    "summary_en": "Natural brown soil cross-section cradling the smooth green grassy hill rising to the sanctuary.",
+    "dir": [
+      0,
+      0.0,
+      0
+    ]
+  },
+  {
+    "id": "celtic_foothill_village_and_dry_wall",
+    "name_vi": "Xóm Làng Cổ Celtic: 4 Nhà Tròn, 2 Nhà Dài, Bờ Đá Cuội, Giếng & Xe Kéo",
+    "name_en": "Celtic Foothill Hamlet: 4 Roundhouses, 2 Longhouses, Dry-Stone Wall, Well & Carts",
+    "summary_vi": "Bốn nhà tròn mái rơm chóp gỗ, hai nhà dài đá rêu, bờ tường đá cuội mở lối, giếng nước, xe kéo và lán củi.",
+    "summary_en": "Four conical-thatched roundhouses, two mossy stone longhouses, curved dry-stone wall, well, carts, and wood shed.",
+    "dir": [
+      0,
+      2.64,
+      0
+    ]
+  },
+  {
+    "id": "flanking_ancient_hillside_oaks",
+    "name_vi": "Đôi Cây Sồi Cổ Thụ Tán Xanh Nơi Sườn Đồi Hai Bên",
+    "name_en": "Twin Gnarled Ancient Oaks Flanking the Hillside Slopes",
+    "summary_vi": "Hai cội sồi già vươn cành lá sum suê trấn giữ hai bên sườn đồi cỏ trên xóm làng.",
+    "summary_en": "Two lush gnarled patriarchal oak trees rooted firmly on the left and right grassy slopes.",
+    "dir": [
+      0,
+      5.67,
+      0
+    ]
+  },
+  {
+    "id": "bluestone_circle_and_fallen_slabs",
+    "name_vi": "Vòng Đá Lam Cổ, Cổng Đá Sườn Trước & Các Phiến Đá Ngã Nghiêng",
+    "name_en": "Inner Bluestone Ring, Slope Portal & Weathered Fallen Slabs",
+    "summary_vi": "Cổng đá cổ nơi triền cỏ trước mặt cùng vòng trụ đá nhỏ và những phiến đá xưa nằm nghiêng theo năm tháng.",
+    "summary_en": "Weathered front-slope portal, inner bluestone ring, and naturally toppled ancient stone slabs.",
+    "dir": [
+      0,
+      8.58,
+      0
+    ]
+  },
+  {
+    "id": "outer_sarsen_circle_and_lintels",
+    "name_vi": "Vòng Cự Thạch Sa Thạch Ngoài & Các Phiến Xà Ngang Uốn Cung",
+    "name_en": "Outer Sarsen Megalith Circle & Curved Interlocking Lintels",
+    "summary_vi": "Vòng trụ cự thạch xám sần sùi đội những thanh dầm đá cong nối liền cung tròn trên đỉnh đồi.",
+    "summary_en": "Rugged grey sarsen uprights supporting heavy curved stone lintels around the hilltop perimeter.",
+    "dir": [
+      0,
+      11.43,
+      0
+    ]
+  },
+  {
+    "id": "great_trilithon_horseshoe_crown",
+    "name_vi": "Vòng Móng Ngựa 5 Cổng Đá Đôi Khổng Lồ Giữa Tâm Đồi",
+    "name_en": "Central Horseshoe of Five Towering Sarsen Trilithons",
+    "summary_vi": "Năm cụm cổng đá đôi sừng sững xếp hình móng ngựa ở chính tâm đỉnh đồi gió lộng.",
+    "summary_en": "Five monumental sarsen trilithons arranged in a central horseshoe crowning the grass mound.",
+    "dir": [
+      0,
+      14.59,
+      0
+    ]
+  }
+]

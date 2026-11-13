@@ -1,0 +1,34 @@
+[08:33:24] MEASURE S3_round_1: app=4845MB (max 4874.2) app3D=25.71% gpu=37% P8 22W
+[08:33:24] PROBE S3_round_1: {
+  created: 37,
+  lost: 15,
+  restored: 0,
+  consoleTooManyContexts: 15,
+  consoleContextLost: 0
+}
+[08:35:26] MEASURE S3_round_3: app=3834.5MB (max 3869.3) app3D=0% gpu=37.89% P8 21.3W
+[08:35:26] PROBE S3_round_3: {
+  created: 111,
+  lost: 75,
+  restored: 0,
+  consoleTooManyContexts: 75,
+  consoleContextLost: 0
+}
+[08:36:25] PROBE S4_after_toggles: {
+  created: 142,
+  lost: 105,
+  restored: 0,
+  consoleTooManyContexts: 105,
+  consoleContextLost: 0
+}
+[08:36:39] MEASURE S4_3d_on_after_toggles: app=4113.1MB (max 4113.1) app3D=23.52% gpu=31.08% P8 22.8W
+[08:36:57] MEASURE S4_vault_tab_after_release: app=4052.1MB (max 4053.7) app3D=0.01% gpu=3% P8 14.1W
+[08:36:57] PROBE S4_final: {
+  created: 142,
+  lost: 105,
+  restored: 0,
+  consoleTooManyContexts: 105,
+  consoleContextLost: 0
+}
+[08:37:00] WROTE E:\Akunarch\docs\vram\scenarios_baseline_s3s4.json
+EXIT=0

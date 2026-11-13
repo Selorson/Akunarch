@@ -1,0 +1,261 @@
+{
+  "schema_version": "2.0",
+  "slug": "temple-of-zyberon",
+  "title": "Đại Đền Ngũ Giác Zyberon & Hòn Đá Phong Ấn",
+  "title_en": "Pentagonal Grand Temple of Zyberon & The Sealing Stone",
+  "kind": "clockwork",
+  "planet": "akunalia",
+  "region_slug": "zyberon-sacred-basin",
+  "era": "Kỷ Nguyên Hoàng Kim Eldarin",
+  "era_year": null,
+  "lat": 14.62,
+  "lng": 108.45,
+  "biome": "sacred-highland",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": 301,
+  "cowriter_key": "place:đền-zyberon",
+  "unlock_chapter": 1,
+  "description_vi": "Kỳ quan trung tâm thành bang cổ: tòa đại đền năm cạnh bằng đá hoa cương xám tro và đồng thau mạ vàng ngự trên hầm rãnh đá ngầm, nơi bốn chậu lửa thiêng và hàng cột hộ pháp vây quanh Hòn Đá Phong Ấn dưới mái vòm kim ô.",
+  "description_en": "Architectural centerpiece of the ancient realm: a monumental five-sided granite and gilded-bronze sanctuary poised above subterranean stone conduits, where guardian pillars and ritual braziers encircle the Sealing Stone beneath the Golden Dome.",
+  "local_image_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\concepts\\concept_sealing_stone.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\temple-of-zyberon\\concepts\\concept_sealing_stone.jpg",
+    "E:\\Akunarch\\projects\\temple-of-zyberon\\concepts\\concept_golden_dome.jpg",
+    "E:\\Akunarch\\projects\\temple-of-zyberon\\concepts\\concept_guardian_pillar.jpg",
+    "E:\\Akunarch\\projects\\temple-of-zyberon\\concepts\\concept_ritual_brazier.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\audio\\zyberon_sanctum_harmonic.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\temple-of-zyberon\\audio\\zyberon_sanctum_harmonic.wav"
+  ],
+  "manga_plates": [
+    {
+      "id": "plate_03_20261111_171754",
+      "label": "Đại Đền Ngũ Giác Zyberon & Hòn Đá Phong Ấn · Explode 0% (2048×1152)",
+      "beauty_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_03_20261111_171754_beauty.png",
+      "depth_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_03_20261111_171754_depth.png",
+      "width": 2048,
+      "height": 1152,
+      "created_at": "2026-11-11T17:17:54.543629200+00:00"
+    },
+    {
+      "id": "plate_02_20261111_171106",
+      "label": "Đại Đền Ngũ Giác Zyberon & Hòn Đá Phong Ấn · Explode 0% (2048×1152)",
+      "beauty_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_02_20261111_171106_beauty.png",
+      "depth_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_02_20261111_171106_depth.png",
+      "width": 2048,
+      "height": 1152,
+      "created_at": "2026-11-11T17:11:06.235971700+00:00"
+    },
+    {
+      "id": "plate_01_20261111_170635",
+      "label": "Đại Đền Ngũ Giác Zyberon & Hòn Đá Phong Ấn · Explode 0% (2048×1152)",
+      "beauty_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_01_20261111_170635_beauty.png",
+      "depth_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\manga_plates\\plate_01_20261111_170635_depth.png",
+      "width": 2048,
+      "height": 1152,
+      "created_at": "2026-11-11T17:06:35.226351700+00:00"
+    }
+  ],
+  "clockwork": {
+    "parts": [
+      {
+        "dir": [
+          0,
+          0.0,
+          0
+        ],
+        "id": "geological_siphon_base",
+        "name_en": "Basalt Geological Cutaway & Subterranean Conduit Base",
+        "name_vi": "Đế Địa Tầng Đá Bazan & Mạch Ngầm Cổ Đại",
+        "summary_en": "Pentagonal basalt bedrock cutaway revealing carved subterranean channels beneath the foundation.",
+        "summary_vi": "Khối đá nền năm cạnh vát mặt cắt địa chất phơi lộ các rãnh dẫn mạch ngầm sâu dưới móng đền."
+      },
+      {
+        "dir": [
+          0,
+          2.7,
+          0
+        ],
+        "id": "subterranean_siphon_vault",
+        "name_en": "Subterranean Bronze Vault & Under-Sanctum Gearwork",
+        "name_vi": "Hầm Vòm Cơ Khí & Bánh Răng Đồng Ngầm Đáy Đền",
+        "summary_en": "Vaulted stone undercroft housing heavy bronze ring mechanisms beneath the main sanctuary floor.",
+        "summary_vi": "Tầng hầm vòm đá khóa chặt các vành cơ cấu đồng thau cổ kính bên dưới sàn chính điện."
+      },
+      {
+        "dir": [
+          0,
+          3.8,
+          0
+        ],
+        "id": "pentagonal_terrace",
+        "name_en": "Grand Pentagonal Stepped Stone Terrace",
+        "name_vi": "Thềm Đá Ngũ Giác Bậc Thang Đại Lễ",
+        "summary_en": "Five-sided monumental granite ceremonial stairway converging toward the inner sanctum.",
+        "summary_vi": "Năm mặt bậc thang đá hoa cương dẫn lối hành hương hội tụ về tâm điểm tòa đại đền."
+      },
+      {
+        "dir": [
+          0,
+          5.3,
+          0
+        ],
+        "id": "ritual_braziers",
+        "name_en": "Sculpted Bronze Ritual Braziers",
+        "name_vi": "Cụm Chậu Lửa Nghi Lễ Đúc Đồng Chạm Nổi",
+        "summary_en": "Ornate sculpted bronze ritual braziers standing sentinel at the corners of the terrace.",
+        "summary_vi": "Những đài lửa đồng điêu khắc tinh xảo canh giữ các góc thềm ngũ giác suốt ngày đêm."
+      },
+      {
+        "dir": [
+          0,
+          7.8,
+          0
+        ],
+        "id": "sealing_stone_core",
+        "name_en": "Rune-Bound Sealing Stone Core",
+        "name_vi": "Hòn Đá Phong Ấn Khắc Cổ Tự Giữa Tâm Điện",
+        "summary_en": "Sacred monolithic Sealing Stone etched with archaic glyphs along the central axis.",
+        "summary_vi": "Khối thạch trụ thiêng chạm khắc văn tự cổ nằm ngay trục thẳng đứng giữa lòng đại đền."
+      },
+      {
+        "dir": [
+          0,
+          11.9,
+          0
+        ],
+        "id": "sanctum_colonnade",
+        "name_en": "Guardian Pillar Sanctum Colonnade",
+        "name_vi": "Vòng Cột Đá Hộ Pháp Đỡ Vòm Thượng Điện",
+        "summary_en": "Ring of carved guardian stone pillars supporting the upper drum of the temple.",
+        "summary_vi": "Hàng cột đá điêu khắc tượng hộ pháp trầm mặc nâng đỡ toàn bộ kết cấu mái vòm phía trên."
+      },
+      {
+        "dir": [
+          0,
+          13.0,
+          0
+        ],
+        "id": "imperial_golden_dome",
+        "name_en": "Imperial Gilded-Bronze Dome Crown",
+        "name_vi": "Mái Vòm Kim Ô Mạ Vàng Đỉnh Đại Đền Zyberon",
+        "summary_en": "Radiant gilded-bronze ribbed dome crowning the vertical axis of the Grand Temple.",
+        "summary_vi": "Mái vòm đồng mạ vàng rực rỡ khép lại trục thẳng đứng uy nghiêm của Đại Đền Ngũ Giác."
+      }
+    ],
+    "glb_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon.glb",
+    "intro_video_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening.mp4",
+    "pack_version": "2.1.0",
+    "preview_render_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon_preview_1080p.png"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "splat_path": null,
+    "water_level": 1.6,
+    "foliage_density": 0.65,
+    "grid_resolution": 65,
+    "heightmap_values": [],
+    "placements": [],
+    "audio_zones": [],
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\vn_episode_vn-zyberon-sanctum-prelude.zip",
+    "episode_title": "Tiếng Vọng Thánh Điện Zyberon",
+    "episode_json_path": "E:\\Akunarch\\projects\\vn-zyberon-sanctum-prelude\\stage_vn\\episode.json"
+  },
+  "cinema": {
+    "video_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening.mp4",
+    "thumbnail_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\thumbnail.jpg",
+    "video_type": "intro",
+    "episode_number": 1,
+    "duration_sec": 5.0,
+    "fps": 24,
+    "vfx_preset": "golden_embers",
+    "vfx_overlay_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening_vfx_overlay.png",
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon.glb",
+    "voice_track_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\narration_vi.wav",
+    "bgm_track_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\audio\\zyberon_cinema_score.wav",
+    "mastered_audio_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening_master_14lufs.wav",
+    "mastered_lufs": -13.95,
+    "mastered_true_peak_dbtp": -1.44,
+    "keyframes": [
+      {
+        "id": "kf_01",
+        "time_sec": 0.0,
+        "pos": [
+          18.5,
+          7.2,
+          20.5
+        ],
+        "target": [
+          0.0,
+          4.2,
+          0.0
+        ],
+        "fov_deg": 38.0,
+        "explode_pct": 0.0
+      },
+      {
+        "id": "kf_02",
+        "time_sec": 2.5,
+        "pos": [
+          11.0,
+          8.8,
+          17.0
+        ],
+        "target": [
+          0.0,
+          5.0,
+          0.0
+        ],
+        "fov_deg": 36.0,
+        "explode_pct": 16.0
+      },
+      {
+        "id": "kf_03",
+        "time_sec": 5.0,
+        "pos": [
+          4.5,
+          6.4,
+          15.2
+        ],
+        "target": [
+          0.0,
+          4.6,
+          0.0
+        ],
+        "fov_deg": 35.0,
+        "explode_pct": 0.0
+      }
+    ],
+    "subtitles": [
+      {
+        "id": "sub_01",
+        "start_sec": 0.2,
+        "end_sec": 2.5,
+        "text_vi": "Giữa sương sớm lòng chảo cổ, năm bậc thềm đá hoa cương dần hiện rõ.",
+        "text_en": "Amid the ancient basin's morning mist, five granite terraces emerge into view."
+      },
+      {
+        "id": "sub_02",
+        "start_sec": 2.5,
+        "end_sec": 4.9,
+        "text_vi": "Ánh bình minh chạm đỉnh mái vòm đồng mạ vàng trên Hòn Đá Phong Ấn.",
+        "text_en": "Dawn light crowns the gilded bronze dome above the central Sealing Stone."
+      }
+    ]
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

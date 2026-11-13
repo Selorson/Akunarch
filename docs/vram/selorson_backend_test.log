@@ -1,0 +1,118 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.33s
+warning: the following packages contain code that will be rejected by a future version of Rust: proc-macro-error2 v2.0.1
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src\lib.rs (target\debug\deps\selorson_backend-bee8390bcdaad3f8.exe)
+
+running 58 tests
+test audit::tests::attributes_a_nested_route_to_its_owner ... ok
+test audit::tests::handles_a_collection_with_no_id ... ok
+test audit::tests::handles_a_bulk_route ... ok
+test cache::tests::a_prefix_scan_stays_inside_its_namespace ... ok
+test audit::tests::names_the_subject_not_the_trailing_verb ... ok
+test cache::tests::channels_are_namespaced_like_keys ... ok
+test config::tests::the_deployment_writes_exactly_where_it_always_has ... ok
+test cache::tests::two_instances_never_collide_on_the_same_key ... ok
+test handlers::admin_sync::tests::http_byte_range_parsing_handles_standard_open_and_suffix_ranges ... ok
+test config::tests::stray_slashes_never_produce_an_empty_path_segment ... ok
+test handlers::admin_promote::tests::detects_urls_requiring_alpha_uplift ... ok
+test handlers::auth::client_ip_tests::rate_limit_ignores_a_forged_header_shape ... ok
+test config::tests::a_scoped_instance_never_writes_beside_the_live_site ... ok
+test handlers::admin_dashboard::tests::inspect_and_toggle_manga_block_status ... ok
+test handlers::auth::client_ip_tests::extracts_first_forwarded_ip ... ok
+test cache::tests::the_deployment_keeps_the_keys_it_already_has ... ok
+test handlers::admin_sync::tests::merge_studio_world_extra_mirrors_local_clockwork_pack_into_both_urls ... ok
+test handlers::admin_sync::tests::merge_studio_world_extra_preserves_existing_keys_and_writes_gateway_fields ... ok
+test handlers::admin_sync::tests::merge_studio_chunk_extra_stores_grid_coordinates_and_open_world_pack ... ok
+test handlers::auth::client_ip_tests::prefers_platform_client_ip ... ok
+test handlers::auth::client_ip_tests::rate_limit_falls_back_to_the_peer_when_no_proxy_is_in_front ... ok
+test handlers::chapter::tests::uoc_tinh_so_tu_va_thoi_luong_doc ... ok
+test handlers::auth::client_ip_tests::rejects_malformed_client_ip ... ok
+test handlers::chapter::tests::khong_ghi_de_tien_do_cu_khi_mo_lai_chuong_voi_position_0 ... ok
+test handlers::comment::tests::test_sanitize_comment_content_preserves_spoiler_tags_and_strips_scripts ... ok
+test handlers::chapter::tests::tim_kiem_chuong_theo_so_va_tieu_de ... ok
+test handlers::library::tests::tim_kiem_thuc_the_khop_ten_biet_danh_vai_tro_va_chuong ... ok
+test handlers::comment::tests::test_resolve_root_thread_id_handles_nested_chains ... ok
+test handlers::auth::client_ip_tests::rate_limit_counts_against_the_visitor_not_the_proxy ... ok
+test handlers::admin_sync::tests::word_boundary_and_case_aware_entity_matching_prevents_false_positives ... ok
+test handlers::library::tests::trich_xuat_aliases_va_first_chapter_chinh_xac ... ok
+test handlers::notification::tests::test_mask_spoilers_for_preview_handles_unclosed_tag ... ok
+test handlers::library::tests::phan_loai_danh_muc_chuan_xac ... ok
+test handlers::music::tests::serialize_track_includes_album_metadata ... ok
+test handlers::notification::tests::test_mask_spoilers_for_preview_hides_secret_text ... ok
+test handlers::comment::tests::test_toggle_like_and_notification_read_tracking ... ok
+test handlers::password::tests::reset_codes_are_not_stored_verbatim ... ok
+test handlers::video::tests::merge_video_progress_protects_saved_position_from_accidental_zero_overwrite ... ok
+test handlers::public::tests::build_chapter_excerpt_strips_html_and_truncates_cleanly ... ok
+test handlers::public::tests::select_diverse_featured_lore_balances_categories_and_prefers_images ... ok
+test handlers::world::tests::test_canon_landmark_lat_lng_matches_akunalia_and_earth_sites ... ok
+test handlers::world::tests::test_compute_base_reveal_consistency_between_guest_and_new_user ... ok
+test handlers::world::tests::test_deterministic_fallback_lat_lng_stays_within_bounds ... ok
+test handlers::world::tests::test_merge_read_up_to_prefers_highest_valid_progress ... ok
+test locale::tests::apply_library_translation_pins_world_slug_before_renaming ... ok
+test locale::tests::overlay_chapter_model_falls_back_to_vi_without_manga_when_en_missing ... ok
+test locale::tests::parse_supported_locale_handles_headers_and_tags ... ok
+test runtime::tests::resolves_runtime_targets ... ok
+test services::content_blocks::tests::chuan_hoa_gia_tri_ngoai_pham_vi ... ok
+test services::content_blocks::tests::dau_vao_khong_phai_mang_tra_ve_null ... ok
+test services::content_blocks::tests::caption_ve_text_thuan_khong_bi_escape_hai_lan ... ok
+test services::content_blocks::tests::giu_nguyen_goc_xoay_va_bo_cuc ... ok
+test services::content_blocks::tests::giu_dinh_dang_inline_va_xoa_script ... ok
+test services::content_blocks::tests::loc_va_an_manga_nhap_khoi_doc_gia ... ok
+test locale::tests::build_translation_blocks_preserves_inline_images_and_drops_manga ... ok
+test handlers::auth_tests::test_login_success ... ok
+test handlers::auth_tests::test_register_success ... ok
+test handlers::auth_tests::test_login_failure ... ok
+
+test result: ok. 58 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.60s
+
+     Running unittests src\bin\gen_pass.rs (target\debug\deps\gen_pass-119c86f0329739e7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\debug\deps\selorson_backend-29202dc8977267ac.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\api_tests.rs (target\debug\deps\api_tests-8ac47346138b39d5.exe)
+
+running 27 tests
+test test_runtime_capabilities ... ok
+test test_public_library ... ok
+test localization_serves_en_translations_and_falls_back_cleanly ... ok
+test test_public_search ... ok
+test test_public_music_albums ... ok
+test test_admin_chapters_forbidden_no_token ... ok
+test test_public_vote_stats ... ok
+test test_login_success ... ok
+test test_public_homepage ... ok
+test test_public_videos ... ok
+test test_auth_me_without_token ... ok
+test test_public_vote_options ... ok
+test test_auth_me_with_valid_token ... ok
+test test_login_wrong_password ... ok
+test test_admin_users_forbidden_regular_user ... ok
+test test_admin_users_forbidden_no_token ... ok
+test test_register_success ... ok
+test test_health_check ... ok
+test chat_without_redis_broadcasts_and_preserves_unread_until_history_is_opened ... ok
+test full_profile_and_privacy_updates_survive_auth_me_reload ... ok
+test test_admin_dashboard_forbidden_regular_user ... ok
+test test_admin_dashboard_forbidden_no_token ... ok
+test test_register_duplicate_email ... ok
+test test_contact_form ... ok
+test profile_showcase_privacy_defaults_and_block_safety_enforced ... ok
+test test_public_chapters ... ok
+test test_newsletter_subscribe ... ok
+
+test result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.56s
+
+   Doc-tests selorson_backend
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

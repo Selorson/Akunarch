@@ -1,0 +1,155 @@
+{
+  "schema_version": "2.0",
+  "slug": "singularity-stonehenge-avalon",
+  "title": "Vòng Cự Thạch Đồi Cỏ Stonehenge & Xóm Làng Cổ Chân Đồi",
+  "title_en": "Salisbury Megalithic Circle & Celtic Foothill Thatched Village",
+  "kind": "clockwork",
+  "planet": "earth",
+  "region_slug": "britannia-salisbury-mist",
+  "era": "497–510 SCN",
+  "era_year": 500,
+  "lat": 51.1789,
+  "lng": -1.8262,
+  "biome": "misty-moorland",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": null,
+  "cowriter_key": "loc:vong-cu-thach-avalon",
+  "unlock_chapter": 4,
+  "description_vi": "Đồi cỏ xanh xứ Salisbury thoải dần từ xóm làng cổ có bờ rào đá xếp khô, bốn nếp nhà tròn mái rơm, hai ngôi nhà dài phủ rêu, giếng nước đá và lán củi bên đôi cội sồi già lên tới vòng cự thạch xám cùng năm cổng đá đôi sừng sững trên đỉnh đồi.",
+  "description_en": "Natural brown-earth cutaway and grassy Salisbury hill rising smoothly from a dry-stone-walled Celtic hamlet of four conical-thatched roundhouses, two mossy-roofed longhouses, stone well, and twin ancient oaks to the outer Sarsen lintel ring and five great Trilithons.",
+  "local_image_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\concepts\\concept_stonehenge_megalith_village_v4.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\concepts\\concept_stonehenge_megalith_village_v4.jpg",
+    "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\concepts\\concept_avalon_ancient_oak_patriarch.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\audio\\avalon_mist_harp.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\audio\\avalon_mist_harp.wav"
+  ],
+  "manga_plates": [],
+  "clockwork": {
+    "parts": [
+      {
+        "dir": [
+          0,
+          0.0,
+          0
+        ],
+        "id": "salisbury_earth_mound_cutaway",
+        "name_en": "Natural Brown Earth Cutaway & Salisbury Grassy Mound",
+        "name_vi": "Đế Đất Nâu Tự Nhiên & Đồi Cỏ Xanh Salisbury",
+        "summary_en": "Natural brown soil cross-section cradling the smooth green grassy hill rising to the sanctuary.",
+        "summary_vi": "Lát cắt đất nâu tự nhiên nâng đỡ quả đồi cỏ xanh thoải dần lên đỉnh thánh địa cổ."
+      },
+      {
+        "dir": [
+          0,
+          2.64,
+          0
+        ],
+        "id": "celtic_foothill_village_and_dry_wall",
+        "name_en": "Celtic Foothill Hamlet: 4 Roundhouses, 2 Longhouses, Dry-Stone Wall, Well & Carts",
+        "name_vi": "Xóm Làng Cổ Celtic: 4 Nhà Tròn, 2 Nhà Dài, Bờ Đá Cuội, Giếng & Xe Kéo",
+        "summary_en": "Four conical-thatched roundhouses, two mossy stone longhouses, curved dry-stone wall, well, carts, and wood shed.",
+        "summary_vi": "Bốn nhà tròn mái rơm chóp gỗ, hai nhà dài đá rêu, bờ tường đá cuội mở lối, giếng nước, xe kéo và lán củi."
+      },
+      {
+        "dir": [
+          0,
+          5.67,
+          0
+        ],
+        "id": "flanking_ancient_hillside_oaks",
+        "name_en": "Twin Gnarled Ancient Oaks Flanking the Hillside Slopes",
+        "name_vi": "Đôi Cây Sồi Cổ Thụ Tán Xanh Nơi Sườn Đồi Hai Bên",
+        "summary_en": "Two lush gnarled patriarchal oak trees rooted firmly on the left and right grassy slopes.",
+        "summary_vi": "Hai cội sồi già vươn cành lá sum suê trấn giữ hai bên sườn đồi cỏ trên xóm làng."
+      },
+      {
+        "dir": [
+          0,
+          8.58,
+          0
+        ],
+        "id": "bluestone_circle_and_fallen_slabs",
+        "name_en": "Inner Bluestone Ring, Slope Portal & Weathered Fallen Slabs",
+        "name_vi": "Vòng Đá Lam Cổ, Cổng Đá Sườn Trước & Các Phiến Đá Ngã Nghiêng",
+        "summary_en": "Weathered front-slope portal, inner bluestone ring, and naturally toppled ancient stone slabs.",
+        "summary_vi": "Cổng đá cổ nơi triền cỏ trước mặt cùng vòng trụ đá nhỏ và những phiến đá xưa nằm nghiêng theo năm tháng."
+      },
+      {
+        "dir": [
+          0,
+          11.43,
+          0
+        ],
+        "id": "outer_sarsen_circle_and_lintels",
+        "name_en": "Outer Sarsen Megalith Circle & Curved Interlocking Lintels",
+        "name_vi": "Vòng Cự Thạch Sa Thạch Ngoài & Các Phiến Xà Ngang Uốn Cung",
+        "summary_en": "Rugged grey sarsen uprights supporting heavy curved stone lintels around the hilltop perimeter.",
+        "summary_vi": "Vòng trụ cự thạch xám sần sùi đội những thanh dầm đá cong nối liền cung tròn trên đỉnh đồi."
+      },
+      {
+        "dir": [
+          0,
+          14.59,
+          0
+        ],
+        "id": "great_trilithon_horseshoe_crown",
+        "name_en": "Central Horseshoe of Five Towering Sarsen Trilithons",
+        "name_vi": "Vòng Móng Ngựa 5 Cổng Đá Đôi Khổng Lồ Giữa Tâm Đồi",
+        "summary_en": "Five monumental sarsen trilithons arranged in a central horseshoe crowning the grass mound.",
+        "summary_vi": "Năm cụm cổng đá đôi sừng sững xếp hình móng ngựa ở chính tâm đỉnh đồi gió lộng."
+      }
+    ],
+    "glb_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon.glb",
+    "intro_video_path": null,
+    "pack_version": "2.1.0",
+    "preview_render_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon_preview_1080p.png"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "splat_path": null,
+    "water_level": 1.6,
+    "foliage_density": 0.65,
+    "grid_resolution": 65,
+    "heightmap_values": [],
+    "placements": [],
+    "audio_zones": [],
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_title": null,
+    "episode_json_path": null
+  },
+  "cinema": {
+    "video_path": null,
+    "thumbnail_path": null,
+    "video_type": "intro",
+    "episode_number": null,
+    "duration_sec": 8.0,
+    "fps": 24,
+    "vfx_preset": "arcane_embers",
+    "vfx_overlay_path": null,
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": null,
+    "voice_track_path": null,
+    "bgm_track_path": null,
+    "mastered_audio_path": null,
+    "mastered_lufs": null,
+    "mastered_true_peak_dbtp": null,
+    "keyframes": [],
+    "subtitles": []
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

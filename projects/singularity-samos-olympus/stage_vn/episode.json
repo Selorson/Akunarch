@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "slug": "singularity-samos-olympus",
+  "title_vi": "Đại Điện Đỉnh Núi Olympus & Quảng Trường Sao Mặt Trời",
+  "title_en": "Mount Olympus Marble Pantheon & Gilded Sun-Star Acropolis",
+  "synopsis_vi": "Hồi sương sớm còn giăng ngang bậc đá rêu, hai lữ khách dừng chân trước cỗ bánh răng đồng xanh đang rầm rì thức giấc.",
+  "synopsis_en": "While morning mist still drifts across the mossy steps, two travelers pause before the bronze gearwork humming awake.",
+  "entry_node_id": "n01_arrival",
+  "bgm_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\audio\\olympus_dorian_lyre.wav",
+  "default_backdrop_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+  "camera_rig": {
+    "preset": "low_angle_monument",
+    "fov_deg": 36.0,
+    "pos": [
+      0.0,
+      4.8,
+      15.2
+    ],
+    "target": [
+      0.0,
+      3.4,
+      0.0
+    ],
+    "weather": "mist",
+    "exposure": 1.08,
+    "source_slug": "singularity-samos-olympus"
+  },
+  "cast": [
+    {
+      "id": "narrator",
+      "name_vi": "Lời Dẫn",
+      "name_en": "Narrator",
+      "voice_vi": "Mỹ Duyên",
+      "voice_en": "narrator",
+      "portrait_path": null,
+      "accent_color": "#94a3b8"
+    },
+    {
+      "id": "lyra",
+      "name_vi": "Người Giữ Tháp",
+      "name_en": "Spire Keeper",
+      "voice_vi": "Thùy Dung",
+      "voice_en": "female",
+      "portrait_path": null,
+      "accent_color": "#6ee7b7"
+    },
+    {
+      "id": "kael",
+      "name_vi": "Lữ Khách Phương Nam",
+      "name_en": "Southern Wayfarer",
+      "voice_vi": "Minh Triết",
+      "voice_en": "male",
+      "portrait_path": null,
+      "accent_color": "#fbbf24"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n01_arrival",
+      "speaker_id": "narrator",
+      "expression": "solemn",
+      "text_vi": "Gió sớm từ lòng chảo thổi ngược lên năm bậc thềm đá xám, mang theo mùi đồng cổ và hơi nước mát lạnh.",
+      "text_en": "Morning wind rises from the basin up the five grey stone steps, carrying the scent of aged bronze and cool mist.",
+      "backdrop_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+      "voice_vi_path": null,
+      "voice_en_path": null,
+      "bgm_override_path": null,
+      "next_node_id": "n02_choice",
+      "choices": [],
+      "hotspots": [
+        {
+          "id": "hs_astrolabe_ring",
+          "x_pct": 50.0,
+          "y_pct": 42.0,
+          "label_vi": "Vòng Khắc Cổ Ngữ Đồng Xanh",
+          "label_en": "Bronze Runic Astrolabe Ring",
+          "inspect_vi": "Vành đồng năm cạnh khắc khít từng nấc sao mùa nước nổi, chạm nhẹ vô vẫn nghe âm ngân trầm ấm.",
+          "inspect_en": "The five-sided bronze ring is etched with seasonal star notches, humming warmly at the lightest touch.",
+          "unlock_tip_id": "tip_fivefold_seal"
+        }
+      ],
+      "unlock_tip_ids": [
+        "tip_fivefold_seal"
+      ],
+      "unlock_shard_id": null
+    },
+    {
+      "id": "n02_choice",
+      "speaker_id": "lyra",
+      "expression": "focused",
+      "text_vi": "Hồi nãy bánh răng tầng ngầm mới nhích thêm nửa khắc đó nghen. Mình bước vô soi bệ đá chính hay đi vòng ra hành lang gió trước đây?",
+      "text_en": "Just moments ago the subterranean gear shifted another half-notch. Shall we inspect the central plinth or circle the wind gallery first?",
+      "backdrop_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+      "voice_vi_path": null,
+      "voice_en_path": null,
+      "bgm_override_path": null,
+      "next_node_id": null,
+      "choices": [
+        {
+          "id": "ch_inspect_plinth",
+          "label_vi": "Đặt tay lên bệ đá trung tâm lắng nghe nhịp mạch ngầm",
+          "label_en": "Lay a hand on the central plinth to hear the subterranean pulse",
+          "target_node_id": "n03_plinth",
+          "grant_shard_id": "shard_emerald_echo"
+        },
+        {
+          "id": "ch_walk_gallery",
+          "label_vi": "Rẽ qua hành lang cột đá đón hướng nắng lên",
+          "label_en": "Step along the stone colonnade toward the rising sun",
+          "target_node_id": "n04_gallery",
+          "grant_shard_id": null
+        }
+      ],
+      "hotspots": [],
+      "unlock_tip_ids": [],
+      "unlock_shard_id": null
+    },
+    {
+      "id": "n03_plinth",
+      "speaker_id": "kael",
+      "expression": "warm",
+      "text_vi": "Dạ, nhịp đồng vọng lên đều đặn như tiếng nước lớn ngoài vàm sông vậy. Người xưa gầy dựng chốn này thiệt biết nương theo hơi thở của đất trời.",
+      "text_en": "Indeed, the bronze cadence rises as steadily as high tide at a river mouth. Those who raised this sanctuary truly built in harmony with earth and sky.",
+      "backdrop_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+      "voice_vi_path": null,
+      "voice_en_path": null,
+      "bgm_override_path": null,
+      "next_node_id": null,
+      "choices": [],
+      "hotspots": [],
+      "unlock_tip_ids": [],
+      "unlock_shard_id": "shard_emerald_echo"
+    },
+    {
+      "id": "n04_gallery",
+      "speaker_id": "lyra",
+      "expression": "calm",
+      "text_vi": "Nhìn kìa, nắng đầu ngày vừa rọi xuyên vòm kính xanh ngọc, soi rõ con đường mòn dẫn sang sườn đồi bên kia luôn.",
+      "text_en": "Look there, first daylight pierces the emerald glass dome, illuminating the trail across to the far hillside.",
+      "backdrop_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+      "voice_vi_path": null,
+      "voice_en_path": null,
+      "bgm_override_path": null,
+      "next_node_id": null,
+      "choices": [],
+      "hotspots": [],
+      "unlock_tip_ids": [],
+      "unlock_shard_id": null
+    }
+  ],
+  "tips": [
+    {
+      "id": "tip_fivefold_seal",
+      "term_vi": "Khóa Đồng Ngũ Giác",
+      "term_en": "Pentagonal Bronze Lock",
+      "body_vi": "Cơ cấu năm vành đồng lồng khít nhau không cần một đinh tán sắt nào, chỉ mở khi ánh bình minh rọi đúng rãnh dẫn nước trên mái vòm.",
+      "body_en": "An interlocking assembly of five bronze rings built without a single iron rivet, opening only when dawn light aligns with the dome's water channels."
+    }
+  ],
+  "memory_shards": [
+    {
+      "id": "shard_emerald_echo",
+      "title_vi": "Mảnh Ký Ức: Nhịp Mạch Đồng Xanh",
+      "title_en": "Memory Shard: Verdigris Pulse",
+      "echo_vi": "Tiếng ngân trầm dưới chân thềm nhắc rằng thánh tích chưa từng ngủ yên suốt ngàn năm gió cát.",
+      "echo_en": "The deep resonance beneath the steps recalls that the sanctuary has never truly slumbered across a thousand years of wind.",
+      "chapter_hint": 1
+    }
+  ],
+  "archive_asset_map": {}
+}

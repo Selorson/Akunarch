@@ -1,0 +1,21 @@
+{
+  "name": "mini",
+  "beats_total": 48,
+  "shafts": [
+    { "id": "s_esc", "axis": [0, 0, 1], "origin": [0, 0, 0] },
+    { "id": "s_out", "axis": [0, 0, 1], "origin": [48, 0, 0] }
+  ],
+  "gears": [
+    { "id": "g_esc", "module": 1.0, "teeth": 30, "shaft": "s_esc", "thickness": 3, "material": "brass" },
+    { "id": "g12", "module": 2.0, "teeth": 12, "shaft": "s_esc", "thickness": 4, "material": "brass" },
+    { "id": "g36", "module": 2.0, "teeth": 36, "shaft": "s_out", "thickness": 4, "material": "brass" }
+  ],
+  "meshes": [["g12", "g36"]],
+  "pendulum": { "id": "pendulum", "escape_gear": "g_esc", "amplitude_deg": 8 },
+  "lead_screws": [{ "id": "ls_lift", "gear": "g36", "pitch_mm": 2.0, "lift_mm": 0.5333, "drives": "platform" }],
+  "hinges": [],
+  "racks": [],
+  "cam_drums": [],
+  "outputs": [],
+  "steps": [{ "id": "lift", "beats": [0, 48], "part": "platform", "action": "lift" }]
+}

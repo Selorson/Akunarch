@@ -1,0 +1,166 @@
+{
+  "schema_version": "2.0",
+  "slug": "eryndor-clocktower-concept",
+  "title": "Tháp Đồng Hồ Thiên Văn Eryndor",
+  "title_en": "Eryndor Astronomical Clock Tower",
+  "kind": "clockwork",
+  "planet": "earth",
+  "region_slug": "eryndor",
+  "era": "Thế kỷ XIV · Giao thừa 2000",
+  "era_year": 2000,
+  "lat": 26.95,
+  "lng": 33.5,
+  "biome": "limestone-highland",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": 499,
+  "cowriter_key": "thap dong ho thien van eryndor",
+  "unlock_chapter": 1,
+  "description_vi": "Tháp đá bazan thế kỷ XIV trên vách đá vôi 1.600 m ở vùng núi phía đông Ai Cập; đỉnh tháp là cỗ đồng hồ thiên văn bằng đồng thau, con lắc neo 4 m; nơi mảnh thiên thạch đen giáng xuống lúc 00:00 ngày 01/01/2000.",
+  "description_en": "A 14th-century basalt tower on a 1,600 m limestone cliff in the mountains east of Egypt, crowned by a brass astronomical clock with a 4 m anchor pendulum; where the black meteorite fell at 00:00 on 1 January 2000.",
+  "local_image_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\concepts\\concept_eryndor_astronomical_clocktower.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\concepts\\concept_eryndor_astronomical_clocktower.jpg",
+    "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\concepts\\concept_eryndor_black_shard_pedestal.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\audio\\eryndor_pendulum_chime.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\audio\\eryndor_pendulum_chime.wav"
+  ],
+  "manga_plates": [
+    {
+      "id": "plate_01_20261113_153510",
+      "label": "Tháp Đồng Hồ Thiên Văn Eryndor · Explode 0% (2048×1152)",
+      "beauty_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\manga_plates\\plate_01_20261113_153510_beauty.png",
+      "depth_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\manga_plates\\plate_01_20261113_153510_depth.png",
+      "width": 2048,
+      "height": 1152,
+      "created_at": "2026-11-13T15:35:10.057506300+00:00"
+    }
+  ],
+  "clockwork": {
+    "parts": [
+      {
+        "dir": [
+          0,
+          0.0,
+          0
+        ],
+        "id": "part_cliff",
+        "name_en": "Limestone Cliff & Underground Sanctuary",
+        "name_vi": "Vách đá vôi & Tĩnh thất ngầm",
+        "summary_en": "Frost-dusted limestone cliff; beneath the foundation lies the windowless sanctuary with 12 zodiac reliefs and a cedar bed.",
+        "summary_vi": "Vách đá vôi phủ sương muối cao 1.600 m; sâu dưới móng là Tĩnh thất của Thánh Đồng: 12 cung hoàng đạo, 3 lớp thảm đỏ, giường tuyết tùng."
+      },
+      {
+        "dir": [
+          0,
+          1.9,
+          0
+        ],
+        "id": "part_base",
+        "name_en": "Octagonal Base & Main Door",
+        "name_vi": "Thân dưới bát giác & Cửa chính",
+        "summary_en": "14th-century black basalt with 8 carved buttresses, lancet windows, arched oak door and the inner limestone spiral stair.",
+        "summary_vi": "Đá bazan đen thế kỷ XIV, 8 trụ ốp khắc hoa văn thoi, cửa sổ lancet chấn song sắt, cửa sồi vòm nhọn, cầu thang xoắn ốc đá vôi bên trong."
+      },
+      {
+        "dir": [
+          0,
+          3.2,
+          0
+        ],
+        "id": "part_parapet",
+        "name_en": "Crenellated Parapet & Corner Turrets",
+        "name_vi": "Tường răng cưa & 4 tháp góc",
+        "summary_en": "Crenellated ring on corbels with four corner turrets.",
+        "summary_vi": "Vòng tường răng cưa trên hàng đá nhô, 4 tháp góc canh giữ vách núi."
+      },
+      {
+        "dir": [
+          0,
+          4.6,
+          0
+        ],
+        "id": "part_upper",
+        "name_en": "Upper Body & Astronomical Clock",
+        "name_vi": "Thân trên & Đồng hồ thiên văn",
+        "summary_en": "Brass astronomical dial with Roman numerals and an eccentric zodiac ring, three sub-dials, and the 4 m anchor pendulum inside.",
+        "summary_vi": "Mặt đồng hồ thiên văn bằng đồng thau khắc số La Mã, vòng hoàng đạo lệch tâm, 3 mặt phụ dưới mái vòm; trong lòng là con lắc neo 4 m và tạ đá hoa cương."
+      },
+      {
+        "dir": [
+          0,
+          6.1,
+          0
+        ],
+        "id": "part_belfry",
+        "name_en": "Belfry",
+        "name_vi": "Gác chuông",
+        "summary_en": "Two bronze bells behind four pointed arches under roundel gables and eight pinnacles.",
+        "summary_vi": "Hai chuông đồng treo xà gỗ sau 4 ô vòm nhọn, 4 đầu hồi có huy hiệu tròn, 8 tháp nhọn."
+      },
+      {
+        "dir": [
+          0,
+          7.7,
+          0
+        ],
+        "id": "part_crown",
+        "name_en": "Spire & Armillary Sphere",
+        "name_vi": "Mái chóp & Quả cầu thiên văn",
+        "summary_en": "Cross-gabled slate spire carrying a five-ring brass armillary sphere.",
+        "summary_vi": "Mái chóp đá phiến có 4 mái hồi chéo, trụ đồng đỡ quả cầu thiên văn 5 đai."
+      }
+    ],
+    "glb_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\clockwork\\eryndor-clocktower-concept.glb",
+    "intro_video_path": null,
+    "pack_version": "2.1.0",
+    "preview_render_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\clockwork\\eryndor-clocktower-concept_preview_1080p.png",
+    "mechanism_glb_path": null
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "splat_path": null,
+    "water_level": 1.6,
+    "foliage_density": 0.65,
+    "grid_resolution": 65,
+    "heightmap_values": [],
+    "placements": [],
+    "audio_zones": [],
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_title": null,
+    "episode_json_path": null
+  },
+  "cinema": {
+    "video_path": null,
+    "thumbnail_path": null,
+    "video_type": "intro",
+    "episode_number": null,
+    "duration_sec": 8.0,
+    "fps": 24,
+    "vfx_preset": "arcane_embers",
+    "vfx_overlay_path": null,
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": null,
+    "voice_track_path": null,
+    "bgm_track_path": null,
+    "mastered_audio_path": null,
+    "mastered_lufs": null,
+    "mastered_true_peak_dbtp": null,
+    "keyframes": [],
+    "subtitles": []
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

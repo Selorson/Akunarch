@@ -1,0 +1,92 @@
+{
+  "phase": "a0_s5_r1",
+  "exe": "E:\\Akunarch\\_archive\\vram_dot_C\\selorson_old_exe\\app.exe",
+  "started": "2026-11-13T11:48:55.376Z",
+  "measurements": {
+    "S5_before_world": {
+      "timestamp": "2026-11-13 18:49:18",
+      "label": "a0_s5_r1_S5_before_world",
+      "process": "app",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 8,
+      "app_vram_mb_median": 119.5,
+      "app_vram_mb_max": 119.5,
+      "webview_mb_median": 119.5,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0,
+      "app_gpu3d_pct_p95": 0,
+      "app_gpu_all_pct_avg": 0,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 11.3,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 974
+    },
+    "S5_in_world_globe": {
+      "timestamp": "2026-11-13 18:50:13",
+      "label": "a0_s5_r1_S5_in_world_globe",
+      "process": "app",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 8,
+      "app_vram_mb_median": 335.1,
+      "app_vram_mb_max": 335.1,
+      "webview_mb_median": 335.1,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 22.49,
+      "app_gpu3d_pct_p95": 23.3,
+      "app_gpu_all_pct_avg": 22.52,
+      "gpu_util_avg": 33,
+      "gpu_util_p95": 36,
+      "gpu_power_w_avg": 19.7,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1186
+    },
+    "S5_after_leave_3s": {
+      "timestamp": "2026-11-13 18:50:38",
+      "label": "a0_s5_r1_S5_after_leave_3s",
+      "process": "app",
+      "process_count": 7,
+      "luid": "luid_0x00000000_0x0001085c",
+      "samples": 8,
+      "app_vram_mb_median": 383,
+      "app_vram_mb_max": 383,
+      "webview_mb_median": 383,
+      "worker_mb_median": 0,
+      "host_mb_median": 0,
+      "app_gpu3d_pct_avg": 0,
+      "app_gpu3d_pct_p95": 0,
+      "app_gpu_all_pct_avg": 0,
+      "gpu_util_avg": 1,
+      "gpu_util_p95": 1,
+      "gpu_power_w_avg": 10.7,
+      "gpu_pstate_mode": "P8",
+      "gpu_mem_used_mb_avg": 1234
+    }
+  },
+  "notes": [
+    "Trang trước: /stories",
+    "/world?space=open: 0 ô chunk; nút Bước vào 3D: false",
+    "CHƯA KIỂM phần Thế giới mở WASD: Selorson local chưa có ô chunk (0). Đo thay bằng Bản đồ 3D Sa bàn (Threlte).",
+    "Canvas Sa bàn 3D: true"
+  ],
+  "mode": "globe_sa_ban_fallback",
+  "probe": {
+    "created": 2,
+    "lost": 0
+  },
+  "summary": {
+    "before_mb": 119.5,
+    "in_world_mb": 335.1,
+    "after_mb": 383,
+    "delta_mb": 263.5,
+    "pass": false,
+    "webgl_created": 2,
+    "webgl_lost": 0
+  },
+  "consoleErrors": [],
+  "finished": "2026-11-13T11:50:39.361Z"
+}

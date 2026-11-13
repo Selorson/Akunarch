@@ -1,0 +1,130 @@
+{
+  "phase": "b0_fix",
+  "exe": "E:\\Akunarch\\app\\src-tauri\\target-dotA\\release\\akunarch.exe",
+  "started": "2026-11-13T09:20:59.988Z",
+  "measurements": {},
+  "probes": {
+    "B0_end": {
+      "created": 1,
+      "lost": 0,
+      "restored": 0,
+      "stage": {
+        "contextsCreated": 1,
+        "contextLost": 0,
+        "contextRestored": 0,
+        "acquires": 6,
+        "releases": 6,
+        "owned": false,
+        "memory": {
+          "geometries": 3,
+          "textures": 2,
+          "programs": 5
+        }
+      },
+      "consoleTooManyContexts": 0,
+      "consoleContextLost": 0
+    }
+  },
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án",
+    "Dữ liệu project.akun.json + manga_plates + stage_vn + akunarch.db đã khôi phục, 46 file khớp SHA-256."
+  ],
+  "b0": {
+    "grid": {
+      "diffOff": 0.348,
+      "diffBack": 0
+    },
+    "wireframe": {
+      "diffOn": 4.861,
+      "diffBack": 0
+    },
+    "ultra": {
+      "hd": {
+        "w": 569,
+        "h": 454,
+        "cssW": 569,
+        "dpr": 1,
+        "stage": {
+          "contextsCreated": 1,
+          "contextLost": 0,
+          "contextRestored": 0,
+          "acquires": 1,
+          "releases": 0,
+          "owned": true,
+          "memory": {
+            "geometries": 328,
+            "textures": 51,
+            "programs": 17
+          }
+        }
+      },
+      "ultra": {
+        "w": 853,
+        "h": 681,
+        "cssW": 569,
+        "dpr": 1,
+        "stage": {
+          "contextsCreated": 1,
+          "contextLost": 0,
+          "contextRestored": 0,
+          "acquires": 2,
+          "releases": 1,
+          "owned": true,
+          "memory": {
+            "geometries": 328,
+            "textures": 51,
+            "programs": 17
+          }
+        }
+      },
+      "ultraLabel": "Ultra",
+      "diffVsHd": 1.183
+    },
+    "manga_tab01": {
+      "beauty": {
+        "w": 2048,
+        "h": 1152,
+        "bytes": 1570517
+      },
+      "depth": {
+        "w": 2048,
+        "h": 1152,
+        "bytes": 192638
+      }
+    },
+    "manga_tab02": {
+      "beauty": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 5079017
+      },
+      "depth": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 84618
+      }
+    },
+    "rig": {
+      "has": true,
+      "w": 676,
+      "h": 781,
+      "x": 870,
+      "y": 505.96875
+    },
+    "manga_tab03": {
+      "beauty": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 1483167
+      },
+      "depth": {
+        "w": 2560,
+        "h": 1440,
+        "bytes": 87167
+      }
+    },
+    "consoleErrors": []
+  },
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T09:21:51.137Z"
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": "2.0",
+  "slug": "singularity-samos-olympus",
+  "title": "Đại Điện Đỉnh Núi Olympus & Quảng Trường Sao Mặt Trời",
+  "title_en": "Mount Olympus Marble Pantheon & Gilded Sun-Star Acropolis",
+  "kind": "clockwork",
+  "planet": "earth",
+  "region_slug": "aegean-hellenic-arc",
+  "era": "800 TCN",
+  "era_year": -800,
+  "lat": 40.0856,
+  "lng": 22.3586,
+  "biome": "alpine-marble",
+  "chunk_x": 0,
+  "chunk_z": 0,
+  "world_size": 256.0,
+  "cowriter_entity_id": 67,
+  "cowriter_key": "place:olympus",
+  "unlock_chapter": 3,
+  "description_vi": "Khối núi cẩm thạch trắng xám vách dựng nhiều tầng có bốn dòng thác xanh đổ thẳng xuống chân vực. Từ quảng trường tròn lát ngôi sao mặt trời mười sáu cánh mạ vàng, đền tròn mái vòm trắng sườn trái và đại lộ cầu thang thắp lửa bên phải cùng dẫn lối lên đại điện mái vòm vàng chói lọi trên đỉnh núi.",
+  "description_en": "Multi-tiered white-grey marble mountain massif pierced by four turquoise cascades, ascending from the 16-ray gilded Sun-Star plaza, arched white Tholos rotunda, and brazier-lined grand stairway to the gilded-dome peripteral Pantheon at the summit.",
+  "local_image_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+  "concept_paths": [
+    "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_mountain_pantheon_v4.jpg",
+    "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_eagle_altar_v4.jpg",
+    "E:\\Akunarch\\projects\\singularity-samos-olympus\\concepts\\concept_olympus_guardian_statue.jpg"
+  ],
+  "bgm_audio_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\audio\\olympus_dorian_lyre.wav",
+  "audio_paths": [
+    "E:\\Akunarch\\projects\\singularity-samos-olympus\\audio\\olympus_dorian_lyre.wav"
+  ],
+  "manga_plates": [],
+  "clockwork": {
+    "parts": [
+      {
+        "dir": [
+          0,
+          0.0,
+          0
+        ],
+        "id": "olympus_marble_massif_and_waterfalls",
+        "name_en": "Multi-Tiered Pentelic Marble Massif & Four Recessed Waterfalls",
+        "name_vi": "Khối Núi Cẩm Thạch Đa Tầng & Bốn Dòng Thác Xanh Đỉnh Olympus",
+        "summary_en": "Towering multi-tiered faceted white-grey marble massif with four frothy turquoise waterfalls in carved gullies.",
+        "summary_vi": "Khối núi đá cẩm thạch trắng xám vát cạnh dựng đứng nhiều tầng cùng bốn dòng thác bọt trắng xanh biếc."
+      },
+      {
+        "dir": [
+          0,
+          4.32,
+          0
+        ],
+        "id": "helios_plaza_and_peristyle_sanctuary",
+        "name_en": "16-Ray Sun-Star Plaza, Golden Fountain & Wrapping Peristyle",
+        "name_vi": "Quảng Trường Sao Mặt Trời 16 Cánh, Đài Phun Nước & Hàng Cột Vòng Cung",
+        "summary_en": "Circular 16-ray gilded Sun-Star plaza, cliffside golden fountain, 258-deg fluted colonnade, and twin portals.",
+        "summary_vi": "Sân tròn ngôi sao mười sáu cánh mạ vàng, đài phun nước mũi vực và hàng cột đá trắng vòng cung khóa hai cổng."
+      },
+      {
+        "dir": [
+          0,
+          7.35,
+          0
+        ],
+        "id": "grand_stairways_and_sacred_braziers",
+        "name_en": "Grand Diagonal Marble Stairways & Burning Gilded Braziers",
+        "name_vi": "Đại Lộ Cầu Thang Đá Trắng Vút Đỉnh Núi & Hàng Chậu Lửa Vàng",
+        "summary_en": "Long diagonal balustraded marble stairway and upper ascent flanked by golden-amber sacred fire braziers.",
+        "summary_vi": "Đại lộ bậc thang cẩm thạch trắng có lan can vươn chéo lên đỉnh thượng, rực sáng hàng chậu lửa đồng mạ vàng."
+      },
+      {
+        "dir": [
+          0,
+          10.82,
+          0
+        ],
+        "id": "mid_left_pierced_marble_rotunda_tholos",
+        "name_en": "Mid-Left Pierced Arched Marble Rotunda & Ribbed White Dome",
+        "name_vi": "Đền Tròn Sườn Trái Trổ Ô Cửa Vòm & Mái Vòm Đá Trắng Chia Múi",
+        "summary_en": "Mid-slope marble Tholos rotunda with open round-arched colonnade, fenestrated drum, and pure white ribbed dome.",
+        "summary_vi": "Tòa đền tròn đá trắng nơi sườn trái trổ mười hai ô cửa vòm thoáng đãng, đội mái vòm bán cầu cẩm thạch trắng."
+      },
+      {
+        "dir": [
+          0,
+          13.92,
+          0
+        ],
+        "id": "summit_pantheon_colonnade_and_guardians",
+        "name_en": "Summit Peripteral Pantheon, Gilded Guardians & Eagle Altar",
+        "name_vi": "Đại Điện Đỉnh Núi, Đôi Tượng Thần Vàng & Bàn Thờ Đại Bàng",
+        "summary_en": "Classical peripteral summit temple with wide stairs, twin gilded guardian statues, relief pediment, and eagle altar.",
+        "summary_vi": "Ngôi đền chữ nhật bốn mặt cột khía rãnh, trán tường phù điêu vàng, đôi tượng thần đứng gác và bệ đại bàng cổ."
+      },
+      {
+        "dir": [
+          0,
+          15.17,
+          0
+        ],
+        "id": "summit_attic_drum_and_golden_dome",
+        "name_en": "Marble Attic Podium, Fenestrated Drum & Ribbed Golden Dome",
+        "name_vi": "Đài Đế Đá Trắng, Cổ Vòm Trổ Cửa & Mái Vòm Bán Cầu Vàng Ròng",
+        "summary_en": "White marble attic podium, fenestrated drum, embossed coffered hemispherical golden dome, and summit lantern.",
+        "summary_vi": "Đài đế đá trắng nâng tầng cổ vòm trổ mười sáu cửa sổ cùng mái vòm bán cầu mạ vàng chạm hoa văn và lồng đèn đỉnh."
+      }
+    ],
+    "glb_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb",
+    "intro_video_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle.mp4",
+    "pack_version": "2.1.0",
+    "preview_render_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus_preview_1080p.png"
+  },
+  "chunks": {
+    "pack_zip_path": null,
+    "heightmap_path": null,
+    "splat_path": null,
+    "water_level": 1.6,
+    "foliage_density": 0.65,
+    "grid_resolution": 65,
+    "heightmap_values": [],
+    "placements": [],
+    "audio_zones": [],
+    "pack_version": "0.1.0",
+    "spawn_points": [],
+    "vn_triggers": []
+  },
+  "stage_vn": {
+    "episode_zip_path": null,
+    "episode_title": null,
+    "episode_json_path": null
+  },
+  "cinema": {
+    "video_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle.mp4",
+    "thumbnail_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\thumbnail.jpg",
+    "video_type": "intro",
+    "episode_number": 1,
+    "duration_sec": 5.0,
+    "fps": 24,
+    "vfx_preset": "golden_embers",
+    "vfx_overlay_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle_vfx_overlay.png",
+    "comfyui_enabled": false,
+    "comfyui_prompt": "",
+    "source_glb_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb",
+    "voice_track_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\narration_vi.wav",
+    "bgm_track_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\audio\\olympus_cinema_score.wav",
+    "mastered_audio_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle_master_14lufs.wav",
+    "mastered_lufs": -13.99,
+    "mastered_true_peak_dbtp": -1.44,
+    "keyframes": [
+      {
+        "id": "kf_01",
+        "time_sec": 0.0,
+        "pos": [
+          19.0,
+          9.5,
+          22.5
+        ],
+        "target": [
+          0.0,
+          5.2,
+          0.0
+        ],
+        "fov_deg": 39.0,
+        "explode_pct": 0.0
+      },
+      {
+        "id": "kf_02",
+        "time_sec": 2.5,
+        "pos": [
+          12.5,
+          11.8,
+          18.5
+        ],
+        "target": [
+          0.0,
+          6.6,
+          -1.2
+        ],
+        "fov_deg": 37.0,
+        "explode_pct": 12.0
+      },
+      {
+        "id": "kf_03",
+        "time_sec": 5.0,
+        "pos": [
+          6.0,
+          13.0,
+          15.8
+        ],
+        "target": [
+          0.0,
+          7.4,
+          -2.0
+        ],
+        "fov_deg": 35.0,
+        "explode_pct": 0.0
+      }
+    ],
+    "subtitles": [
+      {
+        "id": "sub_01",
+        "start_sec": 0.2,
+        "end_sec": 2.5,
+        "text_vi": "Từ quảng trường ngôi sao mười sáu cánh bên bốn dòng thác xanh đổ xuống vực.",
+        "text_en": "From the sixteen-ray sun plaza beside four turquoise cascades plunging into the gorge."
+      },
+      {
+        "id": "sub_02",
+        "start_sec": 2.5,
+        "end_sec": 4.9,
+        "text_vi": "Đại lộ cầu thang thắp lửa vút thẳng lên mái vòm vàng chói lọi giữa tầng mây.",
+        "text_en": "The brazier-lit grand stairway ascends straight to the gleaming golden dome amid the clouds."
+      }
+    ]
+  },
+  "sync_policy": {
+    "source_app": "Akunarch",
+    "force_draft": true
+  }
+}

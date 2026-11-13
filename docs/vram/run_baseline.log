@@ -1,0 +1,45 @@
+[08:28:02] MEASURE S0_machine_idle_app_off: app=0MB (max 0) app3D=0% gpu=6.3% P8 15.1W
+[08:28:02] BACKUP 22 files -> E:\Akunarch\_archive\vram_dot_A\data_backup_baseline
+[08:28:14] PROBE S1_cold_boot: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:28:15] SHOT E:\Akunarch\docs\vram\screenshots\baseline\S1_cold_boot.png
+[08:28:28] MEASURE S1_cold_boot: app=484.3MB (max 488.3) app3D=13.07% gpu=27.3% P5 29W
+[08:28:31] SHOT E:\Akunarch\docs\vram\screenshots\baseline\S2_temple_default_view.png
+[08:28:53] MEASURE S2_3d_idle_after_orbit: app=484.3MB (max 506.6) app3D=15.07% gpu=27.74% P5 27.4W
+[08:28:53] PROBE S2_3d_idle: {
+  created: 1,
+  lost: 0,
+  restored: 0,
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:29:00] SHOT E:\Akunarch\docs\vram\screenshots\baseline\SC_chunk_0_0_before_sculpt.png
+[08:29:13] MEASURE SC_sculpt_0: app=493.4MB (max 519.3) app3D=4.27% gpu=10.57% P8 16.5W
+[08:29:30] MEASURE SC_sculpt_1: app=867.6MB (max 871.7) app3D=0% gpu=6.8% P8 32.9W
+[08:29:30] PROBE SC_sculpt_1: {
+  created: 3,
+  lost: 0,
+  restored: 0,
+  consoleTooManyContexts: 0,
+  consoleContextLost: 0
+}
+[08:30:30] MEASURE SC_sculpt_20: app=5983.4MB (max 5987.4) app3D=4.64% gpu=9.96% P8 15.9W
+[08:30:30] PROBE SC_sculpt_20: {
+  created: 22,
+  lost: 6,
+  restored: 0,
+  consoleTooManyContexts: 6,
+  consoleContextLost: 0
+}
+[08:31:59] RESTORE OK: 22 files, SHA-256 khớp 100%
+[08:31:59] WROTE E:\Akunarch\docs\vram\scenarios_baseline.json
+Error: CDP timeout Runtime.evaluate
+    at Timeout._onTimeout (file:///E:/Akunarch/app/ui/tests/vram-scenarios.mjs:174:38)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+EXIT=1

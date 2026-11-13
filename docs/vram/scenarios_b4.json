@@ -1,0 +1,104 @@
+{
+  "phase": "b4",
+  "exe": "E:\\Akunarch\\app\\src-tauri\\target-dotA\\release\\akunarch.exe",
+  "started": "2026-11-13T11:20:25.616Z",
+  "measurements": {},
+  "probes": {},
+  "notes": [
+    "DB: C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.db · projects_root: E:\\Akunarch\\projects · 10 dự án"
+  ],
+  "tb": [
+    {
+      "label": "2d_standby",
+      "topbar_app_mb_median": 103,
+      "measure_app_mb_median": 102.6,
+      "diff_mb": 0.4,
+      "pass": true,
+      "samples": [
+        {
+          "app": 103,
+          "web": 103,
+          "other": 854,
+          "used": 957,
+          "ok": true
+        },
+        {
+          "app": 103,
+          "web": 103,
+          "other": 854,
+          "used": 957,
+          "ok": true
+        },
+        {
+          "app": 103,
+          "web": 103,
+          "other": 847,
+          "used": 950,
+          "ok": true
+        },
+        {
+          "app": 103,
+          "web": 103,
+          "other": 847,
+          "used": 950,
+          "ok": true
+        },
+        {
+          "app": 103,
+          "web": 103,
+          "other": 847,
+          "used": 950,
+          "ok": true
+        }
+      ],
+      "pillText": "VRAM App: 48 MB · Máy: 899 / 16376 MB\n🧹"
+    },
+    {
+      "label": "3d_temple",
+      "topbar_app_mb_median": 268,
+      "measure_app_mb_median": 267.6,
+      "diff_mb": 0.4,
+      "pass": true,
+      "samples": [
+        {
+          "app": 268,
+          "web": 268,
+          "other": 846,
+          "used": 1114,
+          "ok": true
+        },
+        {
+          "app": 268,
+          "web": 268,
+          "other": 846,
+          "used": 1114,
+          "ok": true
+        },
+        {
+          "app": 268,
+          "web": 268,
+          "other": 846,
+          "used": 1114,
+          "ok": true
+        },
+        {
+          "app": 268,
+          "web": 268,
+          "other": 846,
+          "used": 1114,
+          "ok": true
+        },
+        {
+          "app": 268,
+          "web": 268,
+          "other": 846,
+          "used": 1114,
+          "ok": true
+        }
+      ],
+      "pillText": "VRAM App: 268 MB · Máy: 1115 / 16376 MB\n🧹"
+    }
+  ],
+  "consoleWebglLines": [],
+  "finished": "2026-11-13T11:20:58.474Z"
+}
