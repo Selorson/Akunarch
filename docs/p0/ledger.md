@@ -60,3 +60,4 @@ Mỗi task một dòng: `task | trạng thái | ngày | agent | bằng chứng`.
 - Selorson Admin build (1m54s, -j 8) + hot-swap → app.exe cf9affb0, backend 8001 ok, không giữ bản cũ
 - Đẩy thử DUY NHẤT (anh cho phép): Tháp Eryndor → Nháp; backend báo updated_locations 1, synced_translations 1; ingest `Selorson Admin\local-media\world\eryndor-clocktower-concept-pack_*.glb` 12,46 MB + 2 ảnh concept. Từ nay mỗi lần đẩy PHẢI hỏi anh
 - GitHub Akunarch: `Selorson/Akunarch` thuộc tài khoản cá nhân KHÁC (`Selorson`); `selorsontales-ai` chỉ có quyền đọc, 0 lời mời đang chờ → chưa push (2 commit sẵn ở máy)
+- 2026-11-14 | GitHub Akunarch: ĐÃ PUSH `Selorson/Akunarch` main (b396db8 → +1). Chẩn đoán trước "thiếu quyền" là SAI: repo thuộc tài khoản `Selorson` có sẵn trong Git Credential Manager; em đã ép dùng credential của gh (`selorsontales-ai`). Sửa remote thành `https://Selorson@github.com/Selorson/Akunarch.git` như NeuroForge/ToneForge

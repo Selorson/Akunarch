@@ -98,5 +98,5 @@
 
 ## 7. GitHub & phát hành (2026-11-14, Claude)
 - **Push `main` của `selorson-fe` / `selorson-be` = PHÁT HÀNH** (Cloudflare Pages / Fly.io tự deploy). Code dở → đẩy nhánh `wip/<ngày>-<việc>` (không workflow nào chạy). Kiểm bằng `gh run list -R <repo>` (chạy qua Bash, PowerShell làm hỏng chuỗi jq).
-- `gh` đăng nhập tài khoản `selorsontales-ai` (chủ `selorson-fe`, `selorson-be`). Repo `Selorson/Akunarch` thuộc tài khoản khác → cần lời mời collaborator (Write) rồi mới push được.
+- **Hai tài khoản GitHub trên máy:** `selorsontales-ai` (chủ `selorson-fe`, `selorson-be`; cũng là tài khoản của `gh`) và **`Selorson`** (chủ `Akunarch`, `Neuro-Fox`, `ToneForge`). Git Credential Manager lưu sẵn cả hai. Remote của repo thuộc `Selorson` **phải ghi tên trong URL**: `https://Selorson@github.com/Selorson/<repo>.git`, rồi push bằng helper mặc định. **Đừng** ép `credential.helper=!gh auth git-credential` (sẽ dùng nhầm `selorsontales-ai` → 403). *(2026-11-14, Claude — đã từng chẩn đoán nhầm là "thiếu quyền")*
 - Commit message có dấu ngoặc kép hoặc tiếng Việt dài → dùng `git commit -F <file>`; PowerShell tách sai tham số khi truyền `-m`.
