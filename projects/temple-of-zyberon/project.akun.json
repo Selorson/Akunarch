@@ -149,7 +149,8 @@
     "glb_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon.glb",
     "intro_video_path": "E:\\Akunarch\\projects\\cinema-zyberon-awakening\\cinema\\cinema-zyberon-awakening.mp4",
     "pack_version": "2.1.0",
-    "preview_render_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon_preview_1080p.png"
+    "preview_render_path": "E:\\Akunarch\\projects\\temple-of-zyberon\\clockwork\\temple-of-zyberon_preview_1080p.png",
+    "mechanism_glb_path": null
   },
   "chunks": {
     "pack_zip_path": null,

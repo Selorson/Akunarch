@@ -108,7 +108,8 @@
     "glb_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus.glb",
     "intro_video_path": "E:\\Akunarch\\projects\\cinema-olympus-pantheon-chronicle\\cinema\\cinema-olympus-pantheon-chronicle.mp4",
     "pack_version": "2.1.0",
-    "preview_render_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus_preview_1080p.png"
+    "preview_render_path": "E:\\Akunarch\\projects\\singularity-samos-olympus\\clockwork\\singularity-samos-olympus_preview_1080p.png",
+    "mechanism_glb_path": null
   },
   "chunks": {
     "pack_zip_path": null,

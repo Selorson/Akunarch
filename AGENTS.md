@@ -11,6 +11,8 @@
 > - Mỗi đợt có `docs\<đợt>\implementation_plan.md` + `ledger.md` + `walkthrough.md`. Làm task nào thì ghi ledger task đó.
 > - Mọi cổng duyệt của tác giả phải dừng lại hỏi.
 > - P0 (Tháp Eryndor) là mẫu chuẩn cho mọi công trình sau.
+> - **Mở phiên:** đọc `docs\ops\KINH_NGHIEM.md` (bài học quy trình) và 5 dòng đầu `docs\ops\NHAT_KY_TONG.md`.
+> - **Đóng phiên:** ghi log lần chạy vào `docs\ops\runs\` theo mẫu, rồi cập nhật log tổng.
 
 ## 7 Kỷ Luật Sắt Bắt Buộc Tuân Thủ (`v2.1`)
 

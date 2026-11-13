@@ -107,7 +107,8 @@
     "glb_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\clockwork\\avalon-mage-sanctum.glb",
     "intro_video_path": null,
     "pack_version": "2.1.0",
-    "preview_render_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\clockwork\\avalon-mage-sanctum_preview_1080p.png"
+    "preview_render_path": "E:\\Akunarch\\projects\\avalon-mage-sanctum\\clockwork\\avalon-mage-sanctum_preview_1080p.png",
+    "mechanism_glb_path": null
   },
   "chunks": {
     "pack_zip_path": null,

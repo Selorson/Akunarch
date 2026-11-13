@@ -107,7 +107,8 @@
     "glb_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon.glb",
     "intro_video_path": null,
     "pack_version": "2.1.0",
-    "preview_render_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon_preview_1080p.png"
+    "preview_render_path": "E:\\Akunarch\\projects\\singularity-stonehenge-avalon\\clockwork\\singularity-stonehenge-avalon_preview_1080p.png",
+    "mechanism_glb_path": null
   },
   "chunks": {
     "pack_zip_path": null,
