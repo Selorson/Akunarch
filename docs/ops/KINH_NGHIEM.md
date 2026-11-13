@@ -95,3 +95,8 @@
 - **Co-Writer chỉ đọc** (`cowriter_entity`, `cowriter_search`).
 - **Repo Selorson (`frontend-v3`, `backend-v3`) có nhiều thay đổi chưa commit từ các phiên trước**, và mã mới phụ thuộc vào chúng. Không commit tách lẻ được, phải hỏi anh cách commit. *(2026-11-13, Claude)*
 - **`E:\Akunarch` là git** (`main`, remote `https://github.com/Selorson/Akunarch.git`). `.gitignore` đã loại các thư mục build, `node_modules`, `repos/`, `_archive/`, media dự án, ảnh chụp đo đạc. Commit sau mỗi đợt. *(2026-11-13, Claude)*
+
+## 7. GitHub & phát hành (2026-11-14, Claude)
+- **Push `main` của `selorson-fe` / `selorson-be` = PHÁT HÀNH** (Cloudflare Pages / Fly.io tự deploy). Code dở → đẩy nhánh `wip/<ngày>-<việc>` (không workflow nào chạy). Kiểm bằng `gh run list -R <repo>` (chạy qua Bash, PowerShell làm hỏng chuỗi jq).
+- `gh` đăng nhập tài khoản `selorsontales-ai` (chủ `selorson-fe`, `selorson-be`). Repo `Selorson/Akunarch` thuộc tài khoản khác → cần lời mời collaborator (Write) rồi mới push được.
+- Commit message có dấu ngoặc kép hoặc tiếng Việt dài → dùng `git commit -F <file>`; PowerShell tách sai tham số khi truyền `-m`.
