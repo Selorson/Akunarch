@@ -132,6 +132,7 @@ def main():
         print(f"=== [MECH INTRO] {out} ({out.stat().st_size / 1048576:.1f} MB, {last + 1} khung) ===")
     finally:
         shutil.rmtree(frames, ignore_errors=True)
+        shutil.rmtree(amg.kit.BAKED_DIR, ignore_errors=True)
 
 
 main()

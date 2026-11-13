@@ -100,3 +100,7 @@
 - **Push `main` của `selorson-fe` / `selorson-be` = PHÁT HÀNH** (Cloudflare Pages / Fly.io tự deploy). Code dở → đẩy nhánh `wip/<ngày>-<việc>` (không workflow nào chạy). Kiểm bằng `gh run list -R <repo>` (chạy qua Bash, PowerShell làm hỏng chuỗi jq).
 - **Hai tài khoản GitHub trên máy:** `selorsontales-ai` (chủ `selorson-fe`, `selorson-be`; cũng là tài khoản của `gh`) và **`Selorson`** (chủ `Akunarch`, `Neuro-Fox`, `ToneForge`). Git Credential Manager lưu sẵn cả hai. Remote của repo thuộc `Selorson` **phải ghi tên trong URL**: `https://Selorson@github.com/Selorson/<repo>.git`, rồi push bằng helper mặc định. **Đừng** ép `credential.helper=!gh auth git-credential` (sẽ dùng nhầm `selorsontales-ai` → 403). *(2026-11-14, Claude — đã từng chẩn đoán nhầm là "thiếu quyền")*
 - Commit message có dấu ngoặc kép hoặc tiếng Việt dài → dùng `git commit -F <file>`; PowerShell tách sai tham số khi truyền `-m`.
+
+## 8. Dọn dẹp cuối phiên (2026-11-14, Claude)
+- Cuối phiên xoá: bản nháp `_archive\<đợt>\scratch\`, `clockwork\_master\history\`, thư mục build phụ (`target-*` tạo trong phiên), thư mục tạm `%TEMP%\akun_*`, `cwmini_*`, ảnh chẩn đoán `docs\<đợt>\screenshots\DIAG_*`. **Không xoá:** bản `_master`, bản runtime, dữ liệu dự án, `local-media` của Selorson.
+- Script mới tạo thư mục tạm (`tempfile.mkdtemp`) **phải tự xoá** khi xong. Đã sửa 3 chỗ rò: `render_glb_preview_card.py` (mỗi lần để lại 1–1,6 MB), `assemble_mechanism_glb.py` / `render_mechanism_intro.py` (`kit.BAKED_DIR`), `tests/test_mechanism_glb.py`.

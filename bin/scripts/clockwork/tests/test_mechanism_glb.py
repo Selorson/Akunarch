@@ -50,6 +50,10 @@ class MechanismGlbTest(unittest.TestCase):
             raise AssertionError(r.stdout[-3000:] + r.stderr[-2000:])
         cls.gltf, cls.bin = read_glb(cls.out)
 
+    @classmethod
+    def tearDownClass(cls):
+        __import__("shutil").rmtree(cls.tmp, ignore_errors=True)
+
     def test_two_clips(self):
         self.assertEqual(sorted(a["name"] for a in self.gltf["animations"]), ["assemble", "idle"])
 

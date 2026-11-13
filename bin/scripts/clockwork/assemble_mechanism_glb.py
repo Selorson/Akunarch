@@ -164,6 +164,7 @@ def main():
     )
     print(f"=== [MECHANISM] {slug}: {len(mech.gears)} bánh răng, {n_anim} object chuyển động, "
           f"{n_parts} bộ phận → {out} ({out.stat().st_size / 1048576:.2f} MB) trong {time.time() - t0:.1f}s ===")
+    __import__("shutil").rmtree(kit.BAKED_DIR, ignore_errors=True)   # texture nướng tạm đã nhúng vào .glb
 
 
 if __name__ == "__main__":

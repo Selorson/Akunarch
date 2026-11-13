@@ -165,6 +165,10 @@ def main() -> None:
     dst.file_format = "PNG"
     dst.save()
     print(f"PREVIEW_CARD_OK {out_png} {src.size[0]}x{src.size[1]}")
+    # dọn thư mục tạm (trước đây mỗi lần render để lại 1–1,6 MB trong %TEMP%)
+    bpy.data.images.remove(src)
+    import shutil
+    shutil.rmtree(tmp_png.parent, ignore_errors=True)
 
 
 if __name__ == "__main__":
