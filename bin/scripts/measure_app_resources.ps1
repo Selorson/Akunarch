@@ -26,16 +26,17 @@ param(
 $ErrorActionPreference = 'Stop'
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
-# Dấu hiệu nhận diện: regex trên ExecutablePath hoặc CommandLine (không phân biệt hoa thường).
+# Dấu hiệu nhận diện: `path` so với ĐƯỜNG DẪN EXE, `cmd` so với DÒNG LỆNH (regex, không phân biệt hoa thường).
+# Tách hai loại để không bắt nhầm lệnh khác chỉ nhắc tới đường dẫn của app trong tham số (vd script đo của em).
 # WebView2 của app Tauri nằm ở %LOCALAPPDATA%\<identifier>\EBWebView → bắt theo identifier trong dòng lệnh.
 $Signatures = [ordered]@{
-    'selorson'      = @('\\Selorson Admin\\app\.exe', 'com\.selorson\.app')
-    'akunarch'      = @('\\Akunarch\\akunarch\.exe', 'vn\.selorson\.akunarch')
-    'cowriter'      = @('\\Co-Writer\\', 'vn\.selorson\.cowriter', 'sd-server\.exe')
-    'toneforge'     = @('\\toneforge\\', 'com\.toneforge\.studio')
-    'comfyui'       = @('Akunarch\\repos\\ComfyUI', 'Git-repo\\ComfyUI')
-    'comfyui-rieng' = @('ComfyUI-Rieng')
-    'neuroforge'    = @('\\NeuroForge RTX\\', 'com\.neuroforge\.app')
+    'selorson'      = @{ path = @('\\Selorson Admin\\'); cmd = @('com\.selorson\.app') }
+    'akunarch'      = @{ path = @('\\Akunarch\\akunarch\.exe$'); cmd = @('vn\.selorson\.akunarch') }
+    'cowriter'      = @{ path = @('\\Co-Writer\\'); cmd = @('vn\.selorson\.cowriter') }
+    'toneforge'     = @{ path = @('\\toneforge\\'); cmd = @('com\.toneforge\.studio') }
+    'comfyui'       = @{ path = @('Akunarch\\repos\\ComfyUI\\'); cmd = @() }
+    'comfyui-rieng' = @{ path = @('\\ComfyUI-Rieng\\'); cmd = @() }
+    'neuroforge'    = @{ path = @('\\NeuroForge RTX\\', 'com\.neuroforge\.app'); cmd = @('com\.neuroforge\.app') }
 }
 $targets = if ($App -eq 'all') { @($Signatures.Keys) } else { @($App) }
 
@@ -59,9 +60,10 @@ $byPid = @{}; foreach ($p in $all) { $byPid[[int]$p.ProcessId] = $p }
 $trees = @{}
 foreach ($t in $targets) {
     $seed = @($all | Where-Object {
-            $txt = "$($_.ExecutablePath) $($_.CommandLine)"
+            $exe = "$($_.ExecutablePath)"; $cmdline = "$($_.CommandLine)"
             $hit = $false
-            foreach ($rx in $Signatures[$t]) { if ($txt -match $rx) { $hit = $true; break } }
+            foreach ($rx in $Signatures[$t].path) { if ($exe -match $rx) { $hit = $true; break } }
+            if (-not $hit) { foreach ($rx in $Signatures[$t].cmd) { if ($cmdline -match $rx) { $hit = $true; break } } }
             $hit -and [int]$_.ProcessId -ne $PID
         } | ForEach-Object { [int]$_.ProcessId })
     $set = @{}
