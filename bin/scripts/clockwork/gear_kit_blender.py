@@ -64,7 +64,8 @@ def gear_outline(module: float, teeth: int, samples: int = 8) -> list[tuple[floa
 
 
 def build_spur_gear(scene, gear, mat, parent, spokes: int = 5, sector_deg: float | None = None):
-    """Bánh răng trụ răng thẳng: vành răng thân khai + moay-ơ + nan hoa. Dựng trong mặt XY quanh gốc, dày theo Z."""
+    """Bánh răng trụ răng thẳng, dựng trong mặt XY quanh gốc, dày theo Z. Vành răng thân khai luôn có; phần giữa
+    theo `gear.style`: spoked = moay-ơ + 5 nan hoa, disc = moay-ơ + đĩa đặc, ring = để trống (vành mặt đồng hồ)."""
     m, z = gear.module, gear.teeth
     t = gear.thickness * MM
     outline = gear_outline(m, z)
@@ -87,11 +88,27 @@ def build_spur_gear(scene, gear, mat, parent, spokes: int = 5, sector_deg: float
         bm.faces.new([of[j], of[k], ob[k], ob[j]])
         bm.faces.new([inf[k], inf[j], inb[j], inb[k]])
     obj = _link(scene, bm, f"CW_{gear.id}", mat, parent)
-    # moay-ơ + nan hoa (cùng object con để quay theo bánh)
+    style = getattr(gear, "style", "spoked")
+    if style == "ring":
+        return obj
+    # moay-ơ + nan hoa / đĩa (object con để quay theo bánh)
     hub_r = max(rim_in * 0.22, 1.2 * m)
     hb = bmesh.new()
     bmesh.ops.create_cone(hb, cap_ends=True, segments=24, radius1=hub_r * MM, radius2=hub_r * MM, depth=t * 1.4)
     _link(scene, hb, f"CW_{gear.id}_hub", mat, obj, smooth=True)
+    if style == "disc":
+        # đĩa mỏng hơn vành, có gân tròn ở giữa — đọc rõ là bánh đúc đặc chứ không phải hình trụ trơn
+        wb = bmesh.new()
+        prof = [(hub_r, -t * 0.3), (rim_in * 1.01, -t * 0.3), (rim_in * 1.01, t * 0.3), (hub_r, t * 0.3)]
+        rib = (hub_r + rim_in) / 2
+        prof[2:2] = [(rib + m, t * 0.3), (rib + m * 0.6, t * 0.45), (rib - m * 0.6, t * 0.45), (rib - m, t * 0.3)]
+        rings = [[wb.verts.new((r * MM * math.cos(2 * math.pi * k / 64), r * MM * math.sin(2 * math.pi * k / 64), zz))
+                  for k in range(64)] for r, zz in prof]
+        for a, b in zip(rings, rings[1:] + rings[:1]):
+            for k in range(64):
+                wb.faces.new([a[k], a[(k + 1) % 64], b[(k + 1) % 64], b[k]])
+        _link(scene, wb, f"CW_{gear.id}_web", mat, obj)
+        return obj
     for s in range(spokes):
         a = 2 * math.pi * s / spokes
         sb = bmesh.new()

@@ -39,6 +39,7 @@ CLOCK_Z, CLOCK_R = 12.35, 2.45
 BEL_HALF = 2.3                           # gác chuông vuông 4,6 m
 Z_BEL0, Z_BEL1 = 17.7, 20.35
 Z_GABLE_APEX, Z_SPIRE_APEX = 22.7, 23.1
+BELL_Z, BELL_BEAM_Z = Z_BEL1 - 1.75, Z_BEL1 - 0.45   # miệng chuông, xà treo
 ARMILLARY_Z, ARMILLARY_R = 25.0, 2.05
 
 
@@ -603,15 +604,16 @@ def build_belfry(ctx, parent):
             place_on_face(bal, th, edge, Z_UP1 + 0.4, along=a)
         box(ctx, f"ER_balustrade_rail_{k}", (0, 0, 0), (0.16, 2 * edge + 0.1, 0.1), "basalt_trim", g)
         place_on_face(bpy.data.objects[f"ER_balustrade_rail_{k}"], th, edge, Z_UP1 + 1.07)
-    # xà gỗ + 2 chuông
-    box(ctx, "ER_bell_beam", (0.7, -0.7, Z_BEL1 - 0.45), (0.2, 2 * BEL_HALF + 0.2, 0.2), "oak", g, rot=(0, 0, math.pi / 4))
+    # xà ngang + 1 chuông treo giữa gác (anh chốt 2026-11-14: concept vẽ 2 chuông là lỗi thiết kế)
+    box(ctx, "ER_bell_beam", (0, 0, BELL_BEAM_Z), (2 * BEL_HALF + 0.2, 0.22, 0.22), "oak", g)
     bell_profile = [(0, 0.95), (0.12, 0.95), (0.2, 0.88), (0.26, 0.7), (0.3, 0.45), (0.38, 0.2), (0.47, 0.05), (0.5, 0.0),
                     (0.44, 0.0), (0.4, 0.06), (0.32, 0.25), (0.25, 0.5), (0.2, 0.75), (0, 0.85)]
     bell_profile = [(r * 1.25, z * 1.25) for r, z in bell_profile]
-    for side, (x, y) in (("L", (0.0, -1.42)), ("R", (1.42, 0.0))):
-        lathe(ctx, f"ER_bell_{side}", bell_profile, "bronze", g, segments=36, location=(x, y, Z_BEL1 - 1.75))
-        lathe(ctx, f"ER_bell_{side}_clapper", [(0, 0), (0.07, 0.04), (0.07, 0.1), (0.015, 0.14), (0.015, 0.75), (0, 0.75)],
-              "iron", g, segments=12, location=(x, y, Z_BEL1 - 1.65))
+    lathe(ctx, "ER_bell", bell_profile, "bronze", g, segments=48, location=(0, 0, BELL_Z))
+    lathe(ctx, "ER_bell_crown", [(0, 0), (0.16, 0), (0.12, 0.08), (0.14, 0.14), (0, 0.16)], "bronze", g, segments=16,
+          location=(0, 0, BELL_Z + bell_profile[0][1] - 0.02))
+    lathe(ctx, "ER_bell_clapper", [(0, 0), (0.08, 0.04), (0.08, 0.11), (0.018, 0.15), (0.018, 0.85), (0, 0.85)],
+          "iron", g, segments=12, location=(0, 0, BELL_Z + 0.1))
     # 4 đầu hồi trên 4 ô vòm
     for k in range(4):
         th = k * math.pi / 2

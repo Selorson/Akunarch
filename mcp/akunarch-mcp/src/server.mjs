@@ -87,9 +87,10 @@ tool('gpu_cancel', 'Huỷ job còn ở trạng thái queued.', { job_id: z.numbe
 
 tool(
 	'ui_open_project',
-	'Mở tab Dự án và chọn dự án; stage3d=true thì bật sân khấu 3D và chờ lên hình.',
-	{ slug: z.string(), stage3d: z.boolean().optional() },
-	async ({ slug, stage3d }) => text(await uiOpenProject(await app(), slug, { stage3d: stage3d ?? false }))
+	'Mở tab Dự án và chọn dự án; stage3d=true thì bật sân khấu 3D và chờ lên hình. variant="mechanism" chuyển sang bản cơ khí; seekSec dừng animation ở giây đó (assemble 0–24 s).',
+	{ slug: z.string(), stage3d: z.boolean().optional(), variant: z.enum(['real', 'mechanism']).optional(), seekSec: z.number().optional() },
+	async ({ slug, stage3d, variant, seekSec }) =>
+		text(await uiOpenProject(await app(), slug, { stage3d: stage3d ?? false, variant, seekSec }))
 );
 tool(
 	'ui_screenshot',

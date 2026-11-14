@@ -1,0 +1,1260 @@
+{
+  "name": "Tháp Đồng Hồ Thiên Văn Eryndor — bản cơ khí (concept_eryndor_clockwork_hero.jpg) v5",
+  "_note": "Đơn vị mm, toạ độ tháp kích thước thật (Blender Z-up, tâm tháp ở gốc, +X = mặt cửa & mặt đồng hồ, −Y = mặt hở bên trái). Thiết kế: docs/p0/eryndor_clockwork_design.md",
+  "beats_total": 48,
+  "shafts": [
+    {
+      "id": "s_esc",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        0,
+        -1500,
+        15600
+      ],
+      "length_mm": 800,
+      "radius_mm": 60
+    },
+    {
+      "id": "s_t1",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        -900,
+        -1400,
+        14400
+      ],
+      "length_mm": 600,
+      "radius_mm": 60
+    },
+    {
+      "id": "s_up",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        0,
+        -650,
+        13353.86
+      ],
+      "length_mm": 1500,
+      "radius_mm": 70
+    },
+    {
+      "id": "s_d1",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        0,
+        -1250,
+        11553.86
+      ],
+      "length_mm": 700,
+      "radius_mm": 70
+    },
+    {
+      "id": "s_d3",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        432.487,
+        -950,
+        9550
+      ],
+      "length_mm": 1300,
+      "radius_mm": 70
+    },
+    {
+      "id": "s_main",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        9650
+      ],
+      "length_mm": 17300,
+      "radius_mm": 220
+    },
+    {
+      "id": "s_dp",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "origin": [
+        2075,
+        0,
+        9550
+      ],
+      "length_mm": 2750,
+      "radius_mm": 70
+    },
+    {
+      "id": "s_dial",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "origin": [
+        3000,
+        0,
+        12350
+      ],
+      "length_mm": 900,
+      "radius_mm": 90
+    },
+    {
+      "id": "s_mw",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "origin": [
+        3000,
+        0,
+        13550
+      ],
+      "length_mm": 300,
+      "radius_mm": 50
+    },
+    {
+      "id": "s_hand",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "origin": [
+        3150,
+        0,
+        12350
+      ],
+      "length_mm": 500,
+      "radius_mm": 60
+    },
+    {
+      "id": "s_lay",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        -2404.163,
+        2404.163,
+        3900
+      ],
+      "length_mm": 5800,
+      "radius_mm": 120
+    },
+    {
+      "id": "s_tier1",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        1850
+      ],
+      "length_mm": 600,
+      "radius_mm": 420
+    },
+    {
+      "id": "s_tier2",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        2550
+      ],
+      "length_mm": 600,
+      "radius_mm": 400
+    },
+    {
+      "id": "s_tier3",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        3250
+      ],
+      "length_mm": 600,
+      "radius_mm": 380
+    },
+    {
+      "id": "s_tier4",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        3950
+      ],
+      "length_mm": 600,
+      "radius_mm": 360
+    },
+    {
+      "id": "s_radA",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "origin": [
+        0,
+        -2850,
+        6050
+      ],
+      "length_mm": 5500,
+      "radius_mm": 80
+    },
+    {
+      "id": "s_radB",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "origin": [
+        2850,
+        0,
+        6050
+      ],
+      "length_mm": 5500,
+      "radius_mm": 80
+    },
+    {
+      "id": "s_ring",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        7425
+      ],
+      "length_mm": 250,
+      "radius_mm": 330
+    },
+    {
+      "id": "s_drum",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        271.76,
+        -1014.222,
+        17950
+      ],
+      "length_mm": 400,
+      "radius_mm": 60
+    },
+    {
+      "id": "s_riser",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        -742.462,
+        742.462,
+        19750
+      ],
+      "length_mm": 3500,
+      "radius_mm": 60
+    },
+    {
+      "id": "s_arm",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        22300
+      ],
+      "length_mm": 2200,
+      "radius_mm": 80
+    },
+    {
+      "id": "s_lay2",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        2404.163,
+        -2404.163,
+        3900
+      ],
+      "length_mm": 5800,
+      "radius_mm": 120
+    },
+    {
+      "id": "s_lay3",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "origin": [
+        -2404.163,
+        -2404.163,
+        3900
+      ],
+      "length_mm": 5800,
+      "radius_mm": 120
+    }
+  ],
+  "gears": [
+    {
+      "id": "g_esc",
+      "module": 50,
+      "teeth": 20,
+      "shaft": "s_esc",
+      "z_mm": -250,
+      "thickness": 80,
+      "material": "brass"
+    },
+    {
+      "id": "g_e2",
+      "module": 50,
+      "teeth": 40,
+      "shaft": "s_esc",
+      "z_mm": 0,
+      "thickness": 100,
+      "material": "brass"
+    },
+    {
+      "id": "g_t1",
+      "module": 50,
+      "teeth": 20,
+      "shaft": "s_t1",
+      "z_mm": -100,
+      "thickness": 100,
+      "material": "brass"
+    },
+    {
+      "id": "g_t1b",
+      "module": 60,
+      "teeth": 16,
+      "shaft": "s_t1",
+      "z_mm": 150,
+      "thickness": 110,
+      "material": "steel",
+      "clutch": [
+        0,
+        48
+      ]
+    },
+    {
+      "id": "g_up_spur",
+      "module": 60,
+      "teeth": 30,
+      "shaft": "s_up",
+      "z_mm": -600,
+      "thickness": 110,
+      "material": "brass"
+    },
+    {
+      "id": "g_up2",
+      "module": 50,
+      "teeth": 44,
+      "shaft": "s_up",
+      "z_mm": -350,
+      "thickness": 110,
+      "material": "brass"
+    },
+    {
+      "id": "g_up_bevel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_up",
+      "z_mm": 300,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_d1",
+      "module": 50,
+      "teeth": 28,
+      "shaft": "s_d1",
+      "z_mm": 250,
+      "thickness": 110,
+      "material": "steel"
+    },
+    {
+      "id": "g_d1b",
+      "module": 50,
+      "teeth": 44,
+      "shaft": "s_d1",
+      "z_mm": -250,
+      "thickness": 110,
+      "material": "brass"
+    },
+    {
+      "id": "g_d3",
+      "module": 50,
+      "teeth": 38,
+      "shaft": "s_d3",
+      "z_mm": -550,
+      "thickness": 110,
+      "material": "brass"
+    },
+    {
+      "id": "g_d3_bevel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_d3",
+      "z_mm": 600,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_dp_bevel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_dp",
+      "z_mm": -1292.513,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_dp",
+      "module": 50,
+      "teeth": 12,
+      "shaft": "s_dp",
+      "z_mm": 1375,
+      "thickness": 120,
+      "material": "steel",
+      "clutch": [
+        0,
+        34
+      ]
+    },
+    {
+      "id": "g_dial_ring",
+      "module": 50,
+      "teeth": 100,
+      "shaft": "s_dial",
+      "z_mm": 450,
+      "thickness": 120,
+      "material": "brass",
+      "style": "ring"
+    },
+    {
+      "id": "g_mw1",
+      "module": 40,
+      "teeth": 50,
+      "shaft": "s_dial",
+      "z_mm": -50,
+      "thickness": 90,
+      "material": "brass"
+    },
+    {
+      "id": "g_mw2",
+      "module": 40,
+      "teeth": 10,
+      "shaft": "s_mw",
+      "z_mm": -50,
+      "thickness": 90,
+      "material": "steel"
+    },
+    {
+      "id": "g_mw3",
+      "module": 40,
+      "teeth": 40,
+      "shaft": "s_mw",
+      "z_mm": 80,
+      "thickness": 90,
+      "material": "brass"
+    },
+    {
+      "id": "g_hand",
+      "module": 40,
+      "teeth": 20,
+      "shaft": "s_hand",
+      "z_mm": -70,
+      "thickness": 90,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_main_up",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_main",
+      "z_mm": 4053.86,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_main_side",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_main",
+      "z_mm": -3950,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_main_top",
+      "module": 50,
+      "teeth": 80,
+      "shaft": "s_main",
+      "z_mm": -3050,
+      "thickness": 200,
+      "material": "brass"
+    },
+    {
+      "id": "g_main_bel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_main",
+      "z_mm": 8300,
+      "thickness": 120,
+      "material": "steel",
+      "clutch": [
+        34,
+        47
+      ]
+    },
+    {
+      "id": "g_mb2",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_main",
+      "z_mm": 8500,
+      "thickness": 120,
+      "material": "steel",
+      "clutch": [
+        0,
+        48
+      ]
+    },
+    {
+      "id": "g_lay_top",
+      "module": 50,
+      "teeth": 56,
+      "shaft": "s_lay",
+      "z_mm": 2700,
+      "thickness": 200,
+      "material": "brass"
+    },
+    {
+      "id": "g_p1",
+      "module": 50,
+      "teeth": 12,
+      "shaft": "s_lay",
+      "z_mm": -2050,
+      "thickness": 550,
+      "material": "steel",
+      "clutch": [
+        2,
+        14
+      ]
+    },
+    {
+      "id": "g_p2",
+      "module": 50,
+      "teeth": 30,
+      "shaft": "s_lay",
+      "z_mm": -1350,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        6,
+        18
+      ]
+    },
+    {
+      "id": "g_p3",
+      "module": 50,
+      "teeth": 48,
+      "shaft": "s_lay",
+      "z_mm": -650,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        10,
+        22
+      ]
+    },
+    {
+      "id": "g_p4",
+      "module": 50,
+      "teeth": 68,
+      "shaft": "s_lay",
+      "z_mm": 50,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        14,
+        26
+      ]
+    },
+    {
+      "id": "g_tier1",
+      "module": 50,
+      "teeth": 124,
+      "shaft": "s_tier1",
+      "z_mm": 0,
+      "thickness": 550,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_tier2",
+      "module": 50,
+      "teeth": 106,
+      "shaft": "s_tier2",
+      "z_mm": 0,
+      "thickness": 550,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_tier3",
+      "module": 50,
+      "teeth": 88,
+      "shaft": "s_tier3",
+      "z_mm": 0,
+      "thickness": 550,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_tier4",
+      "module": 50,
+      "teeth": 68,
+      "shaft": "s_tier4",
+      "z_mm": 0,
+      "thickness": 550,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_radA_bevel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_radA",
+      "z_mm": 2500,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_wheelA",
+      "module": 50,
+      "teeth": 50,
+      "shaft": "s_radA",
+      "z_mm": -2600,
+      "thickness": 200,
+      "material": "brass",
+      "kind": "bevel",
+      "clutch": [
+        0,
+        48
+      ]
+    },
+    {
+      "id": "g_radB_bevel",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_radB",
+      "z_mm": -2500,
+      "thickness": 90,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "disc"
+    },
+    {
+      "id": "g_wheelB",
+      "module": 50,
+      "teeth": 50,
+      "shaft": "s_radB",
+      "z_mm": 2600,
+      "thickness": 200,
+      "material": "brass",
+      "kind": "bevel",
+      "clutch": [
+        0,
+        48
+      ]
+    },
+    {
+      "id": "g_crown_ring",
+      "module": 50,
+      "teeth": 218,
+      "shaft": "s_ring",
+      "z_mm": 0,
+      "thickness": 250,
+      "material": "brass",
+      "kind": "bevel",
+      "style": "ring"
+    },
+    {
+      "id": "g_drum",
+      "module": 50,
+      "teeth": 28,
+      "shaft": "s_drum",
+      "z_mm": 0,
+      "thickness": 120,
+      "material": "brass",
+      "style": "disc"
+    },
+    {
+      "id": "g_riser",
+      "module": 50,
+      "teeth": 28,
+      "shaft": "s_riser",
+      "z_mm": -1600,
+      "thickness": 120,
+      "material": "brass"
+    },
+    {
+      "id": "g_riser_top",
+      "module": 50,
+      "teeth": 14,
+      "shaft": "s_riser",
+      "z_mm": 1550,
+      "thickness": 100,
+      "material": "steel"
+    },
+    {
+      "id": "g_arm",
+      "module": 50,
+      "teeth": 28,
+      "shaft": "s_arm",
+      "z_mm": -1000,
+      "thickness": 100,
+      "material": "brass"
+    },
+    {
+      "id": "g_lay2_top",
+      "module": 50,
+      "teeth": 56,
+      "shaft": "s_lay2",
+      "z_mm": 2700,
+      "thickness": 200,
+      "material": "brass"
+    },
+    {
+      "id": "g_p1_2",
+      "module": 50,
+      "teeth": 12,
+      "shaft": "s_lay2",
+      "z_mm": -2050,
+      "thickness": 550,
+      "material": "steel",
+      "clutch": [
+        2,
+        14
+      ]
+    },
+    {
+      "id": "g_p2_2",
+      "module": 50,
+      "teeth": 30,
+      "shaft": "s_lay2",
+      "z_mm": -1350,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        6,
+        18
+      ]
+    },
+    {
+      "id": "g_p3_2",
+      "module": 50,
+      "teeth": 48,
+      "shaft": "s_lay2",
+      "z_mm": -650,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        10,
+        22
+      ]
+    },
+    {
+      "id": "g_p4_2",
+      "module": 50,
+      "teeth": 68,
+      "shaft": "s_lay2",
+      "z_mm": 50,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        14,
+        26
+      ]
+    },
+    {
+      "id": "g_lay3_top",
+      "module": 50,
+      "teeth": 56,
+      "shaft": "s_lay3",
+      "z_mm": 2700,
+      "thickness": 200,
+      "material": "brass"
+    },
+    {
+      "id": "g_p1_3",
+      "module": 50,
+      "teeth": 12,
+      "shaft": "s_lay3",
+      "z_mm": -2050,
+      "thickness": 550,
+      "material": "steel",
+      "clutch": [
+        2,
+        14
+      ]
+    },
+    {
+      "id": "g_p2_3",
+      "module": 50,
+      "teeth": 30,
+      "shaft": "s_lay3",
+      "z_mm": -1350,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        6,
+        18
+      ]
+    },
+    {
+      "id": "g_p3_3",
+      "module": 50,
+      "teeth": 48,
+      "shaft": "s_lay3",
+      "z_mm": -650,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        10,
+        22
+      ]
+    },
+    {
+      "id": "g_p4_3",
+      "module": 50,
+      "teeth": 68,
+      "shaft": "s_lay3",
+      "z_mm": 50,
+      "thickness": 550,
+      "material": "brass",
+      "clutch": [
+        14,
+        26
+      ]
+    }
+  ],
+  "meshes": [
+    [
+      "g_e2",
+      "g_t1"
+    ],
+    [
+      "g_t1b",
+      "g_up_spur"
+    ],
+    [
+      "g_up_bevel",
+      "g_main_up"
+    ],
+    [
+      "g_up2",
+      "g_d1"
+    ],
+    [
+      "g_d1b",
+      "g_d3"
+    ],
+    [
+      "g_d3_bevel",
+      "g_dp_bevel"
+    ],
+    [
+      "g_dp",
+      "g_dial_ring"
+    ],
+    [
+      "g_mw1",
+      "g_mw2"
+    ],
+    [
+      "g_mw3",
+      "g_hand"
+    ],
+    [
+      "g_main_top",
+      "g_lay_top"
+    ],
+    [
+      "g_p1",
+      "g_tier1"
+    ],
+    [
+      "g_p2",
+      "g_tier2"
+    ],
+    [
+      "g_p3",
+      "g_tier3"
+    ],
+    [
+      "g_p4",
+      "g_tier4"
+    ],
+    [
+      "g_main_side",
+      "g_radA_bevel"
+    ],
+    [
+      "g_main_side",
+      "g_radB_bevel"
+    ],
+    [
+      "g_wheelA",
+      "g_crown_ring"
+    ],
+    [
+      "g_wheelB",
+      "g_crown_ring"
+    ],
+    [
+      "g_main_bel",
+      "g_drum"
+    ],
+    [
+      "g_mb2",
+      "g_riser"
+    ],
+    [
+      "g_riser_top",
+      "g_arm"
+    ],
+    [
+      "g_main_top",
+      "g_lay2_top"
+    ],
+    [
+      "g_p1_2",
+      "g_tier1"
+    ],
+    [
+      "g_p2_2",
+      "g_tier2"
+    ],
+    [
+      "g_p3_2",
+      "g_tier3"
+    ],
+    [
+      "g_p4_2",
+      "g_tier4"
+    ],
+    [
+      "g_main_top",
+      "g_lay3_top"
+    ],
+    [
+      "g_p1_3",
+      "g_tier1"
+    ],
+    [
+      "g_p2_3",
+      "g_tier2"
+    ],
+    [
+      "g_p3_3",
+      "g_tier3"
+    ],
+    [
+      "g_p4_3",
+      "g_tier4"
+    ]
+  ],
+  "pendulum": {
+    "id": "pendulum",
+    "escape_gear": "g_esc",
+    "amplitude_deg": 8
+  },
+  "lead_screws": [],
+  "hinges": [],
+  "racks": [],
+  "cam_drums": [
+    {
+      "id": "cd_bell",
+      "gear": "g_drum",
+      "pins_beats": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "drives": "hammer"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "o_tier1",
+      "gear": "g_tier1",
+      "drives": "gear_stair"
+    },
+    {
+      "id": "o_tier2",
+      "gear": "g_tier2",
+      "drives": "gear_stair"
+    },
+    {
+      "id": "o_tier3",
+      "gear": "g_tier3",
+      "drives": "gear_stair"
+    },
+    {
+      "id": "o_tier4",
+      "gear": "g_tier4",
+      "drives": "gear_stair"
+    },
+    {
+      "id": "o_crown_ring",
+      "gear": "g_crown_ring",
+      "drives": "crown_ring"
+    },
+    {
+      "id": "o_zodiac",
+      "gear": "g_dial_ring",
+      "drives": "zodiac_ring"
+    },
+    {
+      "id": "o_hands",
+      "gear": "g_hand",
+      "drives": "dial_hands"
+    },
+    {
+      "id": "o_armillary",
+      "gear": "g_arm",
+      "drives": "armillary"
+    }
+  ],
+  "parts": [
+    "pendulum",
+    "zodiac_ring",
+    "dial_hands",
+    "hammer",
+    "armillary",
+    "gear_stair",
+    "crown_ring"
+  ],
+  "motions": [
+    {
+      "part": "pendulum",
+      "by": "pendulum",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "pivot_mm": [
+        0,
+        -2050,
+        16450
+      ]
+    },
+    {
+      "part": "zodiac_ring",
+      "by": "g_dial_ring",
+      "type": "rotate",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot_mm": [
+        0,
+        0,
+        12350
+      ]
+    },
+    {
+      "part": "dial_hands",
+      "by": "g_hand",
+      "type": "rotate",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "pivot_mm": [
+        0,
+        0,
+        12350
+      ],
+      "zero_at_beat": 34
+    },
+    {
+      "part": "hammer",
+      "by": "cd_bell.lift",
+      "type": "rotate",
+      "axis": [
+        0.70711,
+        0.70711,
+        0
+      ],
+      "pivot_mm": [
+        558,
+        -558,
+        18350
+      ],
+      "scale": 28
+    },
+    {
+      "part": "armillary",
+      "by": "g_arm",
+      "type": "rotate",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "pivot_mm": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "heart",
+      "beats": [
+        0,
+        48
+      ],
+      "part": "pendulum",
+      "action": "con lắc đập nhịp, bánh thoát nhích từng răng"
+    },
+    {
+      "id": "stair",
+      "beats": [
+        2,
+        26
+      ],
+      "part": "gear_stair",
+      "action": "3 trục phụ (sau, trước-trái, sau-trái) cùng kéo 4 tầng bánh răng ở thân dưới, lần lượt quay (tầng trên quay nhiều hơn)"
+    },
+    {
+      "id": "crown",
+      "beats": [
+        0,
+        48
+      ],
+      "part": "crown_ring",
+      "action": "2 bánh răng đứng ở thân dưới cùng kéo vành răng lớn quanh chân tường răng cưa"
+    },
+    {
+      "id": "dial",
+      "beats": [
+        0,
+        34
+      ],
+      "part": "zodiac_ring",
+      "action": "chuỗi 5 bánh răng thấy qua cổng hở đổ xuống, kéo vành răng mặt đồng hồ mang vòng hoàng đạo"
+    },
+    {
+      "id": "midnight",
+      "beats": [
+        0,
+        34
+      ],
+      "part": "dial_hands",
+      "action": "kim chạy, chạm XII ở nhịp 34 rồi dừng (00:00)"
+    },
+    {
+      "id": "bell",
+      "beats": [
+        34,
+        47
+      ],
+      "part": "hammer",
+      "action": "trống chốt nhấc búa, gõ 12 tiếng vào chuông (nhịp 35–46)"
+    },
+    {
+      "id": "sky",
+      "beats": [
+        0,
+        48
+      ],
+      "part": "armillary",
+      "action": "trục phụ vòng qua chuông kéo quả cầu thiên văn quay"
+    }
+  ]
+}

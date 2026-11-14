@@ -30,12 +30,30 @@ test('app anh mở không có CDP → (được anh cho phép 2026-11-13) đóng
 		connectApp({
 			probe: async () => (probes++ === 0 ? { running: true, cdp: false, pids: [42] } : { running: false, cdp: false, pids: [] }),
 			closeApp: async (pids) => closed.push(...pids),
+			busyJobs: () => [],
 			launch: () => {},
+			port: 1, // cổng không ai nghe — để test không vớ phải app thật đang mở kèm cổng 9241
 			timeoutMs: 50
 		}),
 		/Không thấy cổng điều khiển CDP/ // không có app thật → hết hạn chờ cổng, nhưng đã đóng đúng PID
 	);
 	assert.deepEqual(closed, [42]);
+});
+
+test('app không có CDP nhưng hàng đợi đang có job chạy/chờ → KHÔNG tắt app (tắt là giết job, vd KTX2 2026-11-14)', async () => {
+	const closed = [];
+	await assert.rejects(
+		connectApp({
+			probe: async () => ({ running: true, cdp: false, pids: [42] }),
+			closeApp: async (pids) => closed.push(...pids),
+			busyJobs: () => [{ id: 62, status: 'running', mode: 'optimize_glb_runtime' }],
+			launch: () => {},
+			port: 1,
+			timeoutMs: 50
+		}),
+		/job GPU #62/
+	);
+	assert.deepEqual(closed, []);
 });
 
 test('allowClose=false → giữ hành vi cũ: báo lỗi, không đóng app', async () => {

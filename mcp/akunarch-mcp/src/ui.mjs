@@ -15,15 +15,19 @@ export function screenshotPath(name, dir = SHOT_DIR) {
 
 const PROBE = (slug) => `(() => { const __probeState = 1;
 	const stage = ${q('[data-testid="real-pbr-stage"]')};
+	const toggle = ${q('[data-testid="stage-variant-toggle"]')};
 	return {
 		cardFound: Boolean(${q(`[data-testid="project-card-${slug}"]`)}),
 		standby: Boolean(${q('[data-testid="pbr-2d-standby-card"]')}),
 		partsCount: Number(stage?.dataset.partsCount || 0),
-		canvas: Boolean(stage?.querySelector('canvas'))
+		canvas: Boolean(stage?.querySelector('canvas')),
+		variant: toggle ? (toggle.textContent.includes('cơ khí') ? 'mechanism' : 'real') : null,
+		clips: window.__akunarchStage?.clips ?? []
 	}; })()`;
 
-/** Mở tab Dự án → chọn thẻ dự án; tuỳ chọn bật sân khấu 3D và chờ canvas. */
-export async function uiOpenProject(s, slug, { stage3d = false, settleMs = 600, timeoutMs = 20000 } = {}) {
+/** Mở tab Dự án → chọn thẻ dự án; tuỳ chọn bật sân khấu 3D và chờ canvas.
+ *  `variant: 'mechanism'` bấm công tắc sang bản cơ khí và chờ clip; `seekSec` dừng animation ở giây đó để chụp tất định. */
+export async function uiOpenProject(s, slug, { stage3d = false, variant, seekSec, settleMs = 600, timeoutMs = 20000 } = {}) {
 	await s.evaluate(`${q('[data-testid="nav-projects"]')}?.click(), true`);
 	await sleep(settleMs);
 	let st = await s.evaluate(PROBE(slug));
@@ -38,9 +42,20 @@ export async function uiOpenProject(s, slug, { stage3d = false, settleMs = 600, 
 			st = await s.evaluate(PROBE(slug));
 		} while (!st.canvas && Date.now() < deadline);
 		if (!st.canvas) throw new Error(`Sân khấu 3D của '${slug}' chưa lên hình sau ${timeoutMs / 1000} s.`);
+		if (variant && st.variant !== variant) {
+			if (st.variant === null) throw new Error(`Dự án '${slug}' chưa có bản cơ khí (manifest thiếu mechanism_glb_path).`);
+			await s.evaluate(`${q('[data-testid="stage-variant-toggle"]')}?.click(), true`);
+			const deadline = Date.now() + timeoutMs;
+			do {
+				await sleep(Math.max(settleMs, 300));
+				st = await s.evaluate(PROBE(slug));
+			} while ((st.variant !== variant || !st.canvas || (variant === 'mechanism' && !st.clips?.length)) && Date.now() < deadline);
+			if (st.variant !== variant) throw new Error(`Không chuyển được sân khấu sang '${variant}'.`);
+		}
+		if (seekSec != null) await s.evaluate(`(() => { const h = window.__akunarchStage; if (!h) return false; h.pause(); h.seek(${Number(seekSec)}); return true; })()`);
 		await sleep(1500); // để texture / bóng đổ nạp xong trước khi chụp
 	}
-	return { standby: Boolean(st.standby), partsCount: st.partsCount ?? 0, canvas: Boolean(st.canvas) };
+	return { standby: Boolean(st.standby), partsCount: st.partsCount ?? 0, canvas: Boolean(st.canvas), variant: st.variant ?? null, clips: st.clips ?? [] };
 }
 
 const WIN = 'window.__TAURI__.window.getCurrentWindow()';

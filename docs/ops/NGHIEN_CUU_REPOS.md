@@ -17,6 +17,8 @@
 
 ## 2. TRELLIS: điểm mạnh và điểm vướng
 
+> **Cập nhật 2026-11-14:** TRELLIS.2 đã có sẵn trong ComfyUI ≥ 0.34 (bản int8, không cần WSL2, không cần tự biên dịch). Model đã tải về `D:\AI-Models`. Các điểm vướng 1–3 bên dưới không còn đúng. Xem `runs/2026-11-14_claude_comfyui-models.md`.
+
 - **Mạnh:** từ một ảnh ra lưới 3D có texture, chất lượng hình khối thường tốt hơn Hunyuan3D-2mini (bản rút gọn em đang dùng). Giấy phép MIT, dùng thương mại được.
 - **Vướng 1, hệ điều hành:** Microsoft chỉ kiểm trên **Linux**. Windows "chưa kiểm đủ", phải tự biên dịch `spconv`, `kaolin`, `nvdiffrast`, `flash-attn`, rất dễ hỏng. **Cách khả thi nhất:** chạy trong **WSL2 (Ubuntu trên Windows)**.
 - **Vướng 2, VRAM:** yêu cầu ≥ 16 GB. RTX 4080 vừa đúng 16 GB nên sát ngưỡng. Khi chạy phải tắt mọi thứ khác dùng GPU (hàng đợi `GpuJobQueue` đã lo việc này).

@@ -35,6 +35,7 @@ class Gear:
     material: str = "brass"
     kind: str = "spur"  # spur | bevel | sector
     clutch: tuple[float, float] | None = None
+    style: str = "spoked"  # spoked (5 nan hoa) | disc (đĩa đặc) | ring (chỉ vành răng, như vành mặt đồng hồ)
 
 
 @dataclass
@@ -89,6 +90,7 @@ def mechanism_from_dict(d: dict) -> Mechanism:
         gears[g["id"]] = Gear(
             g["id"], float(g["module"]), int(g["teeth"]), g["shaft"], float(g.get("thickness", 3.0)),
             g.get("material", "brass"), g.get("kind", "spur"), tuple(g["clutch"]) if g.get("clutch") else None,
+            g.get("style", "spoked"),
         )
     elements = {}
     for key, kind in _ELEMENT_KEYS.items():
@@ -174,6 +176,7 @@ def _propagate(m: Mechanism):
 
     info[m.escape_gear] = (1.0, window(m.escape_gear, inf))
     parent[m.escape_gear] = None
+    link: dict[str, str] = {}   # bánh → cách nhận chuyển động từ cha: "shaft" | "mesh"
     q = deque([m.escape_gear])
     while q:
         a = q.popleft()
@@ -190,14 +193,25 @@ def _propagate(m: Mechanism):
                 rb = -ra * ga.teeth / gb.teeth
             info[b] = (rb, window(b, wa))
             parent[b] = a
+            link[b] = how
             q.append(b)
-    return info, parent, adj
+    return info, parent, adj, link
+
+
+LIFT_BEATS = 0.6   # búa được nhấc dần trong 0,6 nhịp trước chốt rồi rơi đúng nhịp chốt
+
+
+def _cam_lift(pins: list[float], beat: float) -> float:
+    for p in pins:
+        if p - LIFT_BEATS <= beat < p:
+            return (beat - (p - LIFT_BEATS)) / LIFT_BEATS
+    return 0.0
 
 
 def solve_kinematics(m: Mechanism, beat: float) -> dict[str, float]:
     """Góc (độ) của mọi bánh răng, giá trị của mọi phần tử (mm hoặc độ), và góc lắc con lắc tại nhịp `beat`."""
     adv = escape_advance_deg(m.gears[m.escape_gear].teeth) if m.escape_gear in m.gears else 0.0
-    info, _, _ = _propagate(m)
+    info = _propagate(m)[0]
     out: dict[str, float] = {}
     for gid, (ratio, (w0, w1)) in info.items():
         lo = max(0.0, w0)
@@ -214,8 +228,39 @@ def solve_kinematics(m: Mechanism, beat: float) -> dict[str, float]:
             out[e.id] = abs(ang)
         else:
             out[e.id] = ang
+        if e.kind == "cam_drum":
+            out[f"{e.id}.lift"] = _cam_lift(e.pins_beats, beat)   # 0 → 1: búa được nhấc, rơi về 0 tại chốt
     out[m.pendulum_id] = m.amplitude_deg * math.sin(math.pi * beat)
     return out
+
+
+def motion_value(m: Mechanism, motion: dict, k: dict[str, float]) -> float:
+    """Giá trị đẩy một bộ phận theo `motions[]` của đặc tả: k[by] · scale, trừ đi giá trị tại `zero_at_beat`
+    (nếu có) để bộ phận đứng đúng tư thế dựng sẵn ở nhịp đó — ví dụ kim chạm XII đúng nhịp 34."""
+    v = k.get(motion["by"], 0.0)
+    if "zero_at_beat" in motion:
+        v -= solve_kinematics(m, float(motion["zero_at_beat"])).get(motion["by"], 0.0)
+    return v * motion.get("scale", 1.0)
+
+
+def idle_seam_errors(m: Mechanism, idle_beats: int = 8, spokes: int = 5) -> list[str]:
+    """Clip `idle` lặp vô hạn: sau `idle_beats` nhịp mọi bánh phải về hình y hệt lúc đầu (trọn răng, và trọn bước
+    nan hoa nếu kiểu spoked); mọi giá trị khác (con lắc, búa, vít…) phải bằng nhau. Trả danh sách chỗ bị giật."""
+    a, b = solve_kinematics(m, m.beats_total), solve_kinematics(m, m.beats_total + idle_beats)
+    errs = []
+    for key in a:
+        d = b[key] - a[key]
+        g = m.gears.get(key)
+        if g is None:
+            if abs(d) > 1e-6:
+                errs.append(f"{key}: lệch {d:.3f} sau {idle_beats} nhịp idle.")
+            continue
+        # góc nhỏ nhất bánh trông y hệt: bước răng, hoặc bội chung của bước răng và bước nan hoa
+        pitch = 360.0 / (math.gcd(g.teeth, spokes) if g.style == "spoked" else g.teeth)
+        r = abs(d) % pitch
+        if min(r, pitch - r) > 1e-6:
+            errs.append(f"Bánh răng {key}: quay {d:.3f}° trong idle, không trọn bước {pitch:.3f}° → vòng lặp bị giật.")
+    return errs
 
 
 def validate(m: Mechanism) -> list[str]:
@@ -250,7 +295,11 @@ def validate(m: Mechanism) -> list[str]:
         if abs(got - want) > 0.01 * ga.module:
             errs.append(f"Ăn khớp {a}–{b}: khoảng cách tâm {got:.3f} mm ≠ {want:.3f} mm.")
 
-    info, parent, adj = _propagate(m)
+    info, parent, adj, link = _propagate(m)
+    for gid, g in m.gears.items():
+        if g.clutch and link.get(gid) == "mesh":
+            errs.append(f"Bánh răng {gid}: ly hợp phải đặt giữa bánh và trục — bánh này nhận chuyển động qua ăn khớp "
+                        f"với {parent[gid]} nên không thể đứng yên khi {parent[gid]} quay.")
     for e in m.elements.values():
         if e.gear not in m.gears:
             errs.append(f"Phần tử {e.id}: bánh răng '{e.gear}' không có.")
@@ -265,6 +314,29 @@ def validate(m: Mechanism) -> list[str]:
             useful.add(g)
             g = parent.get(g)
     useful.add(m.escape_gear)
+
+    # vòng kín: một bánh được kéo theo 2 đường (vd 2 bánh côn cùng kéo 1 vành) → tỉ số và cửa sổ ly hợp phải khớp,
+    # không thì bộ máy kẹt; bánh kéo song song vào bánh có ích cũng là bánh có ích (chỉ xét ăn khớp, không xét chung trục)
+    loops = [(a, b, how) for a in info for b, how in adj[a]
+             if b in info and a < b and parent.get(b) != a and parent.get(a) != b]
+    for a, b, how in loops:
+        ga, gb = m.gears[a], m.gears[b]
+        ra = info[a][0]
+        want = ra if how == "shaft" else (ra if "bevel" in (ga.kind, gb.kind) else -ra) * ga.teeth / gb.teeth
+        # bánh chung trục được phép khác cửa sổ (ly hợp nằm giữa bánh và trục); bánh ăn khớp thì không
+        if abs(want - info[b][0]) > 1e-9 or (how == "mesh" and info[a][1] != info[b][1]):
+            errs.append(f"Bánh răng {a}–{b}: hai đường truyền mâu thuẫn (tỉ số hoặc ly hợp) — bộ máy sẽ kẹt.")
+    changed = True
+    while changed:
+        changed = False
+        for a, b, how in loops:
+            for x, y in ((a, b), (b, a)):
+                if how == "mesh" and y in useful and x not in useful:
+                    g = x
+                    while g is not None and g not in useful:
+                        useful.add(g)
+                        g = parent.get(g)
+                    changed = True
     for gid in m.gears:
         if gid in useful:
             continue

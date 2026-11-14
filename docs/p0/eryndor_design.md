@@ -45,7 +45,7 @@ Bề rộng:
 | Mái hiên đá nhỏ ở góc trên | 2 nhìn thấy | |
 | Lan can gác chuông | 1 vòng | |
 | Ô cửa gác chuông | 2 nhìn thấy, suy ra 4 | Mỗi ô dưới một đầu hồi nhọn có huy hiệu tròn |
-| Chuông | 2 | Treo giữa, nhìn được qua các ô cửa |
+| Chuông | 1 | Treo giữa, nhìn được qua các ô cửa. Concept vẽ 2 là lỗi thiết kế (anh chốt 2026-11-14) |
 | Tháp nhọn nhỏ (pinnacle) | 5 nhìn thấy, suy ra 8 | 4 ở góc, 4 kẹp hai bên đầu hồi |
 | Mái chóp | 1 | Mái chóp có 4 đầu hồi chéo nhau, lợp đá phiến |
 | Trụ đỡ đồng | 1 | |

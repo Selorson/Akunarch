@@ -20,8 +20,10 @@ SLUG = "eryndor-clocktower-concept"
 def glb_path() -> Path:
     if os.environ.get("ERYNDOR_GLB"):
         return Path(os.environ["ERYNDOR_GLB"])
-    master = PROJ / "_master" / f"{SLUG}.glb"
-    return master if master.is_file() else PROJ / f"{SLUG}.glb"
+    # `_master` là bản gốc trước khi nén KTX2; dựng lại sau lần nén thì bản runtime mới hơn → lấy bản mới nhất
+    master, runtime = PROJ / "_master" / f"{SLUG}.glb", PROJ / f"{SLUG}.glb"
+    found = [p for p in (master, runtime) if p.is_file()]
+    return max(found, key=lambda p: p.stat().st_mtime) if found else runtime
 
 
 def load_gltf(p: Path) -> dict:
@@ -89,9 +91,13 @@ class EryndorRealTest(unittest.TestCase):
         return len({n for n in self.names if pat.match(n)})
 
     def test_required_parts_present(self):
-        for n in ["ER_clock_face", "ER_bell_L", "ER_bell_R", "ER_armillary", "ER_pendulum",
+        for n in ["ER_clock_face", "ER_bell", "ER_armillary", "ER_pendulum",
                   "ER_spiral_stair", "ER_sanctuary", "ER_cliff", "ER_door", "ER_spire", "ER_sub_dials"]:
             self.assertIn(n, self.names, n)
+
+    def test_single_bell(self):
+        # anh chốt 2026-11-14: concept vẽ 2 chuông là lỗi thiết kế → 1 chuông treo giữa gác
+        self.assertEqual(sorted(n for n in self.names if re.fullmatch(r"ER_bell(_[LR])?", n)), ["ER_bell"])
 
     def test_tower_height(self):
         # đỉnh quả cầu thiên văn tính từ mặt đất chân tháp (z=0): 26 m ±1,5

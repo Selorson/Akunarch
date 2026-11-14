@@ -57,6 +57,13 @@ class MechanismGlbTest(unittest.TestCase):
     def test_two_clips(self):
         self.assertEqual(sorted(a["name"] for a in self.gltf["animations"]), ["assemble", "idle"])
 
+    def test_gear_styles(self):
+        names = {n.get("name") for n in self.gltf["nodes"]}
+        self.assertIn("CW_g_esc_spoke0", names)                       # spoked (mặc định): 5 nan hoa
+        self.assertIn("CW_g12_web", names)                            # disc: đĩa đặc, không nan hoa
+        self.assertNotIn("CW_g12_spoke0", names)
+        self.assertFalse(any(n and n.startswith(("CW_g36_hub", "CW_g36_spoke", "CW_g36_web")) for n in names))  # ring
+
     def test_gear_rotation_matches_kinematics(self):
         mech = load_mechanism(MINI)
         names = [n.get("name") for n in self.gltf["nodes"]]

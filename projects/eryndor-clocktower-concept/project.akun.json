@@ -98,8 +98,8 @@
         "id": "part_belfry",
         "name_en": "Belfry",
         "name_vi": "Gác chuông",
-        "summary_en": "Two bronze bells behind four pointed arches under roundel gables and eight pinnacles.",
-        "summary_vi": "Hai chuông đồng treo xà gỗ sau 4 ô vòm nhọn, 4 đầu hồi có huy hiệu tròn, 8 tháp nhọn."
+        "summary_en": "A bronze bell behind four pointed arches under roundel gables and eight pinnacles.",
+        "summary_vi": "Chuông đồng treo xà giữa gác, sau 4 ô vòm nhọn, 4 đầu hồi có huy hiệu tròn, 8 tháp nhọn."
       },
       {
         "dir": [
@@ -118,7 +118,7 @@
     "intro_video_path": null,
     "pack_version": "2.1.0",
     "preview_render_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\clockwork\\eryndor-clocktower-concept_preview_1080p.png",
-    "mechanism_glb_path": null
+    "mechanism_glb_path": "E:\\Akunarch\\projects\\eryndor-clocktower-concept\\clockwork\\eryndor-clocktower-concept_mechanism.glb"
   },
   "chunks": {
     "pack_zip_path": null,

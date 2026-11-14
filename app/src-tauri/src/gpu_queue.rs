@@ -623,6 +623,39 @@ fn kill_process_tree(pid: u32) {
 /// `run_hidden_command` kiểm `Path::is_file()` nên phải là đường dẫn tuyệt đối (tên trần "powershell" luôn trượt).
 pub const POWERSHELL_EXE: &str = r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe";
 
+pub const COMFY_PYTHON: &str = r"E:\Akunarch\repos\ComfyUI\.venv\Scripts\python.exe";
+const COMFY_RUNNER: &str = r"E:\Akunarch\bin\scripts\comfy_run_workflow.py";
+
+/// Tham số cho `comfy_run_workflow.py` từ payload job `comfy_workflow`
+/// (`workflow` bắt buộc; `image`, `image_node`, `set[]`, `prefix`, `timeout_sec`, `out_dir` tuỳ chọn).
+pub fn comfy_workflow_args(payload: &Value, default_out_dir: &Path) -> Result<Vec<String>, String> {
+    let s = |k: &str| payload.get(k).and_then(Value::as_str).map(str::trim).filter(|v| !v.is_empty());
+    let workflow = s("workflow").ok_or("Job comfy_workflow thiếu 'workflow' (file .api.json).")?;
+    let out_dir = s("out_dir").map(PathBuf::from).unwrap_or_else(|| default_out_dir.to_path_buf());
+    let mut args = vec![
+        COMFY_RUNNER.to_string(),
+        "--workflow".to_string(),
+        workflow.to_string(),
+        "--out-dir".to_string(),
+        out_dir.to_string_lossy().to_string(),
+        "--timeout".to_string(),
+        payload.get("timeout_sec").and_then(Value::as_u64).unwrap_or(1800).to_string(),
+    ];
+    if let Some(img) = s("image") {
+        args.extend(["--image".to_string(), img.to_string()]);
+        args.extend(["--image-node".to_string(), s("image_node").unwrap_or("122").to_string()]);
+    }
+    if let Some(prefix) = s("prefix") {
+        args.extend(["--prefix".to_string(), prefix.to_string()]);
+    }
+    for item in payload.get("set").and_then(Value::as_array).into_iter().flatten() {
+        if let Some(v) = item.as_str() {
+            args.extend(["--set".to_string(), v.to_string()]);
+        }
+    }
+    Ok(args)
+}
+
 /// P0: script và đầu ra video intro theo biến thể (`mechanism` = sa bàn cơ khí, mặc định = turntable bản thật).
 pub fn intro_render_plan(variant: Option<&str>, project_folder: &Path, slug: &str) -> (String, PathBuf) {
     let cinema = project_folder.join("cinema");
@@ -1081,6 +1114,25 @@ async fn execute_worker_step(
             })
             .await;
             Ok(out_glb.to_string_lossy().to_string())
+        }
+        "comfy_workflow" => {
+            // Workflow ComfyUI dạng API (FLUX, TRELLIS.2, H3…): runner tự bật máy chủ, chạy, chép đầu ra, xả VRAM rồi tắt.
+            let project_slug = payload.get("project_slug").and_then(Value::as_str).map(str::trim).unwrap_or("");
+            let mut default_out = PathBuf::from(r"E:\Akunarch\_archive\comfy");
+            if !project_slug.is_empty() {
+                let conn = open_akunarch_db_at(db_path)?;
+                if let Some(proj) = crate::projects::get_project_by_slug(&conn, project_slug)? {
+                    default_out = Path::new(&proj.folder_path).join("comfy");
+                }
+            }
+            let args = comfy_workflow_args(payload, &default_out)?;
+            let timeout = payload.get("timeout_sec").and_then(Value::as_u64).unwrap_or(1800) + 300;
+            let (stdout, _) = run_hidden_command(COMFY_PYTHON, &args, timeout, "ComfyUI workflow").await?;
+            stdout
+                .lines()
+                .rev()
+                .find_map(|l| l.trim().strip_prefix("OUTPUT=").map(str::to_string))
+                .ok_or_else(|| format!("ComfyUI chạy xong nhưng không báo file đầu ra:\n{stdout}"))
         }
         "render_intro_mp4" => {
             let blender_bin = r"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe";
@@ -2631,6 +2683,28 @@ mod tests {
         // Lỗi cũ: run_hidden_command("powershell") kiểm Path::new("powershell").is_file() → luôn sai → KTX2 tự động luôn hỏng
         assert!(std::path::Path::new(POWERSHELL_EXE).is_absolute());
         assert!(std::path::Path::new(POWERSHELL_EXE).is_file());
+    }
+
+    #[test]
+    fn comfy_workflow_args_maps_payload_to_runner_flags() {
+        let p = json!({
+            "workflow": r"E:\Akunarch\bin\comfy_workflows\trellis2_image_to_glb.api.json",
+            "image": r"E:\a b\ảnh.png",
+            "image_node": "122",
+            "set": ["316.value=true", "288.value=2048"],
+            "prefix": "tracery",
+            "timeout_sec": 900
+        });
+        let args = comfy_workflow_args(&p, std::path::Path::new(r"E:\p\demo\comfy")).unwrap();
+        assert!(args[0].ends_with(r"bin\scripts\comfy_run_workflow.py"), "{}", args[0]);
+        let pos = |flag: &str| args.iter().position(|a| a == flag).unwrap();
+        assert_eq!(args[pos("--out-dir") + 1], r"E:\p\demo\comfy");
+        assert_eq!(args[pos("--image") + 1], r"E:\a b\ảnh.png");
+        assert_eq!(args[pos("--prefix") + 1], "tracery");
+        assert_eq!(args[pos("--timeout") + 1], "900");
+        assert_eq!(args.iter().filter(|a| *a == "--set").count(), 2);
+        // thiếu workflow → lỗi rõ
+        assert!(comfy_workflow_args(&json!({}), std::path::Path::new("x")).unwrap_err().contains("workflow"));
     }
 
     #[test]

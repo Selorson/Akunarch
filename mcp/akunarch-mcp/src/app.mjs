@@ -3,6 +3,8 @@ import { spawn, execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { createReadStream } from 'node:fs';
 import http from 'node:http';
+import { join } from 'node:path';
+import { DatabaseSync } from 'node:sqlite';
 import { Cdp } from './cdp.mjs';
 
 export const EXE = 'C:\\Users\\Admin\\AppData\\Local\\Akunarch\\akunarch.exe';
@@ -33,6 +35,20 @@ export function buildInvokeExpression(cmd, args) {
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+export const AKUNARCH_DB = join(process.env.LOCALAPPDATA ?? 'C:\\Users\\Admin\\AppData\\Local', 'Akunarch', 'akunarch.db');
+
+/** Job GPU đang chạy/chờ trong hàng đợi của app (đọc DB chỉ-đọc). Tắt app lúc này là giết job đang chạy. */
+export function busyJobsFromDb(path = AKUNARCH_DB) {
+	const db = new DatabaseSync(path, { readOnly: true });
+	try {
+		return db
+			.prepare(`SELECT id, status, json_extract(payload_json, '$.mode') AS mode FROM gpu_jobs WHERE status IN ('running', 'queued') ORDER BY id`)
+			.all();
+	} finally {
+		db.close();
+	}
+}
 
 function fetchJson(url, timeoutMs = 2000) {
 	return new Promise((resolve, reject) => {
@@ -151,6 +167,7 @@ export async function connectApp({
 	probe,
 	closeApp = closeAppGracefully,
 	launch = launchApp,
+	busyJobs = busyJobsFromDb,
 	exe = EXE,
 	port = CDP_PORT,
 	timeoutMs = 45000
@@ -159,6 +176,11 @@ export async function connectApp({
 	let p = await doProbe();
 	if (p.running && !p.cdp) {
 		if (!allowClose) throw new AppNotDebuggableError();
+		const busy = busyJobs();
+		if (busy.length) {
+			const list = busy.map((j) => `job GPU #${j.id} (${j.mode ?? '?'}, ${j.status})`).join(', ');
+			throw new Error(`App đang mở không có cổng điều khiển và hàng đợi còn ${list} — không tắt app (sẽ giết job). Chờ job xong rồi gọi lại.`);
+		}
 		await closeApp(p.pids ?? []);
 		p = await doProbe();
 		if (p.running) throw new AppNotDebuggableError();

@@ -29,7 +29,7 @@ for p in (str(HERE), r"E:\Akunarch\bin\scripts\monuments", r"E:\Tools-3D\scripts
 
 import _aaa_monument_kit as kit  # noqa: E402
 import gear_kit_blender as gk  # noqa: E402
-from mechanism import mechanism_from_dict, solve_kinematics, validate  # noqa: E402
+from mechanism import idle_seam_errors, mechanism_from_dict, motion_value, solve_kinematics, validate  # noqa: E402
 
 FPS = 24
 FRAMES_PER_BEAT = 12
@@ -68,6 +68,8 @@ def build_scene(slug: str, mech_path: Path):
     errs = validate(mech)
     if errs:
         raise SystemExit("Đặc tả cơ cấu không hợp lệ:\n  - " + "\n  - ".join(errs))
+    for w in idle_seam_errors(mech):
+        print(f"[CẢNH BÁO idle] {w}")
 
     # kit.init_blender_optix_scene tự mkdir MODELS_OUT_DIR (mặc định trỏ vào Selorson static/world/models — đã gỡ bỏ)
     kit.MODELS_OUT_DIR = mech_path.parent
@@ -113,12 +115,12 @@ def build_scene(slug: str, mech_path: Path):
                 continue
 
             def apply(k, o=obj, base=base, mo=motion):
-                v = k.get(mo["by"], 0.0)
+                v = motion_value(mech, mo, k)
                 if mo["type"] == "translate":
-                    o.matrix_basis = Matrix.Translation(Vector(mo["axis"]).normalized() * v * mo.get("scale", 1.0) * gk.MM) @ base
+                    o.matrix_basis = Matrix.Translation(Vector(mo["axis"]).normalized() * v * gk.MM) @ base
                 else:   # rotate quanh trục đi qua `pivot_mm`
                     piv = Vector(mo["pivot_mm"]) * gk.MM
-                    r = Matrix.Translation(piv) @ Matrix.Rotation(math.radians(v * mo.get("scale", 1.0)), 4, Vector(mo["axis"])) @ Matrix.Translation(-piv)
+                    r = Matrix.Translation(piv) @ Matrix.Rotation(math.radians(v), 4, Vector(mo["axis"])) @ Matrix.Translation(-piv)
                     o.matrix_basis = r @ base
             animated.append((obj, apply))
 
@@ -154,6 +156,11 @@ def main():
     a = parse_args()
     slug, mech_path, out = a["slug"], Path(a["mech"]), Path(a["out"])
     scene, t0, mech, n_anim, n_parts = build_scene(slug, mech_path)
+    tris = 0
+    for ob in scene.objects:
+        if ob.type == "MESH":
+            ob.data.calc_loop_triangles()
+            tris += len(ob.data.loop_triangles)
     out.parent.mkdir(parents=True, exist_ok=True)
     bpy.ops.export_scene.gltf(
         filepath=str(out), export_format="GLB", use_visible=True, export_yup=True, export_apply=False,
@@ -163,7 +170,7 @@ def main():
         export_draco_mesh_compression_enable=True, export_draco_mesh_compression_level=6,
     )
     print(f"=== [MECHANISM] {slug}: {len(mech.gears)} bánh răng, {n_anim} object chuyển động, "
-          f"{n_parts} bộ phận → {out} ({out.stat().st_size / 1048576:.2f} MB) trong {time.time() - t0:.1f}s ===")
+          f"{n_parts} bộ phận, {tris} tam giác → {out} ({out.stat().st_size / 1048576:.2f} MB) trong {time.time() - t0:.1f}s ===")
     __import__("shutil").rmtree(kit.BAKED_DIR, ignore_errors=True)   # texture nướng tạm đã nhúng vào .glb
 
 
