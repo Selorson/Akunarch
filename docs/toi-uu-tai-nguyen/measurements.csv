@@ -1,0 +1,8 @@
+﻿"timestamp","app","label","process_count","ram_private_mb","ram_ws_mb","vram_mb_median","vram_mb_max","gpu_used_mb_all","processes"
+"2026-11-14 20:59:02","selorson","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","akunarch","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","cowriter","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","toneforge","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","comfyui","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","comfyui-rieng","passive_snapshot","0","0","0","0","0","1093",""
+"2026-11-14 20:59:02","neuroforge","passive_snapshot","8","468.1","536.3","43.4","43.4","1093","msedgewebview2.exex7 neuroforge.exex1"
