@@ -92,3 +92,18 @@ Xem ledger và mục 4 file thiết kế:
   - xem v6;
   - chọn chi tiết nặn tiếp (tấm chạm trụ ốp, chóp tháp nhọn, mái vòm đồng hồ…);
   - chốt để chạy KTX2 cả 2 bản.
+
+## 8. Kết thúc đợt (2026-11-14, 16:40)
+
+- **v7–v11:**
+  - chi tiết nặn: cổng, 24 tấm chạm, 8 chóp, mái vòm;
+  - sửa lỗi quay glTF (anh bắt);
+  - tường khoét đúng dáng khung (anh bắt);
+  - mặt đồng hồ đồng tâm + số La Mã vàng (anh bắt).
+- **KTX2:** bản thật xong 13:41 (41 MB), bản cơ khí xong 16:37 (90 MB, đủ animation). Test trên bản nén: 50/50 + 6/6.
+- **Sự cố và cách chặn:**
+  - em tự chạy KTX2 khi anh còn soi, rồi lỡ dừng KTX2 bản thật;
+  - script chụp ảnh tắt/mở lại app làm job mồ côi.
+  - Đã chặn bằng quy tắc `ktx2-run-stop-rule` (bộ nhớ + KINH_NGHIEM) và khoá MCP `busyJobsFromDb`.
+- **Commit:** `3edb3d5` (mã + tài liệu), cộng commit tài liệu cuối đợt.
+- **Phiên sau:** anh bàn tài nguyên sản xuất. Đọc `docs/ops/NGHIEN_CUU_TAI_NGUYEN_SAN_XUAT.md` để trình bày.
