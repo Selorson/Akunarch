@@ -8,6 +8,9 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
 use tokio::sync::{Mutex, Notify};
 
+/// ComfyUI riêng của anh (`D:\ComfyUI-Rieng`, mở bằng lối tắt Desktop "ComfyUI riêng"). Khác bản Akunarch ở cổng 8188.
+pub const PERSONAL_COMFYUI_URL: &str = "http://127.0.0.1:8189";
+
 pub const VALID_WORKER_KINDS: &[&str] = &[
     "blender",
     "comfyui",
@@ -154,6 +157,8 @@ pub struct GpuJobQueue {
     /// B2: báo UI (lib.rs gắn `emit("akunarch://gpu-job-starting")`) nhường VRAM WebGL trước job GPU nặng.
     /// Callback thuần thay vì `tauri::AppHandle` để exe test không kéo DLL giao diện của tauri.
     job_start_notifier: Arc<std::sync::OnceLock<JobStartNotifier>>,
+    /// ComfyUI riêng của anh đang bật ở địa chỉ này thì hàng đợi giữ job lại (anh chốt 2026-11-14).
+    personal_comfyui_url: Arc<String>,
 }
 
 impl GpuJobQueue {
@@ -177,6 +182,7 @@ impl GpuJobQueue {
             wakeup: Arc::new(Notify::new()),
             active_jobs_counter: Arc::new(AtomicUsize::new(0)),
             job_start_notifier: Arc::new(std::sync::OnceLock::new()),
+            personal_comfyui_url: Arc::new(PERSONAL_COMFYUI_URL.to_string()),
         };
         queue.spawn_worker_loop();
         queue
@@ -292,6 +298,25 @@ impl GpuJobQueue {
             return false;
         };
 
+        // Anh đang dùng ComfyUI riêng → giữ job ở 'queued' kèm ghi chú, 5 s sau thử lại.
+        if comfyui_alive(&self.personal_comfyui_url).await {
+            if let Ok(conn) = open_akunarch_db_at(&self.db_path) {
+                let _ = conn.execute(
+                    "UPDATE gpu_jobs SET error_log = ?2 WHERE id = ?1 AND status = 'queued'",
+                    params![
+                        job_id,
+                        "Chờ: ComfyUI riêng của anh đang bật (cổng 8189); đóng cửa sổ đó thì job tự chạy."
+                    ],
+                );
+            }
+            let wakeup = self.wakeup.clone();
+            tokio::spawn(async move {
+                tokio::time::sleep(std::time::Duration::from_secs(5)).await;
+                wakeup.notify_one();
+            });
+            return false;
+        }
+
         // Automatically resolve `project_id` -> `project_slug` when UI dispatches via project_id
         if let Some(pid) = project_id {
             let needs_slug = payload
@@ -319,7 +344,7 @@ impl GpuJobQueue {
         if let Ok(conn) = open_akunarch_db_at(&self.db_path) {
             let now = Utc::now().to_rfc3339();
             let _ = conn.execute(
-                "UPDATE gpu_jobs SET status = 'running', progress_pct = 15.0, updated_at = ?2 WHERE id = ?1",
+                "UPDATE gpu_jobs SET status = 'running', progress_pct = 15.0, error_log = '', updated_at = ?2 WHERE id = ?1",
                 params![job_id, now],
             );
         }
@@ -2482,6 +2507,15 @@ pub async fn release_comfyui_vram(comfyui_base_url: Option<&str>) -> VramRelease
     release_comfyui_vram_inner(url).await
 }
 
+async fn comfyui_alive(base_url: &str) -> bool {
+    let client = reqwest::Client::builder()
+        .timeout(std::time::Duration::from_millis(1500))
+        .build()
+        .unwrap_or_default();
+    let endpoint = format!("{}/system_stats", base_url.trim_end_matches('/'));
+    matches!(client.get(&endpoint).send().await, Ok(r) if r.status().is_success())
+}
+
 async fn release_comfyui_vram_inner(base_url: &str) -> VramReleaseResult {
     let endpoint = format!("{}/free", base_url.trim_end_matches('/'));
     let client = reqwest::Client::builder()
@@ -2772,6 +2806,7 @@ mod tests {
             wakeup: Arc::new(Notify::new()),
             active_jobs_counter: Arc::new(AtomicUsize::new(0)),
             job_start_notifier: Arc::new(std::sync::OnceLock::new()),
+            personal_comfyui_url: Arc::new("http://127.0.0.1:9".to_string()),
         };
 
         // Enqueue 3 jobs back-to-back
@@ -2800,6 +2835,60 @@ mod tests {
         let jobs = queue.list_jobs(10).unwrap();
         assert_eq!(jobs.len(), 3);
         assert!(jobs.iter().all(|j| j.status == "completed"));
+
+        let _ = std::fs::remove_file(&tmp_db);
+    }
+
+    /// Đợt ComfyUI riêng: anh đang bật ComfyUI riêng thì job đứng 'queued' kèm ghi chú; anh tắt thì job chạy.
+    #[tokio::test]
+    async fn queue_holds_jobs_while_personal_comfyui_is_on() {
+        let tmp_db = std::env::temp_dir().join(format!(
+            "akunarch_gpu_hold_test_{}.db",
+            Utc::now().timestamp_nanos_opt().unwrap_or(3)
+        ));
+        let _ = open_akunarch_db_at(&tmp_db).unwrap();
+
+        // Máy chủ giả "ComfyUI riêng": trả 200 cho đúng 1 yêu cầu rồi tắt (đóng cổng).
+        let listener = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+        let port = listener.local_addr().unwrap().port();
+        let fake = std::thread::spawn(move || {
+            use std::io::{Read, Write};
+            let (mut s, _) = listener.accept().unwrap();
+            let mut buf = [0u8; 2048];
+            let _ = s.read(&mut buf);
+            let _ = s.write_all(b"HTTP/1.1 200 OK
+Content-Length: 2
+Connection: close
+
+{}");
+        });
+
+        let queue = GpuJobQueue {
+            db_path: tmp_db.clone(),
+            gpu_mutex: Arc::new(Mutex::new(None)),
+            wakeup: Arc::new(Notify::new()),
+            active_jobs_counter: Arc::new(AtomicUsize::new(0)),
+            job_start_notifier: Arc::new(std::sync::OnceLock::new()),
+            personal_comfyui_url: Arc::new(format!("http://127.0.0.1:{port}")),
+        };
+        let job = queue
+            .enqueue(EnqueueGpuJobInput {
+                project_id: None,
+                worker_kind: "blender".to_string(),
+                payload: json!({ "mode": "probe" }),
+            })
+            .expect("enqueue job");
+
+        assert!(!queue.try_process_next_queued_job().await, "ComfyUI riêng đang bật: không được chạy job");
+        let held = queue.list_jobs(10).unwrap().into_iter().find(|j| j.id == job.id).unwrap();
+        assert_eq!(held.status, "queued");
+        assert!(held.error_log.contains("ComfyUI riêng"), "thiếu ghi chú chờ: {:?}", held.error_log);
+
+        fake.join().unwrap(); // máy chủ giả đã tắt
+        assert!(queue.try_process_next_queued_job().await);
+        let done = queue.list_jobs(10).unwrap().into_iter().find(|j| j.id == job.id).unwrap();
+        assert_eq!(done.status, "completed");
+        assert_eq!(done.error_log, "");
 
         let _ = std::fs::remove_file(&tmp_db);
     }

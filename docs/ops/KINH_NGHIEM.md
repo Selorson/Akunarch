@@ -144,3 +144,12 @@
 - **Mỗi chi tiết FLUX → TRELLIS.2 khoảng 3–4 phút GPU.** Xếp nhiều job vào hàng đợi một lượt để máy chạy liền, nhưng xem ảnh FLUX trước khi tin kết quả 3D. *(2026-11-14, Claude)*
 - **Nhập `.glb` vào Blender bằng importer glTF thì object để `rotation_mode = 'QUATERNION'`.** Gán `rotation_euler` sau đó sẽ bị bỏ qua mà không báo lỗi. Phải đặt `rotation_mode = 'XYZ'` trước. v7 Eryndor dính lỗi này: cổng lệch 90°, anh phát hiện bằng mắt. *(2026-11-14, Claude)*
 - **Ảnh xem trước chỉ có một góc 3/4**, nên chi tiết đặt sai ở mặt sau không lộ ra. Soát bằng nút "Xoay" của sân khấu (chụp 4 góc) trước khi chốt, rồi mới chạy KTX2. *(2026-11-14, Claude)*
+
+## 12. ComfyUI riêng của anh (2026-11-14, Claude)
+- **Hai bản, chung kho model:** bản Akunarch `E:\Akunarch\repos\ComfyUI` (cổng 8188, **không cài custom node**) và bản riêng `D:\ComfyUI-Rieng` (cổng 8189, có ComfyUI-Manager). Hướng dẫn cho anh: [`HUONG_DAN_COMFYUI.md`](HUONG_DAN_COMFYUI.md). `D:\Git-repo\ComfyUI` là junction trỏ vào bản Akunarch.
+- **Cổng 8189 sống = anh đang dùng card:** hàng đợi Akunarch giữ mọi job ở `queued` kèm ghi chú "Chờ: ComfyUI riêng…". Job đứng mãi thì kiểm 8189 trước khi nghi lỗi. Test của hàng đợi phải trỏ `personal_comfyui_url` vào cổng đóng, không thì máy anh đang mở bản riêng làm test treo.
+- **Dựng lại bản riêng nhanh:** `git clone E:\Akunarch\repos\ComfyUI D:\ComfyUI-Rieng` (clone cục bộ), `uv venv --python 3.13`, `uv pip install torch… --index-url …/cu130` (cache uv có sẵn, vài phút), `-r requirements.txt -r manager_requirements.txt`, chép `extra_model_paths.yaml`. Venv do uv tạo **không có pip**; Manager tự dùng uv.
+- **Danh sách template chạy được ngay:** đọc `comfyui_workflow_templates_json/templates/index.json` + trường `models` trong từng workflow, đối chiếu `D:\AI-Models\<directory>\<name>`. Nhanh và chắc hơn soi giao diện.
+- **MCP `gpu_jobs` / `app_status` có thể tự mở app.** Trước khi hot-swap, kiểm tiến trình cha của `akunarch.exe` (node `server.mjs` = do em mở, đóng được; khác thì có thể là anh đang dùng → hỏi).
+- **Ảnh chụp từ Browser pane hay hết giờ** khi cửa sổ Claude bị che (viewport 0×0). Dùng `find` / `read_page`, hoặc chụp ngay sau khi mở trang.
+
