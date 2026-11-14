@@ -6,6 +6,10 @@
 #   FLUX.1-schnell fp8 (Apache-2.0)          — ảnh concept
 #   TRELLIS.2 + Pixal3D (MIT, native ComfyUI) — ảnh → 3D
 #   MiniMax H3 fl2va pruned int8 + turbo 8 bước (MiniMax H3 Community License) — video có tiếng
+# Thêm 2026-11-14 tối (anh cho tải, phục vụ ComfyUI riêng):
+#   SeedVR2 3B int8 (Apache-2.0) — nâng cấp ảnh/video · Real-ESRGAN x4plus (BSD-3) · FILM (Apache-2.0) — tăng khung hình
+#   Wan 2.2 14B i2v fp8 + LoRA lightx2v 4 bước (Apache-2.0) — ảnh → video · Pixal3D multiview (MIT) · ACE-Step 1.5 AIO (MIT) — nhạc
+#   Z-Image-Turbo và Qwen Image 2.1 KHÔNG tải: dùng chung bản GGUF của Co-Writer (đọc qua extra_model_paths của bản riêng)
 
 $ErrorActionPreference = 'Continue'
 $root = 'D:\AI-Models'
@@ -25,7 +29,19 @@ $files = @(
   @('vae',                 "$hf/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors"),
   @('loras',               "$hf/lightx2v/Minimax-h3-Turbo/resolve/main/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors"),
   @('text_encoders',       "$hf/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"),
-  @('diffusion_models',    "$hf/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors")
+  @('diffusion_models',    "$hf/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors"),
+  @('vae',                 "$hf/Comfy-Org/SeedVR2/resolve/main/vae/seedvr2_ema_vae_fp16.safetensors"),
+  @('diffusion_models',    "$hf/Comfy-Org/SeedVR2/resolve/main/diffusion_models/seedvr2_3b_int8_convrot.safetensors"),
+  @('upscale_models',      "$hf/Comfy-Org/Real-ESRGAN_repackaged/resolve/main/RealESRGAN_x4plus.safetensors"),
+  @('frame_interpolation', "$hf/Comfy-Org/frame_interpolation/resolve/main/frame_interpolation/film_net_fp16.safetensors"),
+  @('diffusion_models',    "$hf/Comfy-Org/Pixal3D/resolve/main/diffusion_models/pixal3d_multiview_int8_convrot.safetensors"),
+  @('checkpoints',         "$hf/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/checkpoints/ace_step_1.5_turbo_aio.safetensors"),
+  @('vae',                 "$hf/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors"),
+  @('text_encoders',       "$hf/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors"),
+  @('loras',               "$hf/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors"),
+  @('loras',               "$hf/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors"),
+  @('diffusion_models',    "$hf/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors"),
+  @('diffusion_models',    "$hf/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors")
 )
 
 function Log($m) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')  $m" | Out-File -FilePath $log -Append -Encoding utf8 }

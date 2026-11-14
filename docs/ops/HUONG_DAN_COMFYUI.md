@@ -58,23 +58,35 @@ Ghi chú: `D:\Git-repo\ComfyUI` chỉ là lối tắt (junction) trỏ vào bả
 
 **Giấy phép MiniMax H3:** được dùng ở Việt Nam. Nếu đăng sản phẩm thương mại làm bằng H3 thì phải ghi "MiniMax H3". Cấm dùng đầu ra để huấn luyện model khác.
 
-## 5. Nên tải thêm gì cho việc riêng (chưa tải, chờ anh chọn)
+## 5. Model tải thêm 2026-11-14 tối (anh cho tải)
 
-Dung lượng là tổng model mà template đó cần. Dấu ⚠ nghĩa là con số lớn hơn 16 GB VRAM, nên sẽ chạy nhờ RAM và chậm hơn. Em chưa đo các mẫu này.
-
-| Nhóm | Template gợi ý | Dung lượng | Dùng vào |
+| Nhóm | Template (gõ tìm) | Giấy phép | Dùng vào |
 |---|---|---|---|
-| **Nâng cấp ảnh** | Image Upscale: **SeedVR2 3B Int8** | 4 GB | Phóng ảnh nét, rất đáng tải |
-| **Nâng cấp video** | Video Upscale: **SeedVR2 3B Int8** | dùng chung file với bản ảnh | Video nét hơn |
-| | Video Upscale: **Real-ESRGAN** | ~0,1 GB | Phóng nhanh, nhẹ |
-| | Frame Interpolation: **FILM or RIFE** | 0,1 GB | Tăng khung hình cho mượt |
-| **Ảnh** | **Z-Image-Turbo: Text to Image** | 20,8 GB ⚠ | Ảnh đẹp, nhanh |
-| | **Qwen Image 2.1: Image Edit** | 26,7 GB ⚠ | Sửa ảnh bằng lời, giữ nhân vật |
-| **Video** | **Wan 2.2 14B Image to Video** | 38 GB ⚠ | Ảnh → video (không tiếng) |
-| **3D** | **Pixal3D: Multi Views to 3D** | thêm 1 file | Nhiều góc ảnh → 3D chuẩn hơn |
-| **Âm thanh** | **ACE-Step 1.5 Music Generation AIO** | 10,7 GB | Nhạc từ chữ |
+| **Nâng cấp ảnh** | Image Upscale: **SeedVR2 3B Int8** | Apache-2.0 | Phóng ảnh nét |
+| **Nâng cấp video** | Video Upscale: **SeedVR2 3B Int8** (chung file với bản ảnh) | Apache-2.0 | Video nét hơn |
+| | Video Upscale: **Real-ESRGAN** | BSD-3 | Phóng nhanh, nhẹ |
+| | Frame Interpolation: **FILM or RIFE** | Apache-2.0 | Tăng khung hình cho mượt |
+| **Video** | **Wan 2.2 14B Image to Video** | Apache-2.0 | Ảnh → video không tiếng. Model 2 × 14 GB, lớn hơn VRAM nên chạy nhờ RAM |
+| **3D** | **Pixal3D: Multi Views to 3D** | MIT | Nhiều góc ảnh → 3D chuẩn hơn |
+| **Âm thanh** | **ACE-Step 1.5 Music Generation AIO** | MIT | Nhạc từ chữ |
 
-Chỉ cần nói "tải giúp anh SeedVR2 3B", em tải đúng file theo template chính thức. Trước khi tải, em đọc giấy phép và báo lại anh.
+Mấy model này mới tải xong, **chưa chạy thử từng cái** (xem mục 9 để biết cái nào đã thử).
+
+### Z-Image-Turbo và Qwen Image 2.1: dùng chung model với Co-Writer, không tải thêm
+
+Co-Writer đã có sẵn 2 model này (dạng GGUF Q8, trong `%LOCALAPPDATA%\Co-Writer\models\`). Bản riêng đọc thẳng thư mục đó: không chép, không sửa gì bên Co-Writer, nên **không tốn thêm ổ đĩa**.
+
+Cách mở: ở thanh trái bấm **Workflows**, chọn một trong hai:
+- **`Z-Image Turbo (model Co-Writer)`:** ảnh 1024² khoảng 24 giây (lần đầu, gồm nạp model), VRAM ~11 GB, 8 bước;
+- **`Qwen Image 2.1 (model Co-Writer)`:** ảnh 1024² khoảng 67 giây, 25 bước.
+
+Sửa ô chữ mô tả (prompt), bấm Run.
+
+**Giới hạn:**
+- **Qwen Image 2.1 chỉ tạo ảnh từ chữ.** Template *Image Edit* (sửa ảnh theo lời) cần phần "thị giác" (`mmproj`) mà bản của Co-Writer không có. Cần sửa ảnh thì dặn em tải thêm phần đó (khoảng 1 GB).
+- **Template chính thức Z-Image / Qwen Image trong bảng Templates sẽ báo thiếu model** (chúng đòi bản `.safetensors` gốc, hơn 20 GB mỗi bộ). Hãy dùng 2 workflow ở trên.
+- **Đừng tạo ảnh ở Co-Writer cùng lúc với ComfyUI,** vì hai bên giành card. Co-Writer đổi hoặc xoá model thì 2 workflow này hỏng theo.
+- Để đọc được bản GGUF của Co-Writer, em đã sửa nhỏ node `ComfyUI-GGUF` ở bản riêng. **Cập nhật node này bằng Manager thì mất phần sửa**, khi đó dặn em vá lại (bản vá lưu ở `E:\Akunarch\bin\patches\`).
 
 ## 6. Dặn em chạy hộ
 
@@ -112,3 +124,14 @@ Tìm các lệnh này ở nút/menu **Manager** trên thanh trên cùng. Nếu k
 | Việc Selorson đứng mãi ở trạng thái chờ | Bản riêng còn mở: đóng cửa sổ đen |
 | Trang không mở | Xem dòng chữ đỏ trong cửa sổ đen, chụp gửi em |
 | Muốn cập nhật ComfyUI | Dặn em. Em cập nhật bản riêng trước, thử ổn rồi mới cập nhật bản Akunarch |
+
+## 9. Đã chạy thử thật (cập nhật dần)
+
+| Model | Kết quả |
+|---|---|
+| Z-Image-Turbo (GGUF Co-Writer) | ✅ 1024², 8 bước, 24 s, ~11 GB VRAM |
+| Qwen Image 2.1 (GGUF Co-Writer) | ✅ 1024², 25 bước, 67 s |
+| FLUX.1-schnell, TRELLIS.2 | ✅ dùng nhiều lần trong dây chuyền Eryndor |
+| SeedVR2, Real-ESRGAN, FILM, Wan 2.2, Pixal3D multiview, ACE-Step | ⏳ đã tải, chưa chạy thử |
+| MiniMax H3 | ⏳ chưa chạy thử. Sẽ đo qua hàng đợi Akunarch trước (anh chốt: H3 dùng cho mọi chuyển cảnh Selorson) |
+

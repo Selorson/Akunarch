@@ -81,3 +81,9 @@ concept (anh duyệt)
 2. Chấp nhận ghi "MiniMax H3" trên giao diện Selorson nếu đăng video làm bằng H3 không?
 3. Chi tiết nặn bằng AI có cần anh duyệt từng ảnh FLUX trước khi nặn không, hay em tự chọn rồi anh duyệt kết quả cuối (như đợt này)?
 4. Có muốn một "thư viện chi tiết nặn" dùng chung cho mọi công trình (tấm chạm, chóp nhọn, khung cửa…) để đỡ nặn lại?
+
+**Anh trả lời (2026-11-14 tối):**
+1. **H3 dùng cho toàn bộ chuyển cảnh trong thế giới Selorson:** quay phim, VN, intro. Bước kế tiếp là chạy thử H3 qua hàng đợi để đo thời gian, VRAM, RAM trước khi dựng dây chuyền.
+2. **Có ghi "MiniMax H3" trên giao diện** Selorson ở những chỗ phát video làm bằng H3.
+3. **Anh duyệt mọi ảnh tham chiếu trước khi nặn 3D hoặc làm video.** Ảnh có thể từ FLUX hoặc model khác anh tự tạo. Em không tự chọn ảnh rồi nặn luôn.
+4. **Thư viện chi tiết nặn dùng chung:** có lý, để sau. Đã ghi nhận.

@@ -1,0 +1,76 @@
+diff --git a/loader.py b/loader.py
+index 7cefb11..5c3058f 100644
+--- a/loader.py
++++ b/loader.py
+@@ -132,6 +132,10 @@ def gguf_sd_loader(path, handle_prefix="model.diffusion_model.", is_text_model=F
+                 if any([tensor_name.endswith(x) for x in (".proj_in.weight", ".proj_out.weight")]):
+                     while len(shape) > 2 and shape[-1] == 1:
+                         shape = shape[:-1]
++            # Workaround for stable-diffusion.cpp Z-Image (lumina2): pad tokens stored as [dim], ComfyUI expects [1, dim].
++            if compat == "sd.cpp" and arch_str == "lumina2" and len(shape) == 1:
++                if tensor_name.endswith(("x_pad_token", "cap_pad_token")):
++                    shape = torch.Size((1, shape[0]))
+ 
+         # add to state dict
+         if tensor.tensor_type in {gguf.GGMLQuantizationType.F32, gguf.GGMLQuantizationType.F16}:
+diff --git a/nodes.py b/nodes.py
+index 4683514..54f232a 100644
+--- a/nodes.py
++++ b/nodes.py
+@@ -233,15 +233,26 @@ class CLIPLoaderGGUF:
+         return clip_data
+ 
+     def load_patcher(self, clip_paths, clip_type, clip_data):
+-        clip = comfy.sd.load_text_encoder_state_dicts(
+-            clip_type = clip_type,
+-            state_dicts = clip_data,
+-            model_options = {
+-                "custom_operations": GGMLOps,
+-                "initial_device": comfy.model_management.text_encoder_offload_device()
+-            },
+-            embedding_directory = folder_paths.get_folder_paths("embeddings"),
+-        )
++        # Local addition: text-only Qwen3-VL-8B GGUF (stable-diffusion.cpp, no mmproj) for Qwen Image 2.1.
++        # Without vision keys ComfyUI detects plain Qwen3-8B and builds the Flux2 TE; force Qwen3-VL-8B for this type only.
++        orig_detect = comfy.sd.detect_te_model
++        if clip_type == comfy.sd.CLIPType.QWEN_IMAGE:
++            def detect(sd):
++                te = orig_detect(sd)
++                return comfy.sd.TEModel.QWEN3VL_8B if te == comfy.sd.TEModel.QWEN3_8B else te
++            comfy.sd.detect_te_model = detect
++        try:
++            clip = comfy.sd.load_text_encoder_state_dicts(
++                clip_type = clip_type,
++                state_dicts = clip_data,
++                model_options = {
++                    "custom_operations": GGMLOps,
++                    "initial_device": comfy.model_management.text_encoder_offload_device()
++                },
++                embedding_directory = folder_paths.get_folder_paths("embeddings"),
++            )
++        finally:
++            comfy.sd.detect_te_model = orig_detect
+         clip.patcher = GGUFModelPatcher.clone(clip.patcher)
+         return clip
+ 
+diff --git a/tools/convert.py b/tools/convert.py
+index 5029c87..ff251bf 100644
+--- a/tools/convert.py
++++ b/tools/convert.py
+@@ -145,8 +145,15 @@ class ModelLumina2(ModelTemplate):
+         ("cap_embedder.1.weight", "context_refiner.0.attention.qkv.weight")
+     ]
+ 
++class ModelQwenImage21(ModelTemplate):
++    # Local addition: Qwen Image 2.1 GGUF from stable-diffusion.cpp (no arch metadata). Keys match ComfyUI's native names.
++    arch = "qwen_image"
++    keys_detect = [
++        ("txt_in.text_norm.weight", "modulation.1.weight", "transformer_blocks.0.img_mlp.gate_up.weight")
++    ]
++
+ arch_list = [ModelFlux, ModelSD3, ModelAura, ModelHiDream, CosmosPredict2, 
+-             ModelLTXV, ModelHyVid, ModelWan, ModelSDXL, ModelSD1, ModelLumina2]
++             ModelLTXV, ModelHyVid, ModelWan, ModelSDXL, ModelSD1, ModelLumina2, ModelQwenImage21]
+ 
+ def is_model_arch(model, state_dict):
+     # check if model is correct
