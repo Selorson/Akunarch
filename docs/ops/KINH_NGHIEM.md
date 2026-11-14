@@ -156,3 +156,14 @@
 - **Lưu workflow cho anh mở trong giao diện:** viết đồ thị dạng API, rồi trong trang ComfyUI gọi `app.loadApiJson(api, tên)` → `app.graph.serialize()` → `POST /api/userdata/workflows%2F<tên>.json?overwrite=true`. Template chính thức (có subgraph): `fetch('/templates/<tên>.json')` → `app.loadGraphData` → `app.graphToPrompt()` để lấy dạng API. *(2026-11-14, Claude)*
 - **Python ghi đường dẫn Windows:** luôn dùng chuỗi raw (`r"..."`). Trong chuỗi thường, `\r`, `\b` biến thành ký tự điều khiển, làm hỏng file Markdown mà mắt khó thấy. Sau khi ghi, kiểm bằng `grep -nP '[\x00-\x08\x0b\x0c\x0e-\x1f]'`. *(2026-11-14, Claude — dính 2 lần trong một phiên)*
 
+## 13. Đo và tối ưu RAM/VRAM nhiều app (2026-11-15, Claude)
+- **Đo bằng `bin\scripts\measure_app_resources.ps1`** (RAM private/working set + VRAM PDH theo cây tiến trình). Dấu hiệu nhận diện tách 2 loại: `path` so **đường dẫn exe**, `cmd` so **dòng lệnh** (chỉ identifier WebView2). Bản đầu so cả dòng lệnh nên bắt nhầm lệnh node của em có tham số chứa đường dẫn app.
+- **Luôn đo 4 mốc: mở → sau khi dùng → rảnh → sau khi tắt.** Lỗi lớn nhất nằm ở mốc "rảnh": ToneForge và Co-Writer giữ model GPU suốt đời app.
+- **Chọn thời gian nhả theo cái giá nạp lại đo được, không theo cảm tính:** ToneForge ~0,5 s → 15 s; Co-Writer ~2 s → 60 s.
+- **Đóng app như người dùng: `CloseMainWindow`, không `taskkill /T`** (taskkill che mất lỗi để sót tiến trình).
+- **App Tauri gọi lệnh không cần bấm giao diện:** mở với `WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=<cổng>` rồi `window.__TAURI__.core.invoke(...)` qua CDP (cần `withGlobalTauri`).
+- **Trước khi phát hành app nào: kiểm exe trên máy có được build từ mã chưa commit không** (so thời điểm build với mtime file). Co-Writer 04/11 chứa 58 thay đổi chưa commit; phát hành từ git sẽ làm mất tính năng.
+- **Deploy backend có bỏ API:** kiểm frontend mới và các bản app đã phát hành còn gọi không (`git grep` trên nhánh `main` cũ).
+- **Git Bash không có `bc`.** Python heredoc có thể làm hỏng `\` trong chuỗi regex; sửa file có backslash bằng tool Edit.
+- **Theo dõi app đang chạy của anh (NeuroForge):** chỉ đọc danh sách tiến trình + bộ đếm, ưu tiên `BelowNormal`, che khoá bí mật, log thô ngoài git.
+
