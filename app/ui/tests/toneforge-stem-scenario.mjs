@@ -102,12 +102,18 @@ measure('open');
 const wavJs = JSON.stringify(WAV);
 const load = await page.evaluate(`window.__TAURI__.core.invoke('cmd_load_audio_from_path_native', { filePath: ${wavJs} }).then(r => JSON.stringify(r).slice(0, 200))`);
 console.log('load:', load);
-const t0 = Date.now();
-const sep = await page.evaluate(`window.__TAURI__.core.invoke('cmd_run_uvr5_separation', { req: { audioPath: ${wavJs}, bounceToMixer: false } }).then(r => JSON.stringify({ tier: r.activeTier ?? r.active_tier, ms: r.elapsedMs ?? r.elapsed_ms }))`);
-console.log(`separation: ${((Date.now() - t0) / 1000).toFixed(1)} s`, sep);
+async function separate(label) {
+	const t0 = Date.now();
+	await page.evaluate(`window.__TAURI__.core.invoke('cmd_run_uvr5_separation', { req: { audioPath: ${wavJs}, bounceToMixer: false } }).then(() => 1)`);
+	console.log(`${label}: ${((Date.now() - t0) / 1000).toFixed(1)} s`);
+}
+await separate('separation');
 measure('after_separation');
+// --warm true: tách lần 2 ngay khi bộ tách còn nạp sẵn → cái giá của việc nhả = (lần sau khi nhả) − (lần nóng)
+if (args.warm === 'true') await separate('separation_warm');
 
 if (IDLE > 0) { await sleep(IDLE * 1000); measure(`idle_${IDLE}s`); }
+if (args.warm === 'true') { await separate('separation_after_release'); measure('after_separation_3'); }
 page.close();
 
 const procName = path.basename(EXE, '.exe');
